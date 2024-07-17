@@ -10,10 +10,10 @@ export default css`
 
   .button {
     display: inline-flex;
-    align-items: stretch;
+    align-items: center;
     justify-content: center;
     width: 100%;
-    border-style: solid;
+    border-style: none;
     border-width: var(--sl-input-border-width);
     font-family: var(--sl-input-font-family);
     font-weight: var(--sl-font-weight-semibold);
@@ -28,6 +28,7 @@ export default css`
       var(--sl-transition-x-fast) color,
       var(--sl-transition-x-fast) border,
       var(--sl-transition-x-fast) box-shadow;
+    border-radius: var(--sl-border-radius-medium);
     cursor: inherit;
   }
 
@@ -77,20 +78,20 @@ export default css`
   /* Default */
   .button--standard.button--default {
     background-color: var(--sl-color-neutral-900);
-    border-color: var(--sl-input-border-color);
+    border-color: var(--sl-color-neutral-800);
     color: var(--sl-color-neutral-50);
   }
 
   .button--standard.button--default:hover:not(.button--disabled) {
     background-color: var(--sl-color-neutral-800);
-    border-color: var(--sl-color-primary-300);
+    border-color: var(--sl-color-neutral-300);
     color: var(--sl-color-neutral-200);
   }
 
   .button--standard.button--default:active:not(.button--disabled) {
-    background-color: var(--sl-color-primary-100);
-    border-color: var(--sl-color-primary-400);
-    color: var(--sl-color-primary-700);
+    background-color: var(--sl-color-neutral-900);
+    border-color: var(--sl-color-neutral-400);
+    color: var(--sl-color-neutral-100);
   }
 
   /* Primary */
@@ -136,18 +137,21 @@ export default css`
     background-color: var(--sl-color-neutral-300);
     border-color: var(--sl-color-neutral-300);
     color: var(--sl-color-neutral-800);
+    opacity: 80%;
   }
 
   .button--standard.button--neutral:hover:not(.button--disabled) {
     background-color: var(--sl-color-neutral-400);
     border-color: var(--sl-color-neutral-400);
     color: var(--sl-color-neutral-700);
+    background-opacity: 80%;
   }
 
   .button--standard.button--neutral:active:not(.button--disabled) {
     background-color: var(--sl-color-neutral-600);
     border-color: var(--sl-color-neutral-600);
     color: var(--sl-color-neutral-0);
+    opacity: 80%;
   }
 
   /* Warning */
@@ -248,24 +252,6 @@ export default css`
   .button--outline.button--success:active:not(.button--disabled) {
     border-color: var(--sl-color-success-700);
     background-color: var(--sl-color-success-700);
-    color: var(--sl-color-neutral-0);
-  }
-
-  /* Neutral */
-  .button--outline.button--neutral {
-    border-color: var(--sl-color-neutral-600);
-    color: var(--sl-color-neutral-600);
-  }
-
-  .button--outline.button--neutral:hover:not(.button--disabled),
-  .button--outline.button--neutral.button--checked:not(.button--disabled) {
-    background-color: var(--sl-color-neutral-600);
-    color: var(--sl-color-neutral-0);
-  }
-
-  .button--outline.button--neutral:active:not(.button--disabled) {
-    border-color: var(--sl-color-neutral-700);
-    background-color: var(--sl-color-neutral-700);
     color: var(--sl-color-neutral-0);
   }
 

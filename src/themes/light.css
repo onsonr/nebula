@@ -410,10 +410,10 @@
 
   /* Line heights */
   --sl-line-height-denser: 1;
-  --sl-line-height-dense: 1.4;
-  --sl-line-height-normal: 1.8;
-  --sl-line-height-loose: 2.2;
-  --sl-line-height-looser: 2.6;
+  --sl-line-height-dense: 1.5;
+  --sl-line-height-normal: 1.625;
+  --sl-line-height-loose: 1.75;
+  --sl-line-height-looser: 2;
 
   /* Focus rings */
   --sl-focus-ring-color: var(--sl-color-primary-600);
