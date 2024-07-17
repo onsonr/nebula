@@ -1,10 +1,4 @@
 import { getBasePath } from './utilities/base-path.js';
-import { registerIconLibrary } from './utilities/icon-library.js';
-
-registerIconLibrary('oxy', {
-  resolver: name => `https://cdn.sonr.id/icons/${name}.svg`,
-  mutator: svg => svg.setAttribute('fill', 'currentColor')
-});
 
 const observer = new MutationObserver(mutations => {
   for (const { addedNodes } of mutations) {

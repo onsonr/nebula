@@ -1,9 +1,9 @@
 import { getBasePath } from '../../utilities/base-path.js';
 import type { IconLibrary } from './library.js';
 
-const customLibrary: IconLibrary = {
+const library: IconLibrary = {
   name: 'oxy',
-  resolver: name => getBasePath(`icons/${name}.svg`)
+  resolver: name => getBasePath(`assets/oxyicons/${name}.svg`)
 };
 
-export default customLibrary;
+export default library;

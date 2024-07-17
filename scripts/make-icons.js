@@ -12,7 +12,7 @@ import { globby } from 'globby';
 import path from 'path';
 
 const { outdir } = commandLineArgs({ name: 'outdir', type: String });
-const customIconDir = path.join(outdir, '/icons');
+const customIconDir = path.join(outdir, '/assets/oxyicons');
 const iconDir = path.join(outdir, '/assets/icons');
 const iconPackageData = JSON.parse(await fs.readFile('./node_modules/bootstrap-icons/package.json', 'utf8'));
 
@@ -37,7 +37,7 @@ await Promise.all([
 ]);
 
 await fs.mkdir(customIconDir, { recursive: true });
-await Promise.all([copy('./icons', iconDir)]);
+await Promise.all([copy('./icons', customIconDir)]);
 
 // Generate metadata
 const files = await globby(`${srcPath}/docs/content/icons/**/*.md`);
