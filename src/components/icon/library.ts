@@ -1,5 +1,6 @@
-import customLibrary from './library.custom.js';
+import cryptoLibrary from './library.crypto.js';
 import defaultLibrary from './library.default.js';
+import sonrLibrary from './library.sonr.js';
 import systemLibrary from './library.system.js';
 import type SlIcon from '../icon/icon.js';
 
@@ -12,7 +13,7 @@ export interface IconLibrary {
   spriteSheet?: boolean;
 }
 
-let registry: IconLibrary[] = [defaultLibrary, systemLibrary, customLibrary];
+let registry: IconLibrary[] = [defaultLibrary, systemLibrary, cryptoLibrary, sonrLibrary];
 let watchedIcons: SlIcon[] = [];
 
 /** Adds an icon to the list of watched icons. */
