@@ -2,7 +2,7 @@
   "name": "@onsonr/shoelace",
   "description": "A forward-thinking library of web components.",
   "version": "2.15.1",
-  "homepage": "https://github.com/shoelace-style/shoelace",
+  "homepage": "https://github.com/onsonr/styles",
   "author": "Cory LaViska",
   "license": "MIT",
   "customElements": "dist/custom-elements.json",
@@ -36,10 +36,10 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/shoelace-style/shoelace.git"
+    "url": "git+https://github.com/onsonr/styles.git"
   },
   "bugs": {
-    "url": "https://github.com/shoelace-style/shoelace/issues"
+    "url": "https://github.com/onsonr/styles/issues"
   },
   "funding": {
     "type": "individual",

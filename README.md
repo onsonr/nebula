@@ -1,5 +1,7 @@
 # Shoelace
 
+> This repository is a fork of [Shoelace](https://github.com/shoelace-style/shoelace) with the aim of making it easier to use with [Sonr](https://sonr.io/).
+
 A forward-thinking library of web components.
 
 - Works with all frameworks 🧩
