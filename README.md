@@ -1,25 +1,25 @@
-# Shoelace
+# Sonr UI Components
 
-> This repository is a fork of [Shoelace](https://github.com/shoelace-style/shoelace) with the aim of making it easier to use with [Sonr](https://sonr.io/).
+> A specialized fork of [Shoelace](https://github.com/shoelace-style/shoelace) customized for the [Sonr Network](https://sonr.io/), focusing on cryptocurrency and blockchain interfaces.
 
-A forward-thinking library of web components.
+A tailored web components library for blockchain applications.
 
+- Custom crypto-focused icon library 🪙
+- Sonr design system integration 🎨
+- Specialized components for blockchain UIs 🔗
 - Works with all frameworks 🧩
-- Works with CDNs 🚛
-- Fully customizable with CSS 🎨
-- Includes an official dark theme 🌛
 - Built with accessibility in mind ♿️
 - Open source 😸
 
-Designed in New Hampshire by [Cory LaViska](https://twitter.com/claviska).
+Originally designed by [Cory LaViska](https://twitter.com/claviska), customized for Sonr Network.
 
 ---
 
-Documentation: [shoelace.style](https://shoelace.style)
+Documentation: [docs.sonr.io/components](https://docs.sonr.io/components)
 
-Source: [github.com/shoelace-style/shoelace](https://github.com/shoelace-style/shoelace)
+Source: [github.com/sonr-io/components](https://github.com/sonr-io/components)
 
-Twitter: [@shoelace_style](https://twitter.com/shoelace_style)
+Twitter: [@sonr_io](https://twitter.com/sonr_io)
 
 ---
 
@@ -31,9 +31,9 @@ Shoemakers, or "Shoelace developers," can use this documentation to learn how to
 
 If that's not what you're trying to do, the [documentation website](https://shoelace.style) is where you want to be.
 
-### What are you using to build Shoelace?
+### How are Sonr components built?
 
-Components are built with [LitElement](https://lit-element.polymer-project.org/), a custom elements base class that provides an intuitive API and reactive data binding. The build is a custom script with bundling powered by [esbuild](https://esbuild.github.io/).
+Components are built with [LitElement](https://lit-element.polymer-project.org/) for reactive web components, integrated with Sonr's design system and custom icon libraries specifically created for cryptocurrency and blockchain interfaces. The build process uses [esbuild](https://esbuild.github.io/) for efficient bundling.
 
 ### Forking the Repo
 
