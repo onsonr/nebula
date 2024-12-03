@@ -15,9 +15,9 @@ Originally designed by [Cory LaViska](https://twitter.com/claviska), customized 
 
 ---
 
-Documentation: [docs.sonr.io/components](https://docs.sonr.io/components)
+Documentation: [docs.sonr.io/design](https://docs.sonr.io/components)
 
-Source: [github.com/sonr-io/components](https://github.com/sonr-io/components)
+Source: [github.com/onsonr/styles](https://github.com/sonr-io/components)
 
 Twitter: [@sonr_io](https://twitter.com/sonr_io)
 
