@@ -46,6 +46,7 @@
     "url": "https://github.com/sponsors/claviska"
   },
   "scripts": {
+    "minify": "svgo --config=svgo.config.mjs -rf ./assets/sonr-icons/ -o ./assets/sonr-icons/",
     "start": "node scripts/build.js --serve",
     "build": "node scripts/build.js",
     "verify": "npm run prettier:check && npm run lint && npm run build && npm run test",
