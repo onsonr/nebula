@@ -28,7 +28,7 @@ jobs:
           bun-version: latest
 
       - name: Build
-        run: bun run build
+        run: bun install && bun run build
 
       - name: 'Automated Version Bump'
         run: |
