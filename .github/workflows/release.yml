@@ -8,6 +8,8 @@ on:
 
 jobs:
   release:
+    permissions:
+      contents: write
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
@@ -17,14 +19,11 @@ jobs:
         with:
           bun-version: latest
 
-      - name: Build
-        run: bun install && bun run build
+      - name:  'Automated Version Bump'
+        run: npm version patch
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
-      - uses: ryand56/r2-upload-action@latest
+      - uses: JS-DevTools/npm-publish@v3
         with:
-          r2-account-id: ${{ secrets.R2_ACCOUNT_ID }}
-          r2-access-key-id: ${{ secrets.R2_ACCESS_KEY_ID }}
-          r2-secret-access-key: ${{ secrets.R2_SECRET_ACCESS_KEY }}
-          r2-bucket: shoelace
-          source-dir: cdn
-          destination-dir: ./
+          token: ${{ secrets.NPM_TOKEN }}
