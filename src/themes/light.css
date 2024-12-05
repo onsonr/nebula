@@ -124,18 +124,18 @@
   --sl-color-teal-900: hsl(175.9 60.8% 19%);
   --sl-color-teal-950: hsl(176.5 58.6% 11.4%);
 
-  /* Cyan */
-  --sl-color-cyan-50: hsl(183.2 100% 96.3%);
-  --sl-color-cyan-100: hsl(185.1 95.9% 90.4%);
-  --sl-color-cyan-200: hsl(186.2 93.5% 81.8%);
-  --sl-color-cyan-300: hsl(187 92.4% 69%);
-  --sl-color-cyan-400: hsl(187.9 85.7% 53.3%);
-  --sl-color-cyan-500: hsl(188.7 94.5% 42.7%);
-  --sl-color-cyan-600: hsl(191.6 91.4% 36.5%);
-  --sl-color-cyan-700: hsl(192.9 82.3% 31%);
-  --sl-color-cyan-800: hsl(194.4 69.6% 27.1%);
-  --sl-color-cyan-900: hsl(196.4 63.6% 23.7%);
-  --sl-color-cyan-950: hsl(196.8 61% 16.1%);
+  /* Cyan - Light Theme */
+  --sl-color-cyan-50: hsl(195, 100%, 97%); /* rgb(241 251 255) */
+  --sl-color-cyan-100: hsl(198, 100%, 90%); /* rgb(206 242 255) */
+  --sl-color-cyan-200: hsl(198, 100%, 83%); /* rgb(167 232 255) */
+  --sl-color-cyan-300: hsl(198, 100%, 73%); /* rgb(119 219 255) */
+  --sl-color-cyan-400: hsl(198, 100%, 59%); /* rgb(45 200 255) */
+  --sl-color-cyan-500: hsl(197, 84%, 48%); /* rgb(20 172 226) */
+  --sl-color-cyan-600: hsl(197, 83%, 40%); /* rgb(17 142 187) */
+  --sl-color-cyan-700: hsl(197, 83%, 33%); /* rgb(14 116 153) */
+  --sl-color-cyan-800: hsl(197, 84%, 27%); /* rgb(11 96 126) */
+  --sl-color-cyan-900: hsl(197, 84%, 19%); /* rgb(8 69 90) */
+  --sl-color-cyan-950: hsl(197, 84%, 12%); /* rgb(5 42 56) */
 
   /* Sky */
   --sl-color-sky-50: hsl(204 100% 97.1%);
@@ -245,18 +245,18 @@
    * Theme Tokens
    */
 
-  /* Primary */
-  --sl-color-primary-50: rgb(241 251 255);
-  --sl-color-primary-100: rgb(206 242 255);
-  --sl-color-primary-200: rgb(167 232 255);
-  --sl-color-primary-300: rgb(119 219 255);
-  --sl-color-primary-400: rgb(45 200 255);
-  --sl-color-primary-500: rgb(20 172 226);
-  --sl-color-primary-600: rgb(17 142 187);
-  --sl-color-primary-700: rgb(14 116 153);
-  --sl-color-primary-800: rgb(11 96 126);
-  --sl-color-primary-900: rgb(8 69 90);
-  --sl-color-primary-950: rgb(5 42 56);
+  /* Sky - Light Theme */
+  --sl-color-primary-50: hsl(195, 100%, 97%); /* rgb(241 251 255) */
+  --sl-color-primary-100: hsl(198, 100%, 90%); /* rgb(206 242 255) */
+  --sl-color-primary-200: hsl(198, 100%, 83%); /* rgb(167 232 255) */
+  --sl-color-primary-300: hsl(198, 100%, 73%); /* rgb(119 219 255) */
+  --sl-color-primary-400: hsl(198, 100%, 59%); /* rgb(45 200 255) */
+  --sl-color-primary-500: hsl(197, 84%, 48%); /* rgb(20 172 226) */
+  --sl-color-primary-600: hsl(197, 83%, 40%); /* rgb(17 142 187) */
+  --sl-color-primary-700: hsl(197, 83%, 33%); /* rgb(14 116 153) */
+  --sl-color-primary-800: hsl(197, 84%, 27%); /* rgb(11 96 126) */
+  --sl-color-primary-900: hsl(197, 84%, 19%); /* rgb(8 69 90) */
+  --sl-color-primary-950: hsl(197, 84%, 12%); /* rgb(5 42 56) */
 
   /* Success */
   --sl-color-success-50: var(--sl-color-green-50);

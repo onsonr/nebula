@@ -123,18 +123,18 @@
   --sl-color-teal-900: hsl(168.3 100% 86%);
   --sl-color-teal-950: hsl(180 100% 95.5%);
 
-  /* Cyan */
-  --sl-color-cyan-50: hsl(197.1 53.8% 20.3%);
-  --sl-color-cyan-100: hsl(196.8 57.3% 27.2%);
-  --sl-color-cyan-200: hsl(195.3 62.7% 29.4%);
-  --sl-color-cyan-300: hsl(193.5 71.3% 34.1%);
-  --sl-color-cyan-400: hsl(192.5 76.8% 40.6%);
-  --sl-color-cyan-500: hsl(189.4 78.6% 42.6%);
-  --sl-color-cyan-600: hsl(188.2 89.1% 51.7%);
-  --sl-color-cyan-700: hsl(187 98.6% 66.2%);
-  --sl-color-cyan-800: hsl(184.9 100% 78.3%);
-  --sl-color-cyan-900: hsl(180 100% 86.6%);
-  --sl-color-cyan-950: hsl(180 100% 94.8%);
+  /* Cyan - Dark Theme */
+  --sl-color-cyan-50: hsl(197, 84%, 12%); /* Darkest */
+  --sl-color-cyan-100: hsl(197, 84%, 19%);
+  --sl-color-cyan-200: hsl(197, 84%, 27%);
+  --sl-color-cyan-300: hsl(197, 83%, 33%);
+  --sl-color-cyan-400: hsl(197, 83%, 40%);
+  --sl-color-cyan-500: hsl(197, 84%, 48%);
+  --sl-color-cyan-600: hsl(198, 100%, 59%);
+  --sl-color-cyan-700: hsl(198, 100%, 73%);
+  --sl-color-cyan-800: hsl(198, 100%, 83%);
+  --sl-color-cyan-900: hsl(198, 100%, 90%);
+  --sl-color-cyan-950: hsl(195, 100%, 97%); /* Lightest */
 
   /* Sky */
   --sl-color-sky-50: hsl(203 63.8% 20.9%);
@@ -245,18 +245,18 @@
    * Theme Tokens
    */
 
-  /* Primary */
-  --sl-color-primary-50: rgb(241 251 255);
-  --sl-color-primary-100: rgb(206 242 255);
-  --sl-color-primary-200: rgb(167 232 255);
-  --sl-color-primary-300: rgb(119 219 255);
-  --sl-color-primary-400: rgb(45 200 255);
-  --sl-color-primary-500: rgb(20 172 226);
-  --sl-color-primary-600: rgb(17 142 187);
-  --sl-color-primary-700: rgb(14 116 153);
-  --sl-color-primary-800: rgb(11 96 126);
-  --sl-color-primary-900: rgb(8 69 90);
-  --sl-color-primary-950: rgb(5 42 56);
+  /* Sky - Dark Theme */
+  --sl-color-primary-50: hsl(197, 84%, 12%); /* Darkest */
+  --sl-color-primary-100: hsl(197, 84%, 19%);
+  --sl-color-primary-200: hsl(197, 84%, 27%);
+  --sl-color-primary-300: hsl(197, 83%, 33%);
+  --sl-color-primary-400: hsl(197, 83%, 40%);
+  --sl-color-primary-500: hsl(197, 84%, 48%);
+  --sl-color-primary-600: hsl(198, 100%, 59%);
+  --sl-color-primary-700: hsl(198, 100%, 73%);
+  --sl-color-primary-800: hsl(198, 100%, 83%);
+  --sl-color-primary-900: hsl(198, 100%, 90%);
+  --sl-color-primary-950: hsl(195, 100%, 97%); /* Lightest */
 
   /* Success */
   --sl-color-success-50: var(--sl-color-green-50);
