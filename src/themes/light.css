@@ -7,18 +7,18 @@
    * Color Primitives
    */
 
-  /* Gray */
-  --sl-color-gray-50: hsl(0 0% 97.5%);
-  --sl-color-gray-100: hsl(240 4.8% 95.9%);
-  --sl-color-gray-200: hsl(240 5.9% 90%);
-  --sl-color-gray-300: hsl(240 4.9% 83.9%);
-  --sl-color-gray-400: hsl(240 5% 64.9%);
-  --sl-color-gray-500: hsl(240 3.8% 46.1%);
-  --sl-color-gray-600: hsl(240 5.2% 33.9%);
-  --sl-color-gray-700: hsl(240 5.3% 26.1%);
-  --sl-color-gray-800: hsl(240 3.7% 15.9%);
-  --sl-color-gray-900: hsl(240 5.9% 10%);
-  --sl-color-gray-950: hsl(240 7.3% 8%);
+  /* Slate - Light Theme */
+  --sl-color-gray-50: hsl(220 14% 99%); /* slate1: #fcfcfd */
+  --sl-color-gray-100: hsl(220 14% 98%); /* slate2: #f9f9fb */
+  --sl-color-gray-200: hsl(220 13% 95%); /* slate3: #f0f0f3 */
+  --sl-color-gray-300: hsl(220 11% 92%); /* slate4: #e8e8ec */
+  --sl-color-gray-400: hsl(220 10% 89%); /* slate5: #e0e1e6 */
+  --sl-color-gray-500: hsl(220 9% 86%); /* slate6: #d9d9e0 */
+  --sl-color-gray-600: hsl(220 12% 82%); /* slate7: #cdced6 */
+  --sl-color-gray-700: hsl(220 13% 75%); /* slate8: #b9bbc6 */
+  --sl-color-gray-800: hsl(220 8% 57%); /* slate9: #8b8d98 */
+  --sl-color-gray-900: hsl(220 7% 53%); /* slate10: #80838d */
+  --sl-color-gray-950: hsl(220 6% 40%); /* slate11: #60646c */
 
   /* Red */
   --sl-color-red-50: hsl(0 85.7% 97.3%);
