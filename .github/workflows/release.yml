@@ -15,6 +15,11 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v3
 
+      - name: Setup Git Config
+        run: |
+          git config user.name "Prad N."
+          git config user.email "prad@sonr.io"
+
       - uses: oven-sh/setup-bun@v2
         with:
           bun-version: latest
