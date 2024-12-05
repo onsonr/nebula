@@ -14,6 +14,9 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+          token: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Setup Git Config
         run: |
@@ -24,8 +27,11 @@ jobs:
         with:
           bun-version: latest
 
-      - name:  'Automated Version Bump'
-        run: npm version patch
+      - name: 'Automated Version Bump'
+        run: |
+          npm version patch
+          git push
+          git push --tags
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
