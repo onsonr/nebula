@@ -92,27 +92,6 @@
       </sl-dropdown>
     </div>
 
-    <a
-      class="ks-banner with-toc external-link"
-      href="https://www.kickstarter.com/projects/fontawesome/web-awesome?ref=71ihfk"
-      target="_blank"
-      rel="noopener noreferrer"
-    >
-      <span>
-        <svg viewBox="0 0 20 16" xmlns="http://www.w3.org/2000/svg">
-          <path
-            fill="#f36944"
-            d="M11.63 1.625C11.63 2.27911 11.2435 2.84296 10.6865 3.10064L14 6L17.2622 5.34755C17.0968 5.10642 17 4.81452 17 4.5C17 3.67157 17.6716 3 18.5 3C19.3284 3 20 3.67157 20 4.5C20 5.31157 19.3555 5.9726 18.5504 5.99917L15.0307 13.8207C14.7077 14.5384 13.9939 15 13.2068 15H6.79317C6.00615 15 5.29229 14.5384 4.96933 13.8207L1.44963 5.99917C0.64452 5.9726 0 5.31157 0 4.5C0 3.67157 0.671573 3 1.5 3C2.32843 3 3 3.67157 3 4.5C3 4.81452 2.9032 5.10642 2.73777 5.34755L6 6L9.31702 3.09761C8.76346 2.83855 8.38 2.27656 8.38 1.625C8.38 0.727537 9.10754 0 10.005 0C10.9025 0 11.63 0.727537 11.63 1.625Z"
-          ></path>
-        </svg>
-        <span>
-          <strong style="white-space: nowrap">Get ready for more awesome!</strong>
-          Web Awesome, the next iteration of Nebula, is on Kickstarter.
-        </span>
-      </span>
-      <span class="faux-button">Read Our Story</span>
-    </a>
-
     <aside id="sidebar" data-preserve-scroll="">
       <header>
         <a href="/">
@@ -497,8 +476,8 @@
             ></a>
           </h3>
           <p>To add Nebula to your Angular app, install the package from npm.</p>
-          <pre><code class="language-bash" id="code-block-49"><span class="token function">npm</span> <span class="token function">install</span> @onsonr/nebula
-</code><sl-copy-button class="copy-code-button" from="code-block-49"></sl-copy-button></pre>
+          <pre><code class="language-bash" id="code-block-76"><span class="token function">npm</span> <span class="token function">install</span> @onsonr/nebula
+</code><sl-copy-button class="copy-code-button" from="code-block-76"></sl-copy-button></pre>
           <h3 id="update-the-angular-configuration" class="anchor-heading">
             Update the Angular Configuration<a
               href="#update-the-angular-configuration"
@@ -513,7 +492,7 @@
             file. However, the Angular way to do it is by adding a script configurations into your angular.json file as
             follows:
           </p>
-          <pre><code class="language-json" id="code-block-50"><span class="token property">"architect"</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+          <pre><code class="language-json" id="code-block-77"><span class="token property">"architect"</span><span class="token operator">:</span> <span class="token punctuation">{</span>
   <span class="token property">"build"</span><span class="token operator">:</span> <span class="token punctuation">{</span>
     ...
     <span class="token property">"options"</span><span class="token operator">:</span> <span class="token punctuation">{</span>
@@ -526,7 +505,7 @@
         <span class="token string">"@onsonr/nebula/dist/shoelace.js"</span>
       <span class="token punctuation">]</span>
       ...
-</code><sl-copy-button class="copy-code-button" from="code-block-50"></sl-copy-button></pre>
+</code><sl-copy-button class="copy-code-button" from="code-block-77"></sl-copy-button></pre>
           <h3 id="setting-up-the-base-path" class="anchor-heading">
             Setting up the base path<a
               href="#setting-up-the-base-path"
@@ -537,10 +516,10 @@
             Next, set the <a href="/getting-started/installation#setting-the-base-path">base path</a> for icons and
             other assets in the <code>main.ts</code>. In this example, we’ll use the CDN as a base path.
           </p>
-          <pre><code class="language-jsx" id="code-block-51"><span class="token keyword">import</span> <span class="token punctuation">{</span> setBasePath <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'@onsonr/nebula/dist/utilities/base-path'</span><span class="token punctuation">;</span>
+          <pre><code class="language-jsx" id="code-block-78"><span class="token keyword">import</span> <span class="token punctuation">{</span> setBasePath <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'@onsonr/nebula/dist/utilities/base-path'</span><span class="token punctuation">;</span>
 
 <span class="token function">setBasePath</span><span class="token punctuation">(</span><span class="token string">'https://cdn.jsdelivr.net/npm/@onsonr/nebula@0.0.10/cdn/'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-</code><sl-copy-button class="copy-code-button" from="code-block-51"></sl-copy-button></pre>
+</code><sl-copy-button class="copy-code-button" from="code-block-78"></sl-copy-button></pre>
           <div role="alert" class="callout callout--tip">
             <p>
               If you’d rather not use the CDN for assets, you can create a build task that copies
@@ -552,7 +531,7 @@
             Configuration<a href="#configuration" aria-label='Direct link to "Configuration"'></a>
           </h2>
           <p>Then make sure to apply the custom elements schema as shown below.</p>
-          <pre><code class="language-js" id="code-block-52"><span class="token keyword">import</span> <span class="token punctuation">{</span> BrowserModule <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'@angular/platform-browser'</span><span class="token punctuation">;</span>
+          <pre><code class="language-js" id="code-block-79"><span class="token keyword">import</span> <span class="token punctuation">{</span> BrowserModule <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'@angular/platform-browser'</span><span class="token punctuation">;</span>
 <span class="token keyword">import</span> <span class="token punctuation">{</span> NgModule<span class="token punctuation">,</span> <span class="token constant">CUSTOM_ELEMENTS_SCHEMA</span> <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'@angular/core'</span><span class="token punctuation">;</span>
 
 <span class="token keyword">import</span> <span class="token punctuation">{</span> AppComponent <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'./app.component'</span><span class="token punctuation">;</span>
@@ -565,14 +544,14 @@
   <span class="token literal-property property">schemas</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token constant">CUSTOM_ELEMENTS_SCHEMA</span><span class="token punctuation">]</span>
 <span class="token punctuation">}</span><span class="token punctuation">)</span>
 <span class="token keyword">export</span> <span class="token keyword">class</span> <span class="token class-name">AppModule</span> <span class="token punctuation">{</span><span class="token punctuation">}</span>
-</code><sl-copy-button class="copy-code-button" from="code-block-52"></sl-copy-button></pre>
+</code><sl-copy-button class="copy-code-button" from="code-block-79"></sl-copy-button></pre>
           <h2 id="reference-nebula-components-in-your-angular-component-code" class="anchor-heading">
             Reference Nebula components in your Angular component code<a
               href="#reference-nebula-components-in-your-angular-component-code"
               aria-label='Direct link to "Reference Nebula components in your Angular component code"'
             ></a>
           </h2>
-          <pre><code class="language-js" id="code-block-53"><span class="token keyword">import</span> <span class="token punctuation">{</span> SlDrawer <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'@onsonr/nebula'</span><span class="token punctuation">;</span>
+          <pre><code class="language-js" id="code-block-80"><span class="token keyword">import</span> <span class="token punctuation">{</span> SlDrawer <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'@onsonr/nebula'</span><span class="token punctuation">;</span>
 
 @<span class="token function">Component</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
   <span class="token literal-property property">selector</span><span class="token operator">:</span> <span class="token string">'app-drawer-example'</span><span class="token punctuation">,</span>
@@ -599,7 +578,7 @@
     <span class="token keyword">this</span><span class="token punctuation">.</span>drawer<span class="token operator">?.</span>nativeElement<span class="token punctuation">.</span><span class="token function">show</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
   <span class="token punctuation">}</span>
 <span class="token punctuation">}</span>
-</code><sl-copy-button class="copy-code-button" from="code-block-53"></sl-copy-button></pre>
+</code><sl-copy-button class="copy-code-button" from="code-block-80"></sl-copy-button></pre>
           <p>Now you can start using Nebula components in your app!</p>
           <div role="alert" class="callout callout--tip">
             <p>

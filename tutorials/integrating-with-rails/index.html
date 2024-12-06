@@ -92,27 +92,6 @@
       </sl-dropdown>
     </div>
 
-    <a
-      class="ks-banner with-toc external-link"
-      href="https://www.kickstarter.com/projects/fontawesome/web-awesome?ref=71ihfk"
-      target="_blank"
-      rel="noopener noreferrer"
-    >
-      <span>
-        <svg viewBox="0 0 20 16" xmlns="http://www.w3.org/2000/svg">
-          <path
-            fill="#f36944"
-            d="M11.63 1.625C11.63 2.27911 11.2435 2.84296 10.6865 3.10064L14 6L17.2622 5.34755C17.0968 5.10642 17 4.81452 17 4.5C17 3.67157 17.6716 3 18.5 3C19.3284 3 20 3.67157 20 4.5C20 5.31157 19.3555 5.9726 18.5504 5.99917L15.0307 13.8207C14.7077 14.5384 13.9939 15 13.2068 15H6.79317C6.00615 15 5.29229 14.5384 4.96933 13.8207L1.44963 5.99917C0.64452 5.9726 0 5.31157 0 4.5C0 3.67157 0.671573 3 1.5 3C2.32843 3 3 3.67157 3 4.5C3 4.81452 2.9032 5.10642 2.73777 5.34755L6 6L9.31702 3.09761C8.76346 2.83855 8.38 2.27656 8.38 1.625C8.38 0.727537 9.10754 0 10.005 0C10.9025 0 11.63 0.727537 11.63 1.625Z"
-          ></path>
-        </svg>
-        <span>
-          <strong style="white-space: nowrap">Get ready for more awesome!</strong>
-          Web Awesome, the next iteration of Nebula, is on Kickstarter.
-        </span>
-      </span>
-      <span class="faux-button">Read Our Story</span>
-    </a>
-
     <aside id="sidebar" data-preserve-scroll="">
       <header>
         <a href="/">
@@ -501,8 +480,8 @@
             Instructions<a href="#instructions" aria-label='Direct link to "Instructions"'></a>
           </h2>
           <p>To get started using Nebula with Rails, the following packages must be installed.</p>
-          <pre><code class="language-bash" id="code-block-144"><span class="token function">yarn</span> <span class="token function">add</span> @onsonr/nebula copy-webpack-plugin
-</code><sl-copy-button class="copy-code-button" from="code-block-144"></sl-copy-button></pre>
+          <pre><code class="language-bash" id="code-block-132"><span class="token function">yarn</span> <span class="token function">add</span> @onsonr/nebula copy-webpack-plugin
+</code><sl-copy-button class="copy-code-button" from="code-block-132"></sl-copy-button></pre>
           <h3 id="importing-the-default-theme" class="anchor-heading">
             Importing the Default Theme<a
               href="#importing-the-default-theme"
@@ -513,9 +492,9 @@
             The next step is to import Nebula’s default theme (stylesheet) in
             <code>app/javascript/stylesheets/application.scss</code>.
           </p>
-          <pre><code class="language-css" id="code-block-145"><span class="token atrule"><span class="token rule">@import</span> <span class="token string">'@onsonr/nebula/dist/themes/light'</span><span class="token punctuation">;</span></span>
+          <pre><code class="language-css" id="code-block-133"><span class="token atrule"><span class="token rule">@import</span> <span class="token string">'@onsonr/nebula/dist/themes/light'</span><span class="token punctuation">;</span></span>
 <span class="token atrule"><span class="token rule">@import</span> <span class="token string">'@onsonr/nebula/dist/themes/dark'</span><span class="token punctuation">;</span></span> // Optional dark theme
-</code><sl-copy-button class="copy-code-button" from="code-block-145"></sl-copy-button></pre>
+</code><sl-copy-button class="copy-code-button" from="code-block-133"></sl-copy-button></pre>
           <p>
             Fore more details about themes, please refer to
             <a href="/getting-started/themes#theme-basics">Theme Basics</a>.
@@ -530,7 +509,7 @@
             After importing the theme, you’ll need to import the JavaScript files for Nebula. Add the following code to
             <code>app/javascript/packs/application.js</code>.
           </p>
-          <pre><code class="language-js" id="code-block-146"><span class="token keyword">import</span> <span class="token string">'../stylesheets/application.scss'</span>
+          <pre><code class="language-js" id="code-block-134"><span class="token keyword">import</span> <span class="token string">'../stylesheets/application.scss'</span>
 <span class="token keyword">import</span> <span class="token punctuation">{</span> setBasePath<span class="token punctuation">,</span> SlAlert<span class="token punctuation">,</span> SlAnimation<span class="token punctuation">,</span> SlButton<span class="token punctuation">,</span> <span class="token operator">...</span> <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'@onsonr/nebula'</span>
 
 <span class="token comment">// ...</span>
@@ -540,7 +519,7 @@
 <span class="token comment">// Path to the assets folder (should be independent from the current script source path</span>
 <span class="token comment">// to work correctly in different environments)</span>
 <span class="token function">setBasePath</span><span class="token punctuation">(</span>rootUrl <span class="token operator">+</span> <span class="token string">'/packs/js/'</span><span class="token punctuation">)</span>
-</code><sl-copy-button class="copy-code-button" from="code-block-146"></sl-copy-button></pre>
+</code><sl-copy-button class="copy-code-button" from="code-block-134"></sl-copy-button></pre>
           <h3 id="webpack-config" class="anchor-heading">
             webpack Config<a href="#webpack-config" aria-label='Direct link to "webpack Config"'></a>
           </h3>
@@ -548,7 +527,7 @@
             Next we need to add Nebula’s assets to the final build output. To do this, modify
             <code>config/webpack/environment.js</code> to look like this.
           </p>
-          <pre><code class="language-js" id="code-block-147"><span class="token keyword">const</span> <span class="token punctuation">{</span> environment <span class="token punctuation">}</span> <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'@rails/webpacker'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+          <pre><code class="language-js" id="code-block-135"><span class="token keyword">const</span> <span class="token punctuation">{</span> environment <span class="token punctuation">}</span> <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'@rails/webpacker'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 
 <span class="token comment">// Nebula config</span>
 <span class="token keyword">const</span> path <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'path'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
@@ -568,7 +547,7 @@ environment<span class="token punctuation">.</span>plugins<span class="token pun
 <span class="token punctuation">)</span><span class="token punctuation">;</span>
 
 module<span class="token punctuation">.</span>exports <span class="token operator">=</span> environment<span class="token punctuation">;</span>
-</code><sl-copy-button class="copy-code-button" from="code-block-147"></sl-copy-button></pre>
+</code><sl-copy-button class="copy-code-button" from="code-block-135"></sl-copy-button></pre>
           <h3 id="adding-pack-tags" class="anchor-heading">
             Adding Pack Tags<a href="#adding-pack-tags" aria-label='Direct link to "Adding Pack Tags"'></a>
           </h3>
@@ -577,7 +556,7 @@ module<span class="token punctuation">.</span>exports <span class="token operato
             <code>tags</code> in the <code>&lt;head&gt;</code> section of
             <code>app/views/layouts/application.html.erb</code>.
           </p>
-          <pre><code class="language-html" id="code-block-148"><span class="token doctype"><span class="token punctuation">&lt;!</span><span class="token doctype-tag">doctype</span> <span class="token name">html</span><span class="token punctuation">&gt;</span></span>
+          <pre><code class="language-html" id="code-block-136"><span class="token doctype"><span class="token punctuation">&lt;!</span><span class="token doctype-tag">doctype</span> <span class="token name">html</span><span class="token punctuation">&gt;</span></span>
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>html</span><span class="token punctuation">&gt;</span></span>
   <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>head</span><span class="token punctuation">&gt;</span></span>
     <span class="token comment">&lt;!-- ... --&gt;</span>
@@ -589,7 +568,7 @@ module<span class="token punctuation">.</span>exports <span class="token operato
     &lt;%= yield %&gt;
   <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>body</span><span class="token punctuation">&gt;</span></span>
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>html</span><span class="token punctuation">&gt;</span></span>
-</code><sl-copy-button class="copy-code-button" from="code-block-148"></sl-copy-button></pre>
+</code><sl-copy-button class="copy-code-button" from="code-block-136"></sl-copy-button></pre>
           <p>Now you can start using Nebula components with Rails!</p>
           <h2 id="additional-resources" class="anchor-heading">
             Additional Resources<a href="#additional-resources" aria-label='Direct link to "Additional Resources"'></a>
