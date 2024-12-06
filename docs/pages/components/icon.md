@@ -200,113 +200,46 @@ To register an additional icon library, use the `registerIconLibrary()` function
 
 If necessary, a mutator function can be used to mutate the SVG element before rendering. This is necessary for some libraries due to the many possible ways SVGs are crafted. For example, icons should ideally inherit the current text color via `currentColor`, so you may need to apply `fill="currentColor` or `stroke="currentColor"` to the SVG element using this function.
 
-Here's an example that registers an icon library located in the `/assets/icons` directory.
-
-```html
-<script type="module">
-  import { registerIconLibrary } from '/dist/utilities/icon-library.js';
-
-  registerIconLibrary('my-icons', {
-    resolver: name => `/assets/icons/${name}.svg`,
-    mutator: svg => svg.setAttribute('fill', 'currentColor')
-  });
-</script>
-```
-
-To display an icon, set the `library` and `name` attributes of an `<sl-icon>` element.
-
-```html
-<!-- This will show the icon located at /assets/icons/smile.svg -->
-<sl-icon library="my-icons" name="smile"></sl-icon>
-```
-
-If an icon is used before registration occurs, it will be empty initially but shown when registered.
-
 The following examples demonstrate how to register a number of popular, open source icon libraries via CDN. Feel free to adapt the code as you see fit to use your own origin or naming conventions.
 
-### OxyIcons
+### Sonr Icons
 
-Custom Sonr Icons.
+Icons sourced from our internal style guide.
+
+> These are pre-packaged with Nebula and are not available for custom registration.
 
 ```html:preview
 <div style="font-size: 24px;">
-  <sl-icon library="oxy" name="anchor"></sl-icon>
-  <sl-icon library="oxy" name="snr"></sl-icon>
-  <sl-icon library="oxy" name="btc"></sl-icon>
-  <sl-icon library="oxy" name="sol"></sl-icon>
-  <sl-icon library="oxy" name="usdc"></sl-icon>
-  <sl-icon library="oxy" name="osmo"></sl-icon>
+  <sl-icon library="sonr" name="passkey"></sl-icon>
+  <sl-icon library="sonr" name="snr"></sl-icon>
+  <sl-icon library="sonr" name="btc"></sl-icon>
+  <sl-icon library="sonr" name="sol"></sl-icon>
+  <sl-icon library="sonr" name="usdc"></sl-icon>
+  <sl-icon library="sonr" name="osmo"></sl-icon>
  </div>
 ```
 
-### Boxicons
+### Crypto Icons
 
-This will register the [Boxicons](https://boxicons.com/) library using the jsDelivr CDN. This library has three variations: regular (`bx-*`), solid (`bxs-*`), and logos (`bxl-*`). A mutator function is required to set the SVG's `fill` to `currentColor`.
+A collection of icons for cryptocurrencies which are tradeable on the Sonr network. Provide the
+All Caps ticker symbol for the icon.
 
-Icons in this library are licensed under the [Creative Commons 4.0 License](https://github.com/atisawd/boxicons#license).
-
-```html:preview
-<script type="module">
-  import { registerIconLibrary } from '/dist/utilities/icon-library.js';
-
-  registerIconLibrary('boxicons', {
-    resolver: name => {
-      let folder = 'regular';
-      if (name.substring(0, 4) === 'bxs-') folder = 'solid';
-      if (name.substring(0, 4) === 'bxl-') folder = 'logos';
-      return `https://cdn.jsdelivr.net/npm/boxicons@2.0.5/svg/${folder}/${name}.svg`;
-    },
-    mutator: svg => svg.setAttribute('fill', 'currentColor')
-  });
-</script>
-
-<div style="font-size: 24px;">
-  <sl-icon library="boxicons" name="bx-bot"></sl-icon>
-  <sl-icon library="boxicons" name="bx-cookie"></sl-icon>
-  <sl-icon library="boxicons" name="bx-joystick"></sl-icon>
-  <sl-icon library="boxicons" name="bx-save"></sl-icon>
-  <sl-icon library="boxicons" name="bx-server"></sl-icon>
-  <sl-icon library="boxicons" name="bx-wine"></sl-icon>
-  <br />
-  <sl-icon library="boxicons" name="bxs-bot"></sl-icon>
-  <sl-icon library="boxicons" name="bxs-cookie"></sl-icon>
-  <sl-icon library="boxicons" name="bxs-joystick"></sl-icon>
-  <sl-icon library="boxicons" name="bxs-save"></sl-icon>
-  <sl-icon library="boxicons" name="bxs-server"></sl-icon>
-  <sl-icon library="boxicons" name="bxs-wine"></sl-icon>
-  <br />
-  <sl-icon library="boxicons" name="bxl-apple"></sl-icon>
-  <sl-icon library="boxicons" name="bxl-chrome"></sl-icon>
-  <sl-icon library="boxicons" name="bxl-edge"></sl-icon>
-  <sl-icon library="boxicons" name="bxl-firefox"></sl-icon>
-  <sl-icon library="boxicons" name="bxl-opera"></sl-icon>
-  <sl-icon library="boxicons" name="bxl-microsoft"></sl-icon>
-</div>
-```
-
-### Lucide
-
-This will register the [Lucide](https://lucide.dev/) icon library using the jsDelivr CDN. This project is a community-maintained fork of the popular [Feather](https://feathericons.com/) icon library.
-
-Icons in this library are licensed under the [MIT License](https://github.com/lucide-icons/lucide/blob/master/LICENSE).
+> These are pre-packaged with Nebula and are not available for custom registration.
 
 ```html:preview
 <div style="font-size: 24px;">
-  <sl-icon library="lucide" name="feather"></sl-icon>
-  <sl-icon library="lucide" name="pie-chart"></sl-icon>
-  <sl-icon library="lucide" name="settings"></sl-icon>
-  <sl-icon library="lucide" name="map-pin"></sl-icon>
-  <sl-icon library="lucide" name="printer"></sl-icon>
-  <sl-icon library="lucide" name="shopping-cart"></sl-icon>
+  <sl-icon library="crypto" name="BTC"></sl-icon>
+  <sl-icon library="crypto" name="ETH"></sl-icon>
+  <sl-icon library="crypto" name="LTC"></sl-icon>
+  <sl-icon library="crypto" name="XRP"></sl-icon>
+  <sl-icon library="crypto" name="BCH"></sl-icon>
+  <sl-icon library="crypto" name="BNB"></sl-icon>
+  <sl-icon library="crypto" name="LINK"></sl-icon>
+  <sl-icon library="crypto" name="DOT"></sl-icon>
+  <sl-icon library="crypto" name="SOL"></sl-icon>
+  <sl-icon library="crypto" name="USDT"></sl-icon>
+  <sl-icon library="crypto" name="USDC"></sl-icon>
 </div>
-
-<script type="module">
-  import { registerIconLibrary } from '/dist/utilities/icon-library.js';
-
-  registerIconLibrary('lucide', {
-    resolver: name => `https://cdn.jsdelivr.net/npm/lucide-static@0.16.29/icons/${name}.svg`
-  });
-</script>
 ```
 
 ### Font Awesome
@@ -352,331 +285,6 @@ Icons in this library are licensed under the [Font Awesome Free License](https:/
   <sl-icon library="fa" name="fab-firefox"></sl-icon>
   <sl-icon library="fa" name="fab-opera"></sl-icon>
   <sl-icon library="fa" name="fab-microsoft"></sl-icon>
-</div>
-```
-
-### Heroicons
-
-This will register the [Heroicons](https://heroicons.com/) library using the jsDelivr CDN.
-
-Icons in this library are licensed under the [MIT License](https://github.com/tailwindlabs/heroicons/blob/master/LICENSE).
-
-```html:preview
-<script type="module">
-  import { registerIconLibrary } from '/dist/utilities/icon-library.js';
-
-  registerIconLibrary('heroicons', {
-    resolver: name => `https://cdn.jsdelivr.net/npm/heroicons@2.0.1/24/outline/${name}.svg`
-  });
-</script>
-
-<div style="font-size: 24px;">
-  <sl-icon library="heroicons" name="chat-bubble-left"></sl-icon>
-  <sl-icon library="heroicons" name="cloud"></sl-icon>
-  <sl-icon library="heroicons" name="cog"></sl-icon>
-  <sl-icon library="heroicons" name="document-text"></sl-icon>
-  <sl-icon library="heroicons" name="gift"></sl-icon>
-  <sl-icon library="heroicons" name="speaker-wave"></sl-icon>
-</div>
-```
-
-### Iconoir
-
-This will register the [Iconoir](https://iconoir.com/) library using the jsDelivr CDN.
-
-Icons in this library are licensed under the [MIT License](https://github.com/lucaburgio/iconoir/blob/master/LICENSE).
-
-```html:preview
-<script type="module">
-  import { registerIconLibrary } from '/dist/utilities/icon-library.js';
-
-  registerIconLibrary('iconoir', {
-    resolver: name => `https://cdn.jsdelivr.net/gh/lucaburgio/iconoir@latest/icons/${name}.svg`
-  });
-</script>
-
-<div style="font-size: 24px;">
-  <sl-icon library="iconoir" name="check-circled-outline"></sl-icon>
-  <sl-icon library="iconoir" name="drawer"></sl-icon>
-  <sl-icon library="iconoir" name="keyframes"></sl-icon>
-  <sl-icon library="iconoir" name="headset-help"></sl-icon>
-  <sl-icon library="iconoir" name="color-picker"></sl-icon>
-  <sl-icon library="iconoir" name="wifi"></sl-icon>
-</div>
-```
-
-### Ionicons
-
-This will register the [Ionicons](https://ionicons.com/) library using the jsDelivr CDN. This library has three variations: outline (default), filled (`*-filled`), and sharp (`*-sharp`). A mutator function is required to polyfill a handful of styles we're not including.
-
-Icons in this library are licensed under the [MIT License](https://github.com/ionic-team/ionicons/blob/master/LICENSE).
-
-```html:preview
-<script type="module">
-  import { registerIconLibrary } from '/dist/utilities/icon-library.js';
-
-  registerIconLibrary('ionicons', {
-    resolver: name => `https://cdn.jsdelivr.net/npm/ionicons@5.1.2/dist/ionicons/svg/${name}.svg`,
-    mutator: svg => {
-      svg.setAttribute('fill', 'currentColor');
-      svg.setAttribute('stroke', 'currentColor');
-      [...svg.querySelectorAll('.ionicon-fill-none')].map(el => el.setAttribute('fill', 'none'));
-      [...svg.querySelectorAll('.ionicon-stroke-width')].map(el => el.setAttribute('stroke-width', '32px'));
-    }
-  });
-</script>
-
-<div style="font-size: 24px;">
-  <sl-icon library="ionicons" name="alarm"></sl-icon>
-  <sl-icon library="ionicons" name="american-football"></sl-icon>
-  <sl-icon library="ionicons" name="bug"></sl-icon>
-  <sl-icon library="ionicons" name="chatbubble"></sl-icon>
-  <sl-icon library="ionicons" name="settings"></sl-icon>
-  <sl-icon library="ionicons" name="warning"></sl-icon>
-  <br />
-  <sl-icon library="ionicons" name="alarm-outline"></sl-icon>
-  <sl-icon library="ionicons" name="american-football-outline"></sl-icon>
-  <sl-icon library="ionicons" name="bug-outline"></sl-icon>
-  <sl-icon library="ionicons" name="chatbubble-outline"></sl-icon>
-  <sl-icon library="ionicons" name="settings-outline"></sl-icon>
-  <sl-icon library="ionicons" name="warning-outline"></sl-icon>
-  <br />
-  <sl-icon library="ionicons" name="alarm-sharp"></sl-icon>
-  <sl-icon library="ionicons" name="american-football-sharp"></sl-icon>
-  <sl-icon library="ionicons" name="bug-sharp"></sl-icon>
-  <sl-icon library="ionicons" name="chatbubble-sharp"></sl-icon>
-  <sl-icon library="ionicons" name="settings-sharp"></sl-icon>
-  <sl-icon library="ionicons" name="warning-sharp"></sl-icon>
-</div>
-```
-
-### Jam Icons
-
-This will register the [Jam Icons](https://jam-icons.com/) library using the jsDelivr CDN. This library has two variations: regular (default) and filled (`*-f`). A mutator function is required to set the SVG's `fill` to `currentColor`.
-
-Icons in this library are licensed under the [MIT License](https://github.com/michaelampr/jam/blob/master/LICENSE).
-
-```html:preview
-<script type="module">
-  import { registerIconLibrary } from '/dist/utilities/icon-library.js';
-
-  registerIconLibrary('jam', {
-    resolver: name => `https://cdn.jsdelivr.net/npm/jam-icons@2.0.0/svg/${name}.svg`,
-    mutator: svg => svg.setAttribute('fill', 'currentColor')
-  });
-</script>
-
-<div style="font-size: 24px;">
-  <sl-icon library="jam" name="calendar"></sl-icon>
-  <sl-icon library="jam" name="camera"></sl-icon>
-  <sl-icon library="jam" name="filter"></sl-icon>
-  <sl-icon library="jam" name="leaf"></sl-icon>
-  <sl-icon library="jam" name="picture"></sl-icon>
-  <sl-icon library="jam" name="set-square"></sl-icon>
-  <br />
-  <sl-icon library="jam" name="calendar-f"></sl-icon>
-  <sl-icon library="jam" name="camera-f"></sl-icon>
-  <sl-icon library="jam" name="filter-f"></sl-icon>
-  <sl-icon library="jam" name="leaf-f"></sl-icon>
-  <sl-icon library="jam" name="picture-f"></sl-icon>
-  <sl-icon library="jam" name="set-square-f"></sl-icon>
-</div>
-```
-
-### Material Icons
-
-This will register the [Material Icons](https://material.io/resources/icons/?style=baseline) library using the jsDelivr CDN. This library has three variations: outline (default), round (`*_round`), and sharp (`*_sharp`). A mutator function is required to set the SVG's `fill` to `currentColor`.
-
-Icons in this library are licensed under the [Apache 2.0 License](https://github.com/google/material-design-icons/blob/master/LICENSE).
-
-```html:preview
-<script type="module">
-  import { registerIconLibrary } from '/dist/utilities/icon-library.js';
-
-  registerIconLibrary('material', {
-    resolver: name => {
-      const match = name.match(/^(.*?)(_(round|sharp))?$/);
-      return `https://cdn.jsdelivr.net/npm/@material-icons/svg@1.0.5/svg/${match[1]}/${match[3] || 'outline'}.svg`;
-    },
-    mutator: svg => svg.setAttribute('fill', 'currentColor')
-  });
-</script>
-
-<div style="font-size: 24px;">
-  <sl-icon library="material" name="notifications"></sl-icon>
-  <sl-icon library="material" name="email"></sl-icon>
-  <sl-icon library="material" name="delete"></sl-icon>
-  <sl-icon library="material" name="volume_up"></sl-icon>
-  <sl-icon library="material" name="settings"></sl-icon>
-  <sl-icon library="material" name="shopping_basket"></sl-icon>
-  <br />
-  <sl-icon library="material" name="notifications_round"></sl-icon>
-  <sl-icon library="material" name="email_round"></sl-icon>
-  <sl-icon library="material" name="delete_round"></sl-icon>
-  <sl-icon library="material" name="volume_up_round"></sl-icon>
-  <sl-icon library="material" name="settings_round"></sl-icon>
-  <sl-icon library="material" name="shopping_basket_round"></sl-icon>
-  <br />
-  <sl-icon library="material" name="notifications_sharp"></sl-icon>
-  <sl-icon library="material" name="email_sharp"></sl-icon>
-  <sl-icon library="material" name="delete_sharp"></sl-icon>
-  <sl-icon library="material" name="volume_up_sharp"></sl-icon>
-  <sl-icon library="material" name="settings_sharp"></sl-icon>
-  <sl-icon library="material" name="shopping_basket_sharp"></sl-icon>
-</div>
-```
-
-### Remix Icon
-
-This will register the [Remix Icon](https://remixicon.com/) library using the jsDelivr CDN. This library groups icons by categories, so the name must include the category and icon separated by a slash, as well as the `-line` or `-fill` suffix as needed. A mutator function is required to set the SVG's `fill` to `currentColor`.
-
-Icons in this library are licensed under the [Apache 2.0 License](https://github.com/Remix-Design/RemixIcon/blob/master/License).
-
-```html:preview
-<script type="module">
-  import { registerIconLibrary } from '/dist/utilities/icon-library.js';
-
-  registerIconLibrary('remixicon', {
-    resolver: name => {
-      const match = name.match(/^(.*?)\/(.*?)?$/);
-      match[1] = match[1].charAt(0).toUpperCase() + match[1].slice(1);
-      return `https://cdn.jsdelivr.net/npm/remixicon@2.5.0/icons/${match[1]}/${match[2]}.svg`;
-    },
-    mutator: svg => svg.setAttribute('fill', 'currentColor')
-  });
-</script>
-
-<div style="font-size: 24px;">
-  <sl-icon library="remixicon" name="business/cloud-line"></sl-icon>
-  <sl-icon library="remixicon" name="design/brush-line"></sl-icon>
-  <sl-icon library="remixicon" name="business/pie-chart-line"></sl-icon>
-  <sl-icon library="remixicon" name="development/bug-line"></sl-icon>
-  <sl-icon library="remixicon" name="media/image-line"></sl-icon>
-  <sl-icon library="remixicon" name="system/alert-line"></sl-icon>
-  <br />
-  <sl-icon library="remixicon" name="business/cloud-fill"></sl-icon>
-  <sl-icon library="remixicon" name="design/brush-fill"></sl-icon>
-  <sl-icon library="remixicon" name="business/pie-chart-fill"></sl-icon>
-  <sl-icon library="remixicon" name="development/bug-fill"></sl-icon>
-  <sl-icon library="remixicon" name="media/image-fill"></sl-icon>
-  <sl-icon library="remixicon" name="system/alert-fill"></sl-icon>
-</div>
-```
-
-### Tabler Icons
-
-This will register the [Tabler Icons](https://tabler-icons.io/) library using the jsDelivr CDN. This library features over 1,950 open source icons.
-
-Icons in this library are licensed under the [MIT License](https://github.com/tabler/tabler-icons/blob/master/LICENSE).
-
-```html:preview
-<script type="module">
-  import { registerIconLibrary } from '/dist/utilities/icon-library.js';
-
-  registerIconLibrary('tabler', {
-    resolver: name => `https://cdn.jsdelivr.net/npm/@tabler/icons@1.68.0/icons/${name}.svg`
-  });
-</script>
-
-<div style="font-size: 24px;">
-  <sl-icon library="tabler" name="alert-triangle"></sl-icon>
-  <sl-icon library="tabler" name="arrow-back"></sl-icon>
-  <sl-icon library="tabler" name="at"></sl-icon>
-  <sl-icon library="tabler" name="ball-baseball"></sl-icon>
-  <sl-icon library="tabler" name="cake"></sl-icon>
-  <sl-icon library="tabler" name="files"></sl-icon>
-  <br />
-  <sl-icon library="tabler" name="keyboard"></sl-icon>
-  <sl-icon library="tabler" name="moon"></sl-icon>
-  <sl-icon library="tabler" name="pig"></sl-icon>
-  <sl-icon library="tabler" name="printer"></sl-icon>
-  <sl-icon library="tabler" name="ship"></sl-icon>
-  <sl-icon library="tabler" name="toilet-paper"></sl-icon>
-</div>
-```
-
-### Unicons
-
-This will register the [Unicons](https://iconscout.com/unicons) library using the jsDelivr CDN. This library has two variations: line (default) and solid (`*-s`). A mutator function is required to set the SVG's `fill` to `currentColor`.
-
-Icons in this library are licensed under the [Apache 2.0 License](https://github.com/Iconscout/unicons/blob/master/LICENSE). Some of the icons that appear on the Unicons website, particularly many of the solid variations, require a license and are therefore not available in the CDN.
-
-```html:preview
-<script type="module">
-  import { registerIconLibrary } from '/dist/utilities/icon-library.js';
-
-  registerIconLibrary('unicons', {
-    resolver: name => {
-      const match = name.match(/^(.*?)(-s)?$/);
-      return `https://cdn.jsdelivr.net/npm/@iconscout/unicons@3.0.3/svg/${match[2] === '-s' ? 'solid' : 'line'}/${
-        match[1]
-      }.svg`;
-    },
-    mutator: svg => svg.setAttribute('fill', 'currentColor')
-  });
-</script>
-
-<div style="font-size: 24px;">
-  <sl-icon library="unicons" name="clock"></sl-icon>
-  <sl-icon library="unicons" name="graph-bar"></sl-icon>
-  <sl-icon library="unicons" name="padlock"></sl-icon>
-  <sl-icon library="unicons" name="polygon"></sl-icon>
-  <sl-icon library="unicons" name="rocket"></sl-icon>
-  <sl-icon library="unicons" name="star"></sl-icon>
-  <br />
-  <sl-icon library="unicons" name="clock-s"></sl-icon>
-  <sl-icon library="unicons" name="graph-bar-s"></sl-icon>
-  <sl-icon library="unicons" name="padlock-s"></sl-icon>
-  <sl-icon library="unicons" name="polygon-s"></sl-icon>
-  <sl-icon library="unicons" name="rocket-s"></sl-icon>
-  <sl-icon library="unicons" name="star-s"></sl-icon>
-</div>
-```
-
-### Customizing the Default Library
-
-The default icon library contains over 1,300 icons courtesy of the [Bootstrap Icons](https://icons.getbootstrap.com/) project. These are the icons that display when you use `<sl-icon>` without the `library` attribute. If you prefer to have these icons resolve elsewhere or to a different icon library, register an icon library using the `default` name and a custom resolver.
-
-This example will load the same set of icons from the jsDelivr CDN instead of your local assets folder.
-
-```html
-<script type="module">
-  import { registerIconLibrary } from '/dist/utilities/icon-library.js';
-
-  registerIconLibrary('default', {
-    resolver: name => `https://cdn.jsdelivr.net/npm/bootstrap-icons@1.0.0/icons/${name}.svg`
-  });
-</script>
-```
-
-#### Customize the default library to use SVG sprites
-
-To improve performance you can use a SVG sprites to avoid multiple trips for each SVG. The browser will load the sprite sheet once and then you reference the particular SVG within the sprite sheet using hash selector.
-
-As always, make sure to benchmark these changes. When using HTTP/2, it may in fact be more bandwidth-friendly to use multiple small requests instead of 1 large sprite sheet.
-
-:::danger
-When using sprite sheets, the `sl-load` and `sl-error` events will not fire.
-:::
-
-:::danger
-For security reasons, browsers may apply the same-origin policy on `<use>` elements located in the `<sl-icon>` shadow DOM and may refuse to load a cross-origin URL. There is currently no defined way to set a cross-origin policy for `<use>` elements. For this reason, sprite sheets should only be used if you're self-hosting them.
-:::
-
-```html:preview
-<script type="module">
-  import { registerIconLibrary } from '/dist/utilities/icon-library.js';
-
-  registerIconLibrary('sprite', {
-    resolver: name => `/assets/images/sprite.svg#${name}`,
-    mutator: svg => svg.setAttribute('fill', 'currentColor'),
-    spriteSheet: true
-  });
-</script>
-
-<div style="font-size: 24px;">
-  <sl-icon library="sprite" name="clock"></sl-icon>
-  <sl-icon library="sprite" name="speedometer"></sl-icon>
 </div>
 ```
 
@@ -882,3 +490,7 @@ If you want to change the icons Nebula uses internally, you can register an icon
     }
   }
 </style>
+
+```
+
+```
