@@ -1,7 +1,7 @@
 import type { DefineComponent } from "vue";
 
-import type { SlAnimatedImage } from "../../components/animated-image/animated-image.component.js";
 import type { SlAlert } from "../../components/alert/alert.component.js";
+import type { SlAnimatedImage } from "../../components/animated-image/animated-image.component.js";
 import type { SlAnimation } from "../../components/animation/animation.component.js";
 import type { SlAvatar } from "../../components/avatar/avatar.component.js";
 import type { SlBadge } from "../../components/badge/badge.component.js";
@@ -59,25 +59,6 @@ import type { SlTree } from "../../components/tree/tree.component.js";
 import type { SlTreeItem } from "../../components/tree-item/tree-item.component.js";
 import type { SlVisuallyHidden } from "../../components/visually-hidden/visually-hidden.component.js";
 
-type SlAnimatedImageProps = {
-  /** The path to the image to load. */
-  src?: SlAnimatedImage["src"];
-  /** A description of the image used by assistive devices. */
-  alt?: SlAnimatedImage["alt"];
-  /** Plays the animation. When this attribute is remove, the animation will pause. */
-  play?: SlAnimatedImage["play"];
-  /**  */
-  animatedImage?: SlAnimatedImage["animatedImage"];
-  /**  */
-  frozenFrame?: SlAnimatedImage["frozenFrame"];
-  /**  */
-  isLoaded?: SlAnimatedImage["isLoaded"];
-  /** Emitted when the image loads successfully. */
-  onSlLoad?: (e: CustomEvent<never>) => void;
-  /** Emitted when the image fails to load. */
-  onSlError?: (e: CustomEvent<never>) => void;
-};
-
 type SlAlertProps = {
   /** Indicates whether or not the alert is open. You can toggle this attribute to show and hide the alert, or you can
 use the `show()` and `hide()` methods and this attribute will reflect the alert's open state. */
@@ -100,6 +81,25 @@ the alert will not close on its own. */
   onSlHide?: (e: CustomEvent<never>) => void;
   /** Emitted after the alert closes and all animations are complete. */
   onSlAfterHide?: (e: CustomEvent<never>) => void;
+};
+
+type SlAnimatedImageProps = {
+  /** The path to the image to load. */
+  src?: SlAnimatedImage["src"];
+  /** A description of the image used by assistive devices. */
+  alt?: SlAnimatedImage["alt"];
+  /** Plays the animation. When this attribute is remove, the animation will pause. */
+  play?: SlAnimatedImage["play"];
+  /**  */
+  animatedImage?: SlAnimatedImage["animatedImage"];
+  /**  */
+  frozenFrame?: SlAnimatedImage["frozenFrame"];
+  /**  */
+  isLoaded?: SlAnimatedImage["isLoaded"];
+  /** Emitted when the image loads successfully. */
+  onSlLoad?: (e: CustomEvent<never>) => void;
+  /** Emitted when the image fails to load. */
+  onSlError?: (e: CustomEvent<never>) => void;
 };
 
 type SlAnimationProps = {
@@ -1561,28 +1561,6 @@ type SlVisuallyHiddenProps = {};
 
 export type CustomElements = {
   /**
-   * A component for displaying animated GIFs and WEBPs that play and pause on interaction.
-   * ---
-   *
-   *
-   * ### **Events:**
-   *  - **sl-load** - Emitted when the image loads successfully.
-   * - **sl-error** - Emitted when the image fails to load.
-   *
-   * ### **Slots:**
-   *  - **play-icon** - Optional play icon to use instead of the default. Works best with `<sl-icon>`.
-   * - **pause-icon** - Optional pause icon to use instead of the default. Works best with `<sl-icon>`.
-   *
-   * ### **CSS Properties:**
-   *  - **--control-box-size** - The size of the icon box. _(default: undefined)_
-   * - **--icon-size** - The size of the play/pause icons. _(default: undefined)_
-   *
-   * ### **CSS Parts:**
-   *  - **control-box** - The container that surrounds the pause/play icons and provides their background.
-   */
-  "sl-animated-image": DefineComponent<SlAnimatedImageProps>;
-
-  /**
    * Alerts are used to display important messages inline or as toast notifications.
    * ---
    *
@@ -1612,6 +1590,28 @@ export type CustomElements = {
    * - **close-button__base** - The close button's exported `base` part.
    */
   "sl-alert": DefineComponent<SlAlertProps>;
+
+  /**
+   * A component for displaying animated GIFs and WEBPs that play and pause on interaction.
+   * ---
+   *
+   *
+   * ### **Events:**
+   *  - **sl-load** - Emitted when the image loads successfully.
+   * - **sl-error** - Emitted when the image fails to load.
+   *
+   * ### **Slots:**
+   *  - **play-icon** - Optional play icon to use instead of the default. Works best with `<sl-icon>`.
+   * - **pause-icon** - Optional pause icon to use instead of the default. Works best with `<sl-icon>`.
+   *
+   * ### **CSS Properties:**
+   *  - **--control-box-size** - The size of the icon box. _(default: undefined)_
+   * - **--icon-size** - The size of the play/pause icons. _(default: undefined)_
+   *
+   * ### **CSS Parts:**
+   *  - **control-box** - The container that surrounds the pause/play icons and provides their background.
+   */
+  "sl-animated-image": DefineComponent<SlAnimatedImageProps>;
 
   /**
    * Animate elements declaratively with nearly 100 baked-in presets, or roll your own with custom keyframes. Powered by the [Web Animations API](https://developer.mozilla.org/en-US/docs/Web/API/Web_Animations_API).

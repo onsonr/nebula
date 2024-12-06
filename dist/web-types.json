@@ -7,77 +7,6 @@
     "html": {
       "elements": [
         {
-          "name": "sl-animated-image",
-          "description": "A component for displaying animated GIFs and WEBPs that play and pause on interaction.\n---\n\n\n### **Events:**\n - **sl-load** - Emitted when the image loads successfully.\n- **sl-error** - Emitted when the image fails to load.\n\n### **Slots:**\n - **play-icon** - Optional play icon to use instead of the default. Works best with `<sl-icon>`.\n- **pause-icon** - Optional pause icon to use instead of the default. Works best with `<sl-icon>`.\n\n### **CSS Properties:**\n - **--control-box-size** - The size of the icon box. _(default: undefined)_\n- **--icon-size** - The size of the play/pause icons. _(default: undefined)_\n\n### **CSS Parts:**\n - **control-box** - The container that surrounds the pause/play icons and provides their background.",
-          "doc-url": "",
-          "attributes": [
-            {
-              "name": "src",
-              "description": "The path to the image to load.",
-              "value": { "type": "string" }
-            },
-            {
-              "name": "alt",
-              "description": "A description of the image used by assistive devices.",
-              "value": { "type": "string" }
-            },
-            {
-              "name": "play",
-              "description": "Plays the animation. When this attribute is remove, the animation will pause.",
-              "value": { "type": "boolean" }
-            }
-          ],
-          "slots": [
-            {
-              "name": "play-icon",
-              "description": "Optional play icon to use instead of the default. Works best with `<sl-icon>`."
-            },
-            {
-              "name": "pause-icon",
-              "description": "Optional pause icon to use instead of the default. Works best with `<sl-icon>`."
-            }
-          ],
-          "events": [
-            {
-              "name": "sl-load",
-              "description": "Emitted when the image loads successfully."
-            },
-            {
-              "name": "sl-error",
-              "description": "Emitted when the image fails to load."
-            }
-          ],
-          "js": {
-            "properties": [
-              {
-                "name": "src",
-                "description": "The path to the image to load.",
-                "value": { "type": "string" }
-              },
-              {
-                "name": "alt",
-                "description": "A description of the image used by assistive devices.",
-                "value": { "type": "string" }
-              },
-              {
-                "name": "play",
-                "description": "Plays the animation. When this attribute is remove, the animation will pause.",
-                "value": { "type": "boolean" }
-              }
-            ],
-            "events": [
-              {
-                "name": "sl-load",
-                "description": "Emitted when the image loads successfully."
-              },
-              {
-                "name": "sl-error",
-                "description": "Emitted when the image fails to load."
-              }
-            ]
-          }
-        },
-        {
           "name": "sl-alert",
           "description": "Alerts are used to display important messages inline or as toast notifications.\n---\n\n\n### **Events:**\n - **sl-show** - Emitted when the alert opens.\n- **sl-after-show** - Emitted after the alert opens and all animations are complete.\n- **sl-hide** - Emitted when the alert closes.\n- **sl-after-hide** - Emitted after the alert closes and all animations are complete.\n\n### **Methods:**\n - **show()** - Shows the alert.\n- **hide()** - Hides the alert\n- **toast()** - Displays the alert as a toast notification. This will move the alert out of its position in the DOM and, when\ndismissed, it will be removed from the DOM completely. By storing a reference to the alert, you can reuse it by\ncalling this method again. The returned promise will resolve after the alert is hidden.\n\n### **Slots:**\n - _default_ - The alert's main content.\n- **icon** - An icon to show in the alert. Works best with `<sl-icon>`.\n\n### **CSS Parts:**\n - **base** - The component's base wrapper.\n- **icon** - The container that wraps the optional icon.\n- **message** - The container that wraps the alert's main content.\n- **close-button** - The close button, an `<sl-icon-button>`.\n- **close-button__base** - The close button's exported `base` part.",
           "doc-url": "",
@@ -172,6 +101,77 @@
               {
                 "name": "sl-after-hide",
                 "description": "Emitted after the alert closes and all animations are complete."
+              }
+            ]
+          }
+        },
+        {
+          "name": "sl-animated-image",
+          "description": "A component for displaying animated GIFs and WEBPs that play and pause on interaction.\n---\n\n\n### **Events:**\n - **sl-load** - Emitted when the image loads successfully.\n- **sl-error** - Emitted when the image fails to load.\n\n### **Slots:**\n - **play-icon** - Optional play icon to use instead of the default. Works best with `<sl-icon>`.\n- **pause-icon** - Optional pause icon to use instead of the default. Works best with `<sl-icon>`.\n\n### **CSS Properties:**\n - **--control-box-size** - The size of the icon box. _(default: undefined)_\n- **--icon-size** - The size of the play/pause icons. _(default: undefined)_\n\n### **CSS Parts:**\n - **control-box** - The container that surrounds the pause/play icons and provides their background.",
+          "doc-url": "",
+          "attributes": [
+            {
+              "name": "src",
+              "description": "The path to the image to load.",
+              "value": { "type": "string" }
+            },
+            {
+              "name": "alt",
+              "description": "A description of the image used by assistive devices.",
+              "value": { "type": "string" }
+            },
+            {
+              "name": "play",
+              "description": "Plays the animation. When this attribute is remove, the animation will pause.",
+              "value": { "type": "boolean" }
+            }
+          ],
+          "slots": [
+            {
+              "name": "play-icon",
+              "description": "Optional play icon to use instead of the default. Works best with `<sl-icon>`."
+            },
+            {
+              "name": "pause-icon",
+              "description": "Optional pause icon to use instead of the default. Works best with `<sl-icon>`."
+            }
+          ],
+          "events": [
+            {
+              "name": "sl-load",
+              "description": "Emitted when the image loads successfully."
+            },
+            {
+              "name": "sl-error",
+              "description": "Emitted when the image fails to load."
+            }
+          ],
+          "js": {
+            "properties": [
+              {
+                "name": "src",
+                "description": "The path to the image to load.",
+                "value": { "type": "string" }
+              },
+              {
+                "name": "alt",
+                "description": "A description of the image used by assistive devices.",
+                "value": { "type": "string" }
+              },
+              {
+                "name": "play",
+                "description": "Plays the animation. When this attribute is remove, the animation will pause.",
+                "value": { "type": "boolean" }
+              }
+            ],
+            "events": [
+              {
+                "name": "sl-load",
+                "description": "Emitted when the image loads successfully."
+              },
+              {
+                "name": "sl-error",
+                "description": "Emitted when the image fails to load."
               }
             ]
           }
