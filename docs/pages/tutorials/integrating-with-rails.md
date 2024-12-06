@@ -1,15 +1,15 @@
 ---
 meta:
   title: Integrating with Rails
-  description: This page explains how to integrate Shoelace with a Rails app.
+  description: This page explains how to integrate Nebula with a Rails app.
 ---
 
 # Integrating with Rails
 
-This page explains how to integrate Shoelace with a Rails app.
+This page explains how to integrate Nebula with a Rails app.
 
 :::tip
-This is a community-maintained document. Please [ask the community](/resources/community) if you have questions about this integration. You can also [suggest improvements](https://github.com/shoelace-style/shoelace/blob/next/docs/tutorials/integrating-with-rails.md) to make it better.
+This is a community-maintained document. Please [ask the community](/resources/community) if you have questions about this integration. You can also [suggest improvements](https://github.com/onsonr/nebula/blob/next/docs/tutorials/integrating-with-rails.md) to make it better.
 :::
 
 ## Requirements
@@ -22,30 +22,30 @@ This integration has been tested with the following:
 
 ## Instructions
 
-To get started using Shoelace with Rails, the following packages must be installed.
+To get started using Nebula with Rails, the following packages must be installed.
 
 ```bash
-yarn add @shoelace-style/shoelace copy-webpack-plugin
+yarn add @onsonr/nebula copy-webpack-plugin
 ```
 
 ### Importing the Default Theme
 
-The next step is to import Shoelace's default theme (stylesheet) in `app/javascript/stylesheets/application.scss`.
+The next step is to import Nebula's default theme (stylesheet) in `app/javascript/stylesheets/application.scss`.
 
 ```css
-@import '@shoelace-style/shoelace/dist/themes/light';
-@import '@shoelace-style/shoelace/dist/themes/dark'; // Optional dark theme
+@import '@onsonr/nebula/dist/themes/light';
+@import '@onsonr/nebula/dist/themes/dark'; // Optional dark theme
 ```
 
 Fore more details about themes, please refer to [Theme Basics](/getting-started/themes#theme-basics).
 
 ### Importing Required Scripts
 
-After importing the theme, you'll need to import the JavaScript files for Shoelace. Add the following code to `app/javascript/packs/application.js`.
+After importing the theme, you'll need to import the JavaScript files for Nebula. Add the following code to `app/javascript/packs/application.js`.
 
 ```js
 import '../stylesheets/application.scss'
-import { setBasePath, SlAlert, SlAnimation, SlButton, ... } from '@shoelace-style/shoelace'
+import { setBasePath, SlAlert, SlAnimation, SlButton, ... } from '@onsonr/nebula'
 
 // ...
 
@@ -58,12 +58,12 @@ setBasePath(rootUrl + '/packs/js/')
 
 ### webpack Config
 
-Next we need to add Shoelace's assets to the final build output. To do this, modify `config/webpack/environment.js` to look like this.
+Next we need to add Nebula's assets to the final build output. To do this, modify `config/webpack/environment.js` to look like this.
 
 ```js
 const { environment } = require('@rails/webpacker');
 
-// Shoelace config
+// Nebula config
 const path = require('path');
 const CopyPlugin = require('copy-webpack-plugin');
 
@@ -73,7 +73,7 @@ environment.plugins.append(
   new CopyPlugin({
     patterns: [
       {
-        from: path.resolve(__dirname, '../../node_modules/@shoelace-style/shoelace/dist/assets'),
+        from: path.resolve(__dirname, '../../node_modules/@onsonr/nebula/dist/assets'),
         to: path.resolve(__dirname, '../../public/packs/js/assets')
       }
     ]
@@ -102,9 +102,9 @@ The final step is to add the corresponding `pack_tags` to the page. You should h
 </html>
 ```
 
-Now you can start using Shoelace components with Rails!
+Now you can start using Nebula components with Rails!
 
 ## Additional Resources
 
 - There is a third-party [example repo](https://github.com/ParamagicDev/rails-shoelace-example), courtesy of [ParamagicDev](https://github.com/ParamagicDev) available to help you get started.
-- If you would like to avoid repeating this process, check out the associated [Railsbyte for Shoelace](https://railsbytes.com/templates/X8BsEb).
+- If you would like to avoid repeating this process, check out the associated [Railsbyte for Nebula](https://railsbytes.com/templates/X8BsEb).

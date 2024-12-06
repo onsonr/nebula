@@ -9,7 +9,7 @@ QR codes are useful for providing small pieces of information to users who can q
 
 ```html:preview
 <div class="qr-overview">
-  <sl-qr-code value="https://shoelace.style/" label="Scan this code to visit Shoelace on the web!"></sl-qr-code>
+  <sl-qr-code value="https://shoelace.style/" label="Scan this code to visit Nebula on the web!"></sl-qr-code>
   <br />
 
   <sl-input maxlength="255" clearable label="Value"></sl-input>
@@ -39,8 +39,8 @@ QR codes are useful for providing small pieces of information to users who can q
 
 ```jsx:react
 import { useState } from 'react';
-import SlQrCode from '@shoelace-style/shoelace/dist/react/qr-code';
-import SlInput from '@shoelace-style/shoelace/dist/react/input';
+import SlQrCode from '@onsonr/nebula/dist/react/qr-code';
+import SlInput from '@onsonr/nebula/dist/react/input';
 
 const css = `
   .qr-overview {
@@ -58,7 +58,7 @@ const App = () => {
   return (
     <>
       <div className="qr-overview">
-        <SlQrCode value={value} label="Scan this code to visit Shoelace on the web!" />
+        <SlQrCode value={value} label="Scan this code to visit Nebula on the web!" />
         <br />
 
         <SlInput maxlength="255" clearable onInput={event => setValue(event.target.value)} />
@@ -81,7 +81,7 @@ Use the `fill` and `background` attributes to modify the QR code's colors. You s
 ```
 
 ```jsx:react
-import SlQrCode from '@shoelace-style/shoelace/dist/react/qr-code';
+import SlQrCode from '@onsonr/nebula/dist/react/qr-code';
 
 const App = () => <SlQrCode value="https://shoelace.style/" fill="deeppink" background="white" />;
 ```
@@ -95,7 +95,7 @@ Use the `size` attribute to change the size of the QR code.
 ```
 
 ```jsx:react
-import SlQrCode from '@shoelace-style/shoelace/dist/react/qr-code';
+import SlQrCode from '@onsonr/nebula/dist/react/qr-code';
 
 const App = () => <SlQrCode value="https://shoelace.style/" size="64" />;
 ```
@@ -109,7 +109,7 @@ Create a rounded effect with the `radius` attribute.
 ```
 
 ```jsx:react
-import SlQrCode from '@shoelace-style/shoelace/dist/react/qr-code';
+import SlQrCode from '@onsonr/nebula/dist/react/qr-code';
 
 const App = () => <SlQrCode value="https://shoelace.style/" radius="0.5" />;
 ```
@@ -136,7 +136,7 @@ QR codes can be rendered with various levels of [error correction](https://www.q
 ```
 
 ```jsx:react
-import SlQrCode from '@shoelace-style/shoelace/dist/react/qr-code';
+import SlQrCode from '@onsonr/nebula/dist/react/qr-code';
 
 const css = `
   .qr-error-correction {

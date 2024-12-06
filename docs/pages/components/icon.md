@@ -5,10 +5,10 @@ meta:
 layout: component
 ---
 
-Shoelace comes bundled with over 1,500 icons courtesy of the [Bootstrap Icons](https://icons.getbootstrap.com/) project. These icons are part of the `default` icon library. If you prefer, you can register [custom icon libraries](#icon-libraries) as well.
+Nebula comes bundled with over 1,500 icons courtesy of the [Bootstrap Icons](https://icons.getbootstrap.com/) project. These icons are part of the `default` icon library. If you prefer, you can register [custom icon libraries](#icon-libraries) as well.
 
 :::tip
-Depending on how you're loading Shoelace, you may need to copy icon assets and/or [set the base path](/getting-started/installation/#setting-the-base-path) so Shoelace knows where to load them from. Otherwise, icons may not appear and you'll see 404 Not Found errors in the dev console.
+Depending on how you're loading Nebula, you may need to copy icon assets and/or [set the base path](/getting-started/installation/#setting-the-base-path) so Nebula knows where to load them from. Otherwise, icons may not appear and you'll see 404 Not Found errors in the dev console.
 :::
 
 ## Default Icons
@@ -70,7 +70,7 @@ Icons inherit their color from the current text color. Thus, you can set the `co
 {% raw %}
 
 ```jsx:react
-import SlIcon from '@shoelace-style/shoelace/dist/react/icon';
+import SlIcon from '@onsonr/nebula/dist/react/icon';
 
 const App = () => (
   <>
@@ -132,7 +132,7 @@ Icons are sized relative to the current font size. To change their size, set the
 {% raw %}
 
 ```jsx:react
-import SlIcon from '@shoelace-style/shoelace/dist/react/icon';
+import SlIcon from '@onsonr/nebula/dist/react/icon';
 
 const App = () => (
   <div style={{ fontSize: '32px' }}>
@@ -167,7 +167,7 @@ For non-decorative icons, use the `label` attribute to announce it to assistive 
 ```
 
 ```jsx:react
-import SlIcon from '@shoelace-style/shoelace/dist/react/icon';
+import SlIcon from '@onsonr/nebula/dist/react/icon';
 
 const App = () => <SlIcon name="star-fill" label="Add to favorites" />;
 ```
@@ -183,7 +183,7 @@ Custom icons can be loaded individually with the `src` attribute. Only SVGs on a
 {% raw %}
 
 ```jsx:react
-import SlIcon from '@shoelace-style/shoelace/dist/react/icon';
+import SlIcon from '@onsonr/nebula/dist/react/icon';
 
 const App = () => <SlIcon src="https://shoelace.style/assets/images/shoe.svg" style={{ fontSize: '8rem' }}></SlIcon>;
 ```
@@ -194,7 +194,7 @@ const App = () => <SlIcon src="https://shoelace.style/assets/images/shoe.svg" st
 
 You can register additional icons to use with the `<sl-icon>` component through icon libraries. Icon files can exist locally or on a CORS-enabled endpoint (e.g. a CDN). There is no limit to how many icon libraries you can register and there is no cost associated with registering them, as individual icons are only requested when they're used.
 
-Shoelace ships with two built-in icon libraries, `default` and `system`. The [default icon library](#customizing-the-default-library) contains all of the icons in the Bootstrap Icons project. The [system icon library](#customizing-the-system-library) contains only a small subset of icons that are used internally by Shoelace components.
+Nebula ships with two built-in icon libraries, `default` and `system`. The [default icon library](#customizing-the-default-library) contains all of the icons in the Bootstrap Icons project. The [system icon library](#customizing-the-system-library) contains only a small subset of icons that are used internally by Nebula components.
 
 To register an additional icon library, use the `registerIconLibrary()` function that's exported from `utilities/icon-library.js`. At a minimum, you must provide a name and a resolver function. The resolver function translates an icon name to a URL where the corresponding SVG file exists. Refer to the examples below to better understand how it works.
 
@@ -682,9 +682,9 @@ For security reasons, browsers may apply the same-origin policy on `<use>` eleme
 
 ### Customizing the System Library
 
-The system library contains only the icons used internally by Shoelace components. Unlike the default icon library, the system library does not rely on physical assets. Instead, its icons are hard-coded as data URIs into the resolver to ensure their availability.
+The system library contains only the icons used internally by Nebula components. Unlike the default icon library, the system library does not rely on physical assets. Instead, its icons are hard-coded as data URIs into the resolver to ensure their availability.
 
-If you want to change the icons Shoelace uses internally, you can register an icon library using the `system` name and a custom resolver. If you choose to do this, it's your responsibility to provide all of the icons that are required by components. You can reference `src/components/library.system.ts` for a complete list of system icons used by Shoelace.
+If you want to change the icons Nebula uses internally, you can register an icon library using the `system` name and a custom resolver. If you choose to do this, it's your responsibility to provide all of the icons that are required by components. You can reference `src/components/library.system.ts` for a complete list of system icons used by Nebula.
 
 ```html
 <script type="module">
@@ -737,7 +737,7 @@ If you want to change the icons Shoelace uses internally, you can register an ic
         list.appendChild(item);
 
         // Wrap it with a tooltip the first time the mouse lands on it. We do this instead of baking them into the DOM
-        // to improve this page's performance. See: https://github.com/shoelace-style/shoelace/issues/1122
+        // to improve this page's performance. See: https://github.com/onsonr/nebula/issues/1122
         item.addEventListener('mouseover', () => wrapWithTooltip(item), { once: true });
 
         // Copy on click

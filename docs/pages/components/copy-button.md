@@ -6,14 +6,14 @@ layout: component
 ---
 
 ```html:preview
-<sl-copy-button value="Shoelace rocks!"></sl-copy-button>
+<sl-copy-button value="Nebula rocks!"></sl-copy-button>
 ```
 
 ```jsx:react
-import { SlCopyButton } from '@shoelace-style/shoelace/dist/react/copy-button';
+import { SlCopyButton } from '@onsonr/nebula/dist/react/copy-button';
 
 const App = () => (
-  <SlCopyButton value="Shoelace rocks!" />
+  <SlCopyButton value="Nebula rocks!" />
 );
 ```
 
@@ -33,7 +33,7 @@ Copy Buttons display feedback in a tooltip. You can customize the labels using t
 ```
 
 ```jsx:react
-import { SlCopyButton } from '@shoelace-style/shoelace/dist/react/copy-button';
+import { SlCopyButton } from '@onsonr/nebula/dist/react/copy-button';
 
 const App = () => (
   <SlCopyButton
@@ -58,8 +58,8 @@ Use the `copy-icon`, `success-icon`, and `error-icon` slots to customize the ico
 ```
 
 ```jsx:react
-import { SlCopyButton } from '@shoelace-style/shoelace/dist/react/copy-button';
-import { SlIcon } from '@shoelace-style/shoelace/dist/react/icon';
+import { SlCopyButton } from '@onsonr/nebula/dist/react/copy-button';
+import { SlIcon } from '@onsonr/nebula/dist/react/icon';
 
 const App = () => (
   <>
@@ -94,13 +94,13 @@ To copy data from an attribute, use `from="id[attr]"` where `id` is the id of th
 <br><br>
 
 <!-- Copies the link's "href" attribute -->
-<a id="my-link" href="https://shoelace.style/">Shoelace Website</a>
+<a id="my-link" href="https://shoelace.style/">Nebula Website</a>
 <sl-copy-button from="my-link[href]"></sl-copy-button>
 ```
 
 ```jsx:react
-import { SlCopyButton } from '@shoelace-style/shoelace/dist/react/copy-button';
-import { SlInput } from '@shoelace-style/shoelace/dist/react/input';
+import { SlCopyButton } from '@onsonr/nebula/dist/react/copy-button';
+import { SlInput } from '@onsonr/nebula/dist/react/input';
 
 const App = () => (
   <>
@@ -117,7 +117,7 @@ const App = () => (
     <br /><br />
 
     {/* Copies the link's "href" attribute */}
-    <a id="my-link" href="https://shoelace.style/">Shoelace Website</a>
+    <a id="my-link" href="https://shoelace.style/">Nebula Website</a>
     <SlCopyButton from="my-link[href]" />
   </>
 );
@@ -134,7 +134,7 @@ This example demonstrates what happens when a copy error occurs. You can customi
 ```
 
 ```jsx:react
-import { SlCopyButton } from '@shoelace-style/shoelace/dist/react/copy-button';
+import { SlCopyButton } from '@onsonr/nebula/dist/react/copy-button';
 
 const App = () => (
   <SlCopyButton from="i-do-not-exist" />
@@ -150,7 +150,7 @@ Copy buttons can be disabled by adding the `disabled` attribute.
 ```
 
 ```jsx:react
-import { SlCopyButton } from '@shoelace-style/shoelace/dist/react/copy-button';
+import { SlCopyButton } from '@onsonr/nebula/dist/react/copy-button';
 
 const App = () => (
   <SlCopyButton value="You can't copy me" disabled />
@@ -162,14 +162,14 @@ const App = () => (
 A success indicator is briefly shown after copying. You can customize the length of time the indicator is shown using the `feedback-duration` attribute.
 
 ```html:preview
-<sl-copy-button value="Shoelace rocks!" feedback-duration="250"></sl-copy-button>
+<sl-copy-button value="Nebula rocks!" feedback-duration="250"></sl-copy-button>
 ```
 
 ```jsx:react
-import { SlCopyButton } from '@shoelace-style/shoelace/dist/react/copy-button';
+import { SlCopyButton } from '@onsonr/nebula/dist/react/copy-button';
 
 const App = () => (
-  <SlCopyButton value="Shoelace rocks!" feedback-duration={250} />
+  <SlCopyButton value="Nebula rocks!" feedback-duration={250} />
 );
 ```
 
@@ -216,7 +216,7 @@ You can customize the button to your liking with CSS.
 ```
 
 ```jsx:react
-import { SlCopyButton } from '@shoelace-style/shoelace/dist/react/copy-button';
+import { SlCopyButton } from '@onsonr/nebula/dist/react/copy-button';
 
 const css = `
   .custom-styles {

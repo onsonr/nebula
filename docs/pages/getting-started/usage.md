@@ -6,7 +6,7 @@ meta:
 
 # Usage
 
-Shoelace components are just regular HTML elements, or [custom elements](https://developer.mozilla.org/en-US/docs/Web/Web_Components/Using_custom_elements) to be precise. You can use them like any other element. Each component has detailed documentation that describes its full API, including properties, events, methods, and more.
+Nebula components are just regular HTML elements, or [custom elements](https://developer.mozilla.org/en-US/docs/Web/Web_Components/Using_custom_elements) to be precise. You can use them like any other element. Each component has detailed documentation that describes its full API, including properties, events, methods, and more.
 
 If you're new to custom elements, often referred to as "web components," this section will familiarize you with how to use them.
 
@@ -58,7 +58,7 @@ All custom events are prefixed with `sl-` to prevent collisions with standard ev
 
 ## Methods
 
-Some components have methods you can call to trigger various behaviors. For example, you can set focus on a Shoelace input using the `focus()` method.
+Some components have methods you can call to trigger various behaviors. For example, you can set focus on a Nebula input using the `focus()` method.
 
 ```html
 <sl-input></sl-input>
@@ -108,9 +108,9 @@ Custom elements cannot have self-closing tags. Similar to `<script>` and `<texta
 
 ## Differences from Native Elements
 
-You might expect similarly named elements to share the same API as native HTML elements, but this is not always the case. Shoelace components **are not** designed to be one-to-one replacements for their HTML counterparts. While they usually share the same API, there may be subtle differences.
+You might expect similarly named elements to share the same API as native HTML elements, but this is not always the case. Nebula components **are not** designed to be one-to-one replacements for their HTML counterparts. While they usually share the same API, there may be subtle differences.
 
-For example, `<button>` and `<sl-button>` both have a `type` attribute, but the native one defaults to `submit` while the Shoelace one defaults to `button` since this is a better default for most users.
+For example, `<button>` and `<sl-button>` both have a `type` attribute, but the native one defaults to `submit` while the Nebula one defaults to `button` since this is a better default for most users.
 
 :::tip
 **Don't make assumptions about a component's API!** To prevent unexpected behaviors, please take the time to review the documentation and make sure you understand what each attribute, property, method, and event is intended to do.
@@ -118,7 +118,7 @@ For example, `<button>` and `<sl-button>` both have a `type` attribute, but the 
 
 ## Waiting for Components to Load
 
-Web components are registered with JavaScript, so depending on how and when you load Shoelace, you may notice a [Flash of Undefined Custom Elements (FOUCE)](https://www.abeautifulsite.net/posts/flash-of-undefined-custom-elements/) when the page loads. There are a couple ways to prevent this, both of which are described in the linked article.
+Web components are registered with JavaScript, so depending on how and when you load Nebula, you may notice a [Flash of Undefined Custom Elements (FOUCE)](https://www.abeautifulsite.net/posts/flash-of-undefined-custom-elements/) when the page loads. There are a couple ways to prevent this, both of which are described in the linked article.
 
 One option is to use the [`:defined`](https://developer.mozilla.org/en-US/docs/Web/CSS/:defined) CSS pseudo-class to "hide" custom elements that haven't been registered yet. You can scope it to specific tags or you can hide all undefined custom elements as shown below.
 
@@ -161,7 +161,7 @@ A clever way to use this method is to hide the `<body>` with `opacity: 0` and ad
 
 ## Component Rendering and Updating
 
-Shoelace components are built with [Lit](https://lit.dev/), a tiny library that makes authoring custom elements easier, more maintainable, and a lot of fun! As a Shoelace user, here is some helpful information about rendering and updating you should probably be aware of.
+Nebula components are built with [Lit](https://lit.dev/), a tiny library that makes authoring custom elements easier, more maintainable, and a lot of fun! As a Nebula user, here is some helpful information about rendering and updating you should probably be aware of.
 
 To optimize performance and reduce re-renders, Lit batches component updates. This means changing multiple attributes or properties at the same time will result in just a single re-render. In most cases, this isn't an issue, but there may be times you'll need to wait for the component to update before continuing.
 
@@ -195,16 +195,16 @@ Avoid using `setTimeout()` or `requestAnimationFrame()` in situations like this.
 
 ### VS Code
 
-Shoelace ships with a file called `vscode.html-custom-data.json` that can be used to describe it's custom elements to Visual Studio Code. This enables code completion for Shoelace components (also known as "code hinting" or "IntelliSense"). To enable it, you need to tell VS Code where the file is.
+Nebula ships with a file called `vscode.html-custom-data.json` that can be used to describe it's custom elements to Visual Studio Code. This enables code completion for Nebula components (also known as "code hinting" or "IntelliSense"). To enable it, you need to tell VS Code where the file is.
 
-1. [Install Shoelace locally](/getting-started/installation#local-installation)
+1. [Install Nebula locally](/getting-started/installation#local-installation)
 2. If it doesn't already exist, create a folder called `.vscode` at the root of your project
 3. If it doesn't already exist, create a file inside that folder called `settings.json`
 4. Add the following to the file
 
 ```js
 {
-  "html.customData": ["./node_modules/@shoelace-style/shoelace/dist/vscode.html-custom-data.json"]
+  "html.customData": ["./node_modules/@onsonr/nebula/dist/vscode.html-custom-data.json"]
 }
 ```
 
@@ -212,9 +212,9 @@ If `settings.json` already exists, simply add the above line to the root of the 
 
 ### JetBrains IDEs
 
-If you are using a [JetBrains IDE](https://www.jetbrains.com/) and you are installing Shoelace from NPM, the editor will automatically detect the `web-types.json` file from the package and you should immediately see component information in your editor.
+If you are using a [JetBrains IDE](https://www.jetbrains.com/) and you are installing Nebula from NPM, the editor will automatically detect the `web-types.json` file from the package and you should immediately see component information in your editor.
 
-If you are installing from the CDN, you can [download a local copy](https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace/dist/web-types.json) and add it to the root of your project. Be sure to add a reference to the `web-types.json` file in your `package.json` in order for your editor to properly detect it.
+If you are installing from the CDN, you can [download a local copy](https://cdn.jsdelivr.net/npm/@onsonr/nebula/dist/web-types.json) and add it to the root of your project. Be sure to add a reference to the `web-types.json` file in your `package.json` in order for your editor to properly detect it.
 
 ```json
 {
@@ -239,4 +239,4 @@ If you are using types from multiple projects, you can add an array of reference
 
 ### Other Editors
 
-Most popular editors support custom code completion with a bit of configuration. Please [submit a feature request](https://github.com/shoelace-style/shoelace/issues/new/choose) for your editor of choice. PRs are also welcome!
+Most popular editors support custom code completion with a bit of configuration. Please [submit a feature request](https://github.com/onsonr/nebula/issues/new/choose) for your editor of choice. PRs are also welcome!

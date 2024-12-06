@@ -6,7 +6,7 @@ meta:
 
 # Color Tokens
 
-Color tokens help maintain consistent use of color throughout your app. Shoelace provides palettes for theme colors and primitives that you can use as a foundation for your design system.
+Color tokens help maintain consistent use of color throughout your app. Nebula provides palettes for theme colors and primitives that you can use as a foundation for your design system.
 
 Color tokens are referenced using the `--sl-color-{name}-{n}` CSS custom property, where `{name}` is the name of the palette and `{n}` is the numeric value of the desired swatch.
 
@@ -135,8 +135,8 @@ Additional palettes are provided in the form of color primitives. Use these when
   <div class="color-palette__example"><div class="color-palette__swatch" style="background-color: var(--sl-color-gray-600);"></div>600</div>
   <div class="color-palette__example"><div class="color-palette__swatch" style="background-color: var(--sl-color-gray-700);"></div>700</div>
   <div class="color-palette__example"><div class="color-palette__swatch" style="background-color: var(--sl-color-gray-800);"></div>800</div>
-  <div class="color-palette__example"><div class="color-palette__swatch" style="background-color: var(--sl-color-gray-900);"></div>900</div>  
-  <div class="color-palette__example"><div class="color-palette__swatch" style="background-color: var(--sl-color-gray-950);"></div>950</div>  
+  <div class="color-palette__example"><div class="color-palette__swatch" style="background-color: var(--sl-color-gray-900);"></div>900</div>
+  <div class="color-palette__example"><div class="color-palette__swatch" style="background-color: var(--sl-color-gray-950);"></div>950</div>
 </div>
 
 <div class="color-palette">

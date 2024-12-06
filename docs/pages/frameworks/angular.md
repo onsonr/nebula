@@ -1,21 +1,21 @@
 ---
 meta:
   title: Angular
-  description: Tips for using Shoelace in your Angular app.
+  description: Tips for using Nebula in your Angular app.
 ---
 
 # Angular
 
-Angular [plays nice](https://custom-elements-everywhere.com/#angular) with custom elements, so you can use Shoelace in your Angular apps with ease.
+Angular [plays nice](https://custom-elements-everywhere.com/#angular) with custom elements, so you can use Nebula in your Angular apps with ease.
 
 ## Installation
 
 ### Download the npm package
 
-To add Shoelace to your Angular app, install the package from npm.
+To add Nebula to your Angular app, install the package from npm.
 
 ```bash
-npm install @shoelace-style/shoelace
+npm install @onsonr/nebula
 ```
 
 ### Update the Angular Configuration
@@ -32,10 +32,10 @@ Its also important to load the components by using a `<script>` tag into the ind
       ...
       "styles": [
         "src/styles.scss",
-        "@shoelace-style/shoelace/dist/themes/light.css"
+        "@onsonr/nebula/dist/themes/light.css"
        ],
       "scripts": [
-        "@shoelace-style/shoelace/dist/shoelace.js"
+        "@onsonr/nebula/dist/shoelace.js"
       ]
       ...
 ```
@@ -45,13 +45,13 @@ Its also important to load the components by using a `<script>` tag into the ind
 Next, set the [base path](/getting-started/installation#setting-the-base-path) for icons and other assets in the `main.ts`. In this example, we'll use the CDN as a base path.
 
 ```jsx
-import { setBasePath } from '@shoelace-style/shoelace/%NPMDIR%/utilities/base-path';
+import { setBasePath } from '@onsonr/nebula/%NPMDIR%/utilities/base-path';
 
-setBasePath('https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@%VERSION%/%CDNDIR%/');
+setBasePath('https://cdn.jsdelivr.net/npm/@onsonr/nebula@%VERSION%/%CDNDIR%/');
 ```
 
 :::tip
-If you'd rather not use the CDN for assets, you can create a build task that copies `node_modules/@shoelace-style/shoelace/%NPMDIR%/assets` into a public folder in your app. Then you can point the base path to that folder instead.
+If you'd rather not use the CDN for assets, you can create a build task that copies `node_modules/@onsonr/nebula/%NPMDIR%/assets` into a public folder in your app. Then you can point the base path to that folder instead.
 :::
 
 ## Configuration
@@ -74,10 +74,10 @@ import { AppComponent } from './app.component';
 export class AppModule {}
 ```
 
-## Reference Shoelace components in your Angular component code
+## Reference Nebula components in your Angular component code
 
 ```js
-import { SlDrawer } from '@shoelace-style/shoelace';
+import { SlDrawer } from '@onsonr/nebula';
 
 @Component({
   selector: 'app-drawer-example',
@@ -100,14 +100,14 @@ export class DrawerExampleComponent implements OnInit {
   ...
 
   showDrawer() {
-    // use nativeElement to access Shoelace components
+    // use nativeElement to access Nebula components
     this.drawer?.nativeElement.show();
   }
 }
 ```
 
-Now you can start using Shoelace components in your app!
+Now you can start using Nebula components in your app!
 
 :::tip
-Are you using Shoelace with Angular? [Help us improve this page!](https://github.com/shoelace-style/shoelace/blob/next/docs/frameworks/angular.md)
+Are you using Nebula with Angular? [Help us improve this page!](https://github.com/onsonr/nebula/blob/next/docs/frameworks/angular.md)
 :::

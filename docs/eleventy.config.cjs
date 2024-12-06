@@ -33,7 +33,7 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addGlobalData('toc', true); // enable the table of contents
   eleventyConfig.addGlobalData('meta', {
     title: 'Nebula',
-    description: 'A specialized fork of Shoelace for Crypto and Blockchain interfaces.',
+    description: 'A specialized fork of Nebula for Crypto and Blockchain interfaces.',
     image: 'images/og-image.png',
     version: customElementsManifest.package.version,
     components: allComponents,
@@ -74,7 +74,7 @@ module.exports = function (eleventyConfig) {
     if (!component) {
       throw new Error(
         `Unable to find a component called "${tagName}". Make sure the file name is the same as the component's tag ` +
-        `name (minus the sl- prefix).`
+          `name (minus the sl- prefix).`
       );
     }
     return component;
