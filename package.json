@@ -2,7 +2,7 @@
   "name": "@onsonr/nebula",
   "description": "A specialized fork of Shoelace customized for the Sonr Network, focusing on cryptocurrency and blockchain interfaces.",
   "version": "0.0.10",
-  "homepage": "https://github.com/onsonr/nebula",
+  "homepage": "https://nebulaui.org",
   "author": "Prad <prad@sonr.io>",
   "license": "MIT",
   "customElements": "dist/custom-elements.json",
@@ -30,20 +30,19 @@
     "cdn"
   ],
   "keywords": [
+    "sonr network",
+    "cosmos kit",
+    "nebula",
     "web components",
     "custom elements",
     "components"
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/onsonr/styles.git"
+    "url": "git+https://github.com/onsonr/nebula.git"
   },
   "bugs": {
-    "url": "https://github.com/onsonr/styles/issues"
-  },
-  "funding": {
-    "type": "individual",
-    "url": "https://github.com/sponsors/claviska"
+    "url": "https://github.com/onsonr/nebula/issues"
   },
   "scripts": {
     "minify": "svgo --config=svgo.config.mjs -rf ./assets/sonr-icons/ -o ./assets/sonr-icons/",

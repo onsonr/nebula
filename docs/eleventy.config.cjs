@@ -28,7 +28,7 @@ module.exports = function (eleventyConfig) {
   //
   // Global data
   //
-  eleventyConfig.addGlobalData('baseUrl', 'https://ui.onsonr.dev/'); // the production URL
+  eleventyConfig.addGlobalData('baseUrl', 'https://nebulaui.org'); // the production URL
   eleventyConfig.addGlobalData('layout', 'default'); // make 'default' the default layout
   eleventyConfig.addGlobalData('toc', true); // enable the table of contents
   eleventyConfig.addGlobalData('meta', {
@@ -74,7 +74,7 @@ module.exports = function (eleventyConfig) {
     if (!component) {
       throw new Error(
         `Unable to find a component called "${tagName}". Make sure the file name is the same as the component's tag ` +
-          `name (minus the sl- prefix).`
+        `name (minus the sl- prefix).`
       );
     }
     return component;
