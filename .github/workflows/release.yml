@@ -32,8 +32,10 @@ jobs:
       - name: Build
         run: bun run build
 
-      - name: 'Automated Version Bump'
+      - name: 'Automated Version Bump and Release'
         run: |
+          git add .
+          git commit -m "chore: update build artifacts [skip ci]" || echo "No changes to commit"
           npm version patch
           git push
           git push --tags
