@@ -9,17 +9,15 @@ toc: false
 <div class="splash-start">
 <img class="splash-logo" src="/assets/images/wordmark.svg" alt="Nebula">
 
-# <sl-visually-hidden>Nebula:</sl-visually-hidden> A forward-thinking library of web components.
+# <sl-visually-hidden>Nebula:</sl-visually-hidden> A forward-thinking library of web components, specifically designed for Blockchain Clients.
 
 - Works with all frameworks 🧩
 - Works with CDNs 🚛
 - Fully customizable with CSS 🎨
 - Includes a dark theme 🌛
 - Built with accessibility in mind ♿️
-- First-class [React support](/frameworks/react) ⚛️
 - Built-in localization 💬
 - Open source 😸
-- [More awesome than ever](https://blog.fontawesome.com/shoelace-joins-font-awesome/) ![Awesome emoji](/assets/images/awesome.svg)
 
 </div>
 <div class="splash-end">
