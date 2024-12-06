@@ -2,7 +2,7 @@
   "name": "@onsonr/nebula",
   "description": "A specialized fork of Shoelace customized for the Sonr Network, focusing on cryptocurrency and blockchain interfaces.",
   "version": "0.0.10",
-  "homepage": "https://github.com/onsonr/styles",
+  "homepage": "https://github.com/onsonr/nebula",
   "author": "Prad <prad@sonr.io>",
   "license": "MIT",
   "customElements": "dist/custom-elements.json",
