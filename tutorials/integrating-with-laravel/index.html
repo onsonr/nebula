@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="This page explains how to integrate Shoelace with a Laravel app." />
+    <meta name="description" content="This page explains how to integrate Nebula with a Laravel app." />
     <title>Integrating with Laravel</title>
 
     <meta name="turbo-cache-control" />
@@ -20,7 +20,7 @@
 
     <meta property="og:url" content="https://ui.onsonr.dev/tutorials/integrating-with-laravel/" />
     <meta property="og:title" content="Integrating with Laravel" />
-    <meta property="og:description" content="This page explains how to integrate Shoelace with a Laravel app." />
+    <meta property="og:description" content="This page explains how to integrate Nebula with a Laravel app." />
     <meta property="og:image" content="https://ui.onsonr.dev/assets/images/og-image.png" />
 
     <link rel="stylesheet" href="/dist/themes/light.css" />
@@ -59,8 +59,8 @@
 
     <div id="icon-toolbar">
       <a
-        href="https://github.com/shoelace-style/shoelace"
-        title="View Shoelace on GitHub"
+        href="https://github.com/onsonr/nebula"
+        title="View Nebula on GitHub"
         class="external-link"
         rel="noopener noreferrer"
         target="_blank"
@@ -70,7 +70,7 @@
 
       <a
         href="https://twitter.com/shoelace_style"
-        title="Follow Shoelace on Twitter"
+        title="Follow Nebula on Twitter"
         class="external-link"
         rel="noopener noreferrer"
         target="_blank"
@@ -107,7 +107,7 @@
         </svg>
         <span>
           <strong style="white-space: nowrap">Get ready for more awesome!</strong>
-          Web Awesome, the next iteration of Shoelace, is on Kickstarter.
+          Web Awesome, the next iteration of Nebula, is on Kickstarter.
         </span>
       </span>
       <span class="faux-button">Read Our Story</span>
@@ -116,7 +116,7 @@
     <aside id="sidebar" data-preserve-scroll="">
       <header>
         <a href="/">
-          <img src="/assets/images/wordmark.svg" alt="Shoelace" />
+          <img src="/assets/images/wordmark.svg" alt="Nebula" />
         </a>
         <div class="sidebar-version">0.0.10</div>
       </header>
@@ -125,7 +125,7 @@
         <sl-button
           size="small"
           class="repo-button repo-button--github"
-          href="https://github.com/shoelace-style/shoelace"
+          href="https://github.com/onsonr/nebula"
           target="_blank"
         >
           <sl-icon slot="prefix" name="github"></sl-icon> Code
@@ -133,7 +133,7 @@
         <sl-button
           size="small"
           class="repo-button repo-button--star"
-          href="https://github.com/shoelace-style/shoelace/stargazers"
+          href="https://github.com/onsonr/nebula/stargazers"
           target="_blank"
         >
           <sl-icon slot="prefix" name="star-fill"></sl-icon> Star
@@ -181,7 +181,7 @@
               <li><a href="/resources/community">Community</a></li>
               <li>
                 <a
-                  href="https://github.com/shoelace-style/shoelace/discussions"
+                  href="https://github.com/onsonr/nebula/discussions"
                   class="external-link"
                   rel="noopener noreferrer"
                   target="_blank"
@@ -463,12 +463,12 @@
             <li class="top"><a href="#">Integrating with Laravel</a></li>
             <li data-level="2"><a href="#requirements">Requirements</a></li>
             <li data-level="2"><a href="#instructions">Instructions</a></li>
-            <li data-level="3"><a href="#install-the-shoelace-package">Install the Shoelace package</a></li>
+            <li data-level="3"><a href="#install-the-nebula-package">Install the Nebula package</a></li>
             <li data-level="3"><a href="#import-the-default-theme">Import the Default Theme</a></li>
-            <li data-level="3"><a href="#import-your-shoelace-components">Import Your Shoelace Components</a></li>
+            <li data-level="3"><a href="#import-your-nebula-components">Import Your Nebula Components</a></li>
             <li data-level="3">
-              <a href="#copy-the-shoelace-static-assets-icons-images-etc_-to-a-public-folder"
-                >Copy the Shoelace Static Assets (icons, images, etc.) to a Public Folder</a
+              <a href="#copy-the-nebula-static-assets-icons-images-etc_-to-a-public-folder"
+                >Copy the Nebula Static Assets (icons, images, etc.) to a Public Folder</a
               >
             </li>
             <li data-level="3"><a href="#set-the-base-path">Set the Base Path</a></li>
@@ -483,7 +483,7 @@
         <div class="content__body">
           <h1>Integrating with Laravel</h1>
           <p>
-            This page explains how to integrate Shoelace with a
+            This page explains how to integrate Nebula with a
             <a href="https://laravel.com" class="external-link" rel="noopener noreferrer" target="_blank">Laravel 9</a>
             app using Vite. For additional details refer to the
             <a href="https://laravel.com/docs/9.x/vite" class="external-link" rel="noopener noreferrer" target="_blank"
@@ -496,7 +496,7 @@
               This is a community-maintained document. Please <a href="/resources/community">ask the community</a> if
               you have questions about this integration. You can also
               <a
-                href="https://github.com/shoelace-style/shoelace/blob/next/docs/tutorials/integrating-with-laravel.md"
+                href="https://github.com/onsonr/nebula/blob/next/docs/tutorials/integrating-with-laravel.md"
                 class="external-link"
                 rel="noopener noreferrer"
                 target="_blank"
@@ -528,33 +528,33 @@
             that uses
             <a href="https://vitejs.dev/" class="external-link" rel="noopener noreferrer" target="_blank">Vite</a> to
             bundle assets. Be sure to run <code>npm install</code> to install the default Laravel front-end dependencies
-            before installing Shoelace.
+            before installing Nebula.
           </p>
-          <h3 id="install-the-shoelace-package" class="anchor-heading">
-            Install the Shoelace package<a
-              href="#install-the-shoelace-package"
-              aria-label='Direct link to "Install the Shoelace package"'
+          <h3 id="install-the-nebula-package" class="anchor-heading">
+            Install the Nebula package<a
+              href="#install-the-nebula-package"
+              aria-label='Direct link to "Install the Nebula package"'
             ></a>
           </h3>
-          <pre><code class="language-bash" id="code-block-131"><span class="token function">npm</span> <span class="token function">install</span> @shoelace-style/shoelace
-</code><sl-copy-button class="copy-code-button" from="code-block-131"></sl-copy-button></pre>
+          <pre><code class="language-bash" id="code-block-123"><span class="token function">npm</span> <span class="token function">install</span> @onsonr/nebula
+</code><sl-copy-button class="copy-code-button" from="code-block-123"></sl-copy-button></pre>
           <h3 id="import-the-default-theme" class="anchor-heading">
             Import the Default Theme<a
               href="#import-the-default-theme"
               aria-label='Direct link to "Import the Default Theme"'
             ></a>
           </h3>
-          <p>Import the Shoelace default theme (stylesheet) in <code>/resources/css/app.css</code>:</p>
-          <pre><code class="language-css" id="code-block-132"><span class="token atrule"><span class="token rule">@import</span> <span class="token string">'/node_modules/@shoelace-style/shoelace/dist/themes/light.css'</span><span class="token punctuation">;</span></span>
-</code><sl-copy-button class="copy-code-button" from="code-block-132"></sl-copy-button></pre>
-          <h3 id="import-your-shoelace-components" class="anchor-heading">
-            Import Your Shoelace Components<a
-              href="#import-your-shoelace-components"
-              aria-label='Direct link to "Import Your Shoelace Components"'
+          <p>Import the Nebula default theme (stylesheet) in <code>/resources/css/app.css</code>:</p>
+          <pre><code class="language-css" id="code-block-124"><span class="token atrule"><span class="token rule">@import</span> <span class="token string">'/node_modules/@onsonr/nebula/dist/themes/light.css'</span><span class="token punctuation">;</span></span>
+</code><sl-copy-button class="copy-code-button" from="code-block-124"></sl-copy-button></pre>
+          <h3 id="import-your-nebula-components" class="anchor-heading">
+            Import Your Nebula Components<a
+              href="#import-your-nebula-components"
+              aria-label='Direct link to "Import Your Nebula Components"'
             ></a>
           </h3>
           <p>
-            Import each Shoelace component you plan to use in <code>/resources/js/bootstrap.js</code>. Use the full path
+            Import each Nebula component you plan to use in <code>/resources/js/bootstrap.js</code>. Use the full path
             to each component (as outlined in the
             <a
               href="https://shoelace.style/getting-started/installation#cherry-picking"
@@ -565,41 +565,41 @@
             >). You can find the full import statement for a component in the <em>Importing</em> section of the
             component’s documentation (use the <em>Bundler</em> import). Your imports should look similar to:
           </p>
-          <pre><code class="language-js" id="code-block-133"><span class="token keyword">import</span> <span class="token string">'@shoelace-style/shoelace/dist/components/button/button.js'</span><span class="token punctuation">;</span>
-<span class="token keyword">import</span> <span class="token string">'@shoelace-style/shoelace/dist/components/icon/icon.js'</span><span class="token punctuation">;</span>
-<span class="token keyword">import</span> <span class="token string">'@shoelace-style/shoelace/dist/components/dialog/dialog.js'</span><span class="token punctuation">;</span>
-</code><sl-copy-button class="copy-code-button" from="code-block-133"></sl-copy-button></pre>
-          <h3 id="copy-the-shoelace-static-assets-icons-images-etc_-to-a-public-folder" class="anchor-heading">
-            Copy the Shoelace Static Assets (icons, images, etc.) to a Public Folder<a
-              href="#copy-the-shoelace-static-assets-icons-images-etc_-to-a-public-folder"
-              aria-label='Direct link to "Copy the Shoelace Static Assets (icons, images, etc.) to a Public Folder"'
+          <pre><code class="language-js" id="code-block-125"><span class="token keyword">import</span> <span class="token string">'@onsonr/nebula/dist/components/button/button.js'</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token string">'@onsonr/nebula/dist/components/icon/icon.js'</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token string">'@onsonr/nebula/dist/components/dialog/dialog.js'</span><span class="token punctuation">;</span>
+</code><sl-copy-button class="copy-code-button" from="code-block-125"></sl-copy-button></pre>
+          <h3 id="copy-the-nebula-static-assets-icons-images-etc_-to-a-public-folder" class="anchor-heading">
+            Copy the Nebula Static Assets (icons, images, etc.) to a Public Folder<a
+              href="#copy-the-nebula-static-assets-icons-images-etc_-to-a-public-folder"
+              aria-label='Direct link to "Copy the Nebula Static Assets (icons, images, etc.) to a Public Folder"'
             ></a>
           </h3>
           <p>
             Since Vite has no way to copy arbitrary assets into your build (like webpack), you need to manually copy the
-            Shoelace static assets to your project’s public folder. Run this command from your project’s root directory
-            to copy the Shoelace static assets to the <code>./public/assets</code> folder:
+            Nebula static assets to your project’s public folder. Run this command from your project’s root directory to
+            copy the Nebula static assets to the <code>./public/assets</code> folder:
           </p>
-          <pre><code class="language-sh" id="code-block-134"><span class="token function">cp</span> <span class="token parameter variable">-aR</span> node_modules/@shoelace-style/shoelace/dist/assets/ ./public/assets
-</code><sl-copy-button class="copy-code-button" from="code-block-134"></sl-copy-button></pre>
+          <pre><code class="language-sh" id="code-block-126"><span class="token function">cp</span> <span class="token parameter variable">-aR</span> node_modules/@onsonr/nebula/dist/assets/ ./public/assets
+</code><sl-copy-button class="copy-code-button" from="code-block-126"></sl-copy-button></pre>
           <h3 id="set-the-base-path" class="anchor-heading">
             Set the Base Path<a href="#set-the-base-path" aria-label='Direct link to "Set the Base Path"'></a>
           </h3>
           <p>
-            Add the base path to your Shoelace assets (icons, images, etc.) in <code>/resources/js/bootstrap.js</code>.
+            Add the base path to your Nebula assets (icons, images, etc.) in <code>/resources/js/bootstrap.js</code>.
             The path must point to the same folder where you copy assets to in the next step.
           </p>
-          <pre><code class="language-js" id="code-block-135"><span class="token keyword">import</span> <span class="token punctuation">{</span> setBasePath <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'@shoelace-style/shoelace/dist/utilities/base-path.js'</span><span class="token punctuation">;</span>
+          <pre><code class="language-js" id="code-block-127"><span class="token keyword">import</span> <span class="token punctuation">{</span> setBasePath <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'@onsonr/nebula/dist/utilities/base-path.js'</span><span class="token punctuation">;</span>
 <span class="token function">setBasePath</span><span class="token punctuation">(</span><span class="token string">'/'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-</code><sl-copy-button class="copy-code-button" from="code-block-135"></sl-copy-button></pre>
+</code><sl-copy-button class="copy-code-button" from="code-block-127"></sl-copy-button></pre>
           <p>Example <code>/resources/js/bootstrap.js</code> file:</p>
-          <pre><code class="language-js" id="code-block-136"><span class="token keyword">import</span> <span class="token punctuation">{</span> setBasePath <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'@shoelace-style/shoelace/dist/utilities/base-path.js'</span><span class="token punctuation">;</span>
+          <pre><code class="language-js" id="code-block-128"><span class="token keyword">import</span> <span class="token punctuation">{</span> setBasePath <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'@onsonr/nebula/dist/utilities/base-path.js'</span><span class="token punctuation">;</span>
 <span class="token function">setBasePath</span><span class="token punctuation">(</span><span class="token string">'/'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 
-<span class="token keyword">import</span> <span class="token string">'@shoelace-style/shoelace/dist/components/button/button.js'</span><span class="token punctuation">;</span>
-<span class="token keyword">import</span> <span class="token string">'@shoelace-style/shoelace/dist/components/icon/icon.js'</span><span class="token punctuation">;</span>
-<span class="token keyword">import</span> <span class="token string">'@shoelace-style/shoelace/dist/components/dialog/dialog.js'</span><span class="token punctuation">;</span>
-</code><sl-copy-button class="copy-code-button" from="code-block-136"></sl-copy-button></pre>
+<span class="token keyword">import</span> <span class="token string">'@onsonr/nebula/dist/components/button/button.js'</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token string">'@onsonr/nebula/dist/components/icon/icon.js'</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token string">'@onsonr/nebula/dist/components/dialog/dialog.js'</span><span class="token punctuation">;</span>
+</code><sl-copy-button class="copy-code-button" from="code-block-128"></sl-copy-button></pre>
           <h3 id="verify-vite-entry-points" class="anchor-heading">
             Verify Vite Entry Points<a
               href="#verify-vite-entry-points"
@@ -611,13 +611,13 @@
             <code>resources/css/app.css</code> and <code>resources/js/app.js</code>. If you use a different location for
             your CSS and/or Javascript entry point, update this configuration to accordingly.
           </p>
-          <pre><code class="language-js" id="code-block-137"><span class="token literal-property property">plugins</span><span class="token operator">:</span> <span class="token punctuation">[</span>
+          <pre><code class="language-js" id="code-block-129"><span class="token literal-property property">plugins</span><span class="token operator">:</span> <span class="token punctuation">[</span>
         <span class="token function">laravel</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
             <span class="token literal-property property">input</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token string">"resources/css/app.css"</span><span class="token punctuation">,</span> <span class="token string">"resources/js/app.js"</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
             <span class="token literal-property property">refresh</span><span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
         <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
     <span class="token punctuation">]</span><span class="token punctuation">,</span>
-</code><sl-copy-button class="copy-code-button" from="code-block-137"></sl-copy-button></pre>
+</code><sl-copy-button class="copy-code-button" from="code-block-129"></sl-copy-button></pre>
           <h3 id="compile-front-end-assets" class="anchor-heading">
             Compile Front-End Assets<a
               href="#compile-front-end-assets"
@@ -625,12 +625,12 @@
             ></a>
           </h3>
           <p>Run the Vite development server or production build.</p>
-          <pre><code class="language-bash" id="code-block-138"><span class="token comment">## run the Vite development bundle</span>
+          <pre><code class="language-bash" id="code-block-130"><span class="token comment">## run the Vite development bundle</span>
 <span class="token function">npm</span> run dev
 
 <span class="token comment">## build a production bundle (with versioning)</span>
 <span class="token function">npm</span> run build
-</code><sl-copy-button class="copy-code-button" from="code-block-138"></sl-copy-button></pre>
+</code><sl-copy-button class="copy-code-button" from="code-block-130"></sl-copy-button></pre>
           <h3 id="include-front-end-assets-in-your-layout-file" class="anchor-heading">
             Include Front-End Assets in Your Layout File<a
               href="#include-front-end-assets-in-your-layout-file"
@@ -641,11 +641,11 @@
             Add the <code>@vite()</code> Blade directive to the <code>&lt;head&gt;</code> of your application’s root
             template.
           </p>
-          <pre><code class="language-html" id="code-block-139"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>head</span><span class="token punctuation">&gt;</span></span>
+          <pre><code class="language-html" id="code-block-131"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>head</span><span class="token punctuation">&gt;</span></span>
   ... @vite(['resources/css/app.css', 'resources/js/app.js'])
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>head</span><span class="token punctuation">&gt;</span></span>
-</code><sl-copy-button class="copy-code-button" from="code-block-139"></sl-copy-button></pre>
-          <p>Have fun using Shoelace components in your Laravel app!</p>
+</code><sl-copy-button class="copy-code-button" from="code-block-131"></sl-copy-button></pre>
+          <p>Have fun using Nebula components in your Laravel app!</p>
         </div>
       </article>
     </main>

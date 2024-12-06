@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="This page explains how to integrate Shoelace with an Astro app." />
+    <meta name="description" content="This page explains how to integrate Nebula with an Astro app." />
     <title>Integrating with Astro</title>
 
     <meta name="turbo-cache-control" />
@@ -20,7 +20,7 @@
 
     <meta property="og:url" content="https://ui.onsonr.dev/tutorials/integrating-with-astro/" />
     <meta property="og:title" content="Integrating with Astro" />
-    <meta property="og:description" content="This page explains how to integrate Shoelace with an Astro app." />
+    <meta property="og:description" content="This page explains how to integrate Nebula with an Astro app." />
     <meta property="og:image" content="https://ui.onsonr.dev/assets/images/og-image.png" />
 
     <link rel="stylesheet" href="/dist/themes/light.css" />
@@ -59,8 +59,8 @@
 
     <div id="icon-toolbar">
       <a
-        href="https://github.com/shoelace-style/shoelace"
-        title="View Shoelace on GitHub"
+        href="https://github.com/onsonr/nebula"
+        title="View Nebula on GitHub"
         class="external-link"
         rel="noopener noreferrer"
         target="_blank"
@@ -70,7 +70,7 @@
 
       <a
         href="https://twitter.com/shoelace_style"
-        title="Follow Shoelace on Twitter"
+        title="Follow Nebula on Twitter"
         class="external-link"
         rel="noopener noreferrer"
         target="_blank"
@@ -107,7 +107,7 @@
         </svg>
         <span>
           <strong style="white-space: nowrap">Get ready for more awesome!</strong>
-          Web Awesome, the next iteration of Shoelace, is on Kickstarter.
+          Web Awesome, the next iteration of Nebula, is on Kickstarter.
         </span>
       </span>
       <span class="faux-button">Read Our Story</span>
@@ -116,7 +116,7 @@
     <aside id="sidebar" data-preserve-scroll="">
       <header>
         <a href="/">
-          <img src="/assets/images/wordmark.svg" alt="Shoelace" />
+          <img src="/assets/images/wordmark.svg" alt="Nebula" />
         </a>
         <div class="sidebar-version">0.0.10</div>
       </header>
@@ -125,7 +125,7 @@
         <sl-button
           size="small"
           class="repo-button repo-button--github"
-          href="https://github.com/shoelace-style/shoelace"
+          href="https://github.com/onsonr/nebula"
           target="_blank"
         >
           <sl-icon slot="prefix" name="github"></sl-icon> Code
@@ -133,7 +133,7 @@
         <sl-button
           size="small"
           class="repo-button repo-button--star"
-          href="https://github.com/shoelace-style/shoelace/stargazers"
+          href="https://github.com/onsonr/nebula/stargazers"
           target="_blank"
         >
           <sl-icon slot="prefix" name="star-fill"></sl-icon> Star
@@ -181,7 +181,7 @@
               <li><a href="/resources/community">Community</a></li>
               <li>
                 <a
-                  href="https://github.com/shoelace-style/shoelace/discussions"
+                  href="https://github.com/onsonr/nebula/discussions"
                   class="external-link"
                   rel="noopener noreferrer"
                   target="_blank"
@@ -471,13 +471,13 @@
 
         <div class="content__body">
           <h1>Integrating with Astro</h1>
-          <p>This page explains how to integrate Shoelace with an Astro app.</p>
+          <p>This page explains how to integrate Nebula with an Astro app.</p>
           <div role="alert" class="callout callout--tip">
             <p>
               This is a community-maintained document. Please <a href="/resources/community">ask the community</a> if
               you have questions about this integration. You can also
               <a
-                href="https://github.com/shoelace-style/shoelace/blob/next/docs/tutorials/integrating-with-astro.md"
+                href="https://github.com/onsonr/nebula/blob/next/docs/tutorials/integrating-with-astro.md"
                 class="external-link"
                 rel="noopener noreferrer"
                 target="_blank"
@@ -493,8 +493,8 @@
             ></a>
           </h2>
           <p>
-            In the following tutorial you will notice that Shoelace cannot be imported in the frontmatter of Astro
-            files. This is because Shoelace relies on globals from the DOM to be present.
+            In the following tutorial you will notice that Nebula cannot be imported in the frontmatter of Astro files.
+            This is because Nebula relies on globals from the DOM to be present.
           </p>
           <p>
             There is a
@@ -505,7 +505,7 @@
               target="_blank"
               >Lit + Astro integration for SSR</a
             >
-            , however it will not work with Shoelace in its current state due to some reliance on DOM APIs that aren’t
+            , however it will not work with Nebula in its current state due to some reliance on DOM APIs that aren’t
             shimmed. We are working to resolve this.
           </p>
           <h2 id="instructions-astro-4_11_3" class="anchor-heading">
@@ -517,18 +517,18 @@
           <ul>
             <li>Node: v18.17.1 or v20.3.0 or higher. ( v19 is not supported.)</li>
             <li>Astro: 4.11.3</li>
-            <li>Shoelace: 2.15.1</li>
+            <li>Nebula: 2.15.1</li>
           </ul>
-          <p>To get started using Shoelace with Astro, the following packages must be installed.</p>
-          <pre><code class="language-bash" id="code-block-145"><span class="token function">npm</span> <span class="token function">install</span> @shoelace-style/shoelace rollup-plugin-copy
-</code><sl-copy-button class="copy-code-button" from="code-block-145"></sl-copy-button></pre>
+          <p>To get started using Nebula with Astro, the following packages must be installed.</p>
+          <pre><code class="language-bash" id="code-block-119"><span class="token function">npm</span> <span class="token function">install</span> @onsonr/nebula rollup-plugin-copy
+</code><sl-copy-button class="copy-code-button" from="code-block-119"></sl-copy-button></pre>
           <h3 id="importing-components" class="anchor-heading">
             Importing components<a href="#importing-components" aria-label='Direct link to "Importing components"'></a>
           </h3>
-          <p>In <code>/src/pages/index.astro</code>, set the base path and import Shoelace.</p>
-          <pre><code class="language-html" id="code-block-146">---
+          <p>In <code>/src/pages/index.astro</code>, set the base path and import Nebula.</p>
+          <pre><code class="language-html" id="code-block-120">---
 // import default stylesheet
-import "@shoelace-style/shoelace/dist/themes/light.css";
+import "@onsonr/nebula/dist/themes/light.css";
 ---
 
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>html</span><span class="token punctuation">&gt;</span></span>
@@ -538,18 +538,18 @@ import "@shoelace-style/shoelace/dist/themes/light.css";
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>html</span><span class="token punctuation">&gt;</span></span>
 
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span><span class="token punctuation">&gt;</span></span><span class="token script"><span class="token language-javascript">
-  <span class="token comment">// setBasePath to tell Shoelace where to load icons from.</span>
-  <span class="token keyword">import</span> <span class="token punctuation">{</span> setBasePath <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'@shoelace-style/shoelace/dist/utilities/base-path.js'</span><span class="token punctuation">;</span>
+  <span class="token comment">// setBasePath to tell Nebula where to load icons from.</span>
+  <span class="token keyword">import</span> <span class="token punctuation">{</span> setBasePath <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'@onsonr/nebula/dist/utilities/base-path.js'</span><span class="token punctuation">;</span>
   <span class="token function">setBasePath</span><span class="token punctuation">(</span><span class="token string">'/shoelace-assets/'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 
   <span class="token comment">// Load all components.</span>
-  <span class="token keyword">import</span> <span class="token string">'@shoelace-style/shoelace'</span><span class="token punctuation">;</span>
+  <span class="token keyword">import</span> <span class="token string">'@onsonr/nebula'</span><span class="token punctuation">;</span>
 </span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">&gt;</span></span>
-</code><sl-copy-button class="copy-code-button" from="code-block-146"></sl-copy-button></pre>
+</code><sl-copy-button class="copy-code-button" from="code-block-120"></sl-copy-button></pre>
           <div role="alert" class="callout callout--tip">
             <p>
-              If you want to cherry pick components, replace the main Shoelace import with ‘import
-              ”@shoelace-style/shoelace/dist/components/button/button.js”;’ for whichever component you would like.
+              If you want to cherry pick components, replace the main Nebula import with ‘import
+              ”@onsonr/nebula/dist/components/button/button.js”;’ for whichever component you would like.
             </p>
           </div>
           <p>
@@ -562,9 +562,9 @@ import "@shoelace-style/shoelace/dist/themes/light.css";
               aria-label='Direct link to "Customizing animations"'
             ></a>
           </h3>
-          <p>In <code>/src/pages/index.astro</code>, set custom animations after the Shoelace import.</p>
-          <pre><code class="language-html" id="code-block-147">---
-import { setBasePath } from "@shoelace-style/shoelace/dist/utilities/base-path.js";
+          <p>In <code>/src/pages/index.astro</code>, set custom animations after the Nebula import.</p>
+          <pre><code class="language-html" id="code-block-121">---
+import { setBasePath } from "@onsonr/nebula/dist/utilities/base-path.js";
 setBasePath("dist/assets");
 ---
 
@@ -577,15 +577,15 @@ setBasePath("dist/assets");
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>html</span><span class="token punctuation">&gt;</span></span>
 
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span><span class="token punctuation">&gt;</span></span><span class="token script"><span class="token language-javascript">
-  <span class="token comment">// setBasePath to tell Shoelace where to load icons from.</span>
-  <span class="token keyword">import</span> <span class="token punctuation">{</span> setBasePath <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'@shoelace-style/shoelace/dist/utilities/base-path.js'</span><span class="token punctuation">;</span>
+  <span class="token comment">// setBasePath to tell Nebula where to load icons from.</span>
+  <span class="token keyword">import</span> <span class="token punctuation">{</span> setBasePath <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'@onsonr/nebula/dist/utilities/base-path.js'</span><span class="token punctuation">;</span>
   <span class="token function">setBasePath</span><span class="token punctuation">(</span><span class="token string">'/shoelace-assets/'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 
   <span class="token comment">// Load all components.</span>
-  <span class="token keyword">import</span> <span class="token string">'@shoelace-style/shoelace'</span><span class="token punctuation">;</span>
+  <span class="token keyword">import</span> <span class="token string">'@onsonr/nebula'</span><span class="token punctuation">;</span>
 
   <span class="token keyword">const</span> duration <span class="token operator">=</span> <span class="token number">3000</span><span class="token punctuation">;</span>
-  <span class="token keyword">import</span> <span class="token punctuation">{</span> setDefaultAnimation <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'@shoelace-style/shoelace/dist/utilities/animation-registry.js'</span><span class="token punctuation">;</span>
+  <span class="token keyword">import</span> <span class="token punctuation">{</span> setDefaultAnimation <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'@onsonr/nebula/dist/utilities/animation-registry.js'</span><span class="token punctuation">;</span>
 
   <span class="token function">setDefaultAnimation</span><span class="token punctuation">(</span><span class="token string">'tooltip.show'</span><span class="token punctuation">,</span> <span class="token punctuation">{</span>
     <span class="token literal-property property">keyframes</span><span class="token operator">:</span> <span class="token punctuation">[</span>
@@ -595,7 +595,7 @@ setBasePath("dist/assets");
     <span class="token literal-property property">options</span><span class="token operator">:</span> <span class="token punctuation">{</span> <span class="token literal-property property">duration</span><span class="token operator">:</span> duration<span class="token punctuation">,</span> <span class="token literal-property property">easing</span><span class="token operator">:</span> <span class="token string">'ease'</span> <span class="token punctuation">}</span>
   <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 </span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">&gt;</span></span>
-</code><sl-copy-button class="copy-code-button" from="code-block-147"></sl-copy-button></pre>
+</code><sl-copy-button class="copy-code-button" from="code-block-121"></sl-copy-button></pre>
           <h2 id="modifying-astro-config" class="anchor-heading">
             Modifying Astro Config<a
               href="#modifying-astro-config"
@@ -604,10 +604,10 @@ setBasePath("dist/assets");
           </h2>
           <p>
             You’ll notice the above steps never added our icons into our <code>/public</code> directory. To solve this,
-            we can install <code>rollup-plugin-copy</code> to copy Shoelace’s assets into your public directory.
+            we can install <code>rollup-plugin-copy</code> to copy Nebula’s assets into your public directory.
           </p>
           <p>Here’s what your Astro config should look like:</p>
-          <pre><code class="language-js" id="code-block-148"><span class="token comment">// astro.config.mjs</span>
+          <pre><code class="language-js" id="code-block-122"><span class="token comment">// astro.config.mjs</span>
 
 <span class="token keyword">import</span> <span class="token punctuation">{</span> defineConfig <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'astro/config'</span><span class="token punctuation">;</span>
 <span class="token keyword">import</span> copy <span class="token keyword">from</span> <span class="token string">'rollup-plugin-copy'</span><span class="token punctuation">;</span>
@@ -621,13 +621,13 @@ setBasePath("dist/assets");
         <span class="token literal-property property">copyOnce</span><span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
         <span class="token literal-property property">hook</span><span class="token operator">:</span> <span class="token string">'buildStart'</span><span class="token punctuation">,</span>
         <span class="token literal-property property">targets</span><span class="token operator">:</span> <span class="token punctuation">[</span>
-          <span class="token punctuation">{</span> <span class="token literal-property property">src</span><span class="token operator">:</span> <span class="token string">'node_modules/@shoelace-style/shoelace/dist/assets/*'</span><span class="token punctuation">,</span> <span class="token literal-property property">dest</span><span class="token operator">:</span> <span class="token string">'public/shoelace-assets/assets/'</span> <span class="token punctuation">}</span>
+          <span class="token punctuation">{</span> <span class="token literal-property property">src</span><span class="token operator">:</span> <span class="token string">'node_modules/@onsonr/nebula/dist/assets/*'</span><span class="token punctuation">,</span> <span class="token literal-property property">dest</span><span class="token operator">:</span> <span class="token string">'public/shoelace-assets/assets/'</span> <span class="token punctuation">}</span>
         <span class="token punctuation">]</span>
       <span class="token punctuation">}</span><span class="token punctuation">)</span>
     <span class="token punctuation">]</span>
   <span class="token punctuation">}</span>
 <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-</code><sl-copy-button class="copy-code-button" from="code-block-148"></sl-copy-button></pre>
+</code><sl-copy-button class="copy-code-button" from="code-block-122"></sl-copy-button></pre>
         </div>
       </article>
     </main>

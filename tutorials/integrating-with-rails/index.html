@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="This page explains how to integrate Shoelace with a Rails app." />
+    <meta name="description" content="This page explains how to integrate Nebula with a Rails app." />
     <title>Integrating with Rails</title>
 
     <meta name="turbo-cache-control" />
@@ -20,7 +20,7 @@
 
     <meta property="og:url" content="https://ui.onsonr.dev/tutorials/integrating-with-rails/" />
     <meta property="og:title" content="Integrating with Rails" />
-    <meta property="og:description" content="This page explains how to integrate Shoelace with a Rails app." />
+    <meta property="og:description" content="This page explains how to integrate Nebula with a Rails app." />
     <meta property="og:image" content="https://ui.onsonr.dev/assets/images/og-image.png" />
 
     <link rel="stylesheet" href="/dist/themes/light.css" />
@@ -59,8 +59,8 @@
 
     <div id="icon-toolbar">
       <a
-        href="https://github.com/shoelace-style/shoelace"
-        title="View Shoelace on GitHub"
+        href="https://github.com/onsonr/nebula"
+        title="View Nebula on GitHub"
         class="external-link"
         rel="noopener noreferrer"
         target="_blank"
@@ -70,7 +70,7 @@
 
       <a
         href="https://twitter.com/shoelace_style"
-        title="Follow Shoelace on Twitter"
+        title="Follow Nebula on Twitter"
         class="external-link"
         rel="noopener noreferrer"
         target="_blank"
@@ -107,7 +107,7 @@
         </svg>
         <span>
           <strong style="white-space: nowrap">Get ready for more awesome!</strong>
-          Web Awesome, the next iteration of Shoelace, is on Kickstarter.
+          Web Awesome, the next iteration of Nebula, is on Kickstarter.
         </span>
       </span>
       <span class="faux-button">Read Our Story</span>
@@ -116,7 +116,7 @@
     <aside id="sidebar" data-preserve-scroll="">
       <header>
         <a href="/">
-          <img src="/assets/images/wordmark.svg" alt="Shoelace" />
+          <img src="/assets/images/wordmark.svg" alt="Nebula" />
         </a>
         <div class="sidebar-version">0.0.10</div>
       </header>
@@ -125,7 +125,7 @@
         <sl-button
           size="small"
           class="repo-button repo-button--github"
-          href="https://github.com/shoelace-style/shoelace"
+          href="https://github.com/onsonr/nebula"
           target="_blank"
         >
           <sl-icon slot="prefix" name="github"></sl-icon> Code
@@ -133,7 +133,7 @@
         <sl-button
           size="small"
           class="repo-button repo-button--star"
-          href="https://github.com/shoelace-style/shoelace/stargazers"
+          href="https://github.com/onsonr/nebula/stargazers"
           target="_blank"
         >
           <sl-icon slot="prefix" name="star-fill"></sl-icon> Star
@@ -181,7 +181,7 @@
               <li><a href="/resources/community">Community</a></li>
               <li>
                 <a
-                  href="https://github.com/shoelace-style/shoelace/discussions"
+                  href="https://github.com/onsonr/nebula/discussions"
                   class="external-link"
                   rel="noopener noreferrer"
                   target="_blank"
@@ -473,13 +473,13 @@
 
         <div class="content__body">
           <h1>Integrating with Rails</h1>
-          <p>This page explains how to integrate Shoelace with a Rails app.</p>
+          <p>This page explains how to integrate Nebula with a Rails app.</p>
           <div role="alert" class="callout callout--tip">
             <p>
               This is a community-maintained document. Please <a href="/resources/community">ask the community</a> if
               you have questions about this integration. You can also
               <a
-                href="https://github.com/shoelace-style/shoelace/blob/next/docs/tutorials/integrating-with-rails.md"
+                href="https://github.com/onsonr/nebula/blob/next/docs/tutorials/integrating-with-rails.md"
                 class="external-link"
                 rel="noopener noreferrer"
                 target="_blank"
@@ -500,9 +500,9 @@
           <h2 id="instructions" class="anchor-heading">
             Instructions<a href="#instructions" aria-label='Direct link to "Instructions"'></a>
           </h2>
-          <p>To get started using Shoelace with Rails, the following packages must be installed.</p>
-          <pre><code class="language-bash" id="code-block-140"><span class="token function">yarn</span> <span class="token function">add</span> @shoelace-style/shoelace copy-webpack-plugin
-</code><sl-copy-button class="copy-code-button" from="code-block-140"></sl-copy-button></pre>
+          <p>To get started using Nebula with Rails, the following packages must be installed.</p>
+          <pre><code class="language-bash" id="code-block-144"><span class="token function">yarn</span> <span class="token function">add</span> @onsonr/nebula copy-webpack-plugin
+</code><sl-copy-button class="copy-code-button" from="code-block-144"></sl-copy-button></pre>
           <h3 id="importing-the-default-theme" class="anchor-heading">
             Importing the Default Theme<a
               href="#importing-the-default-theme"
@@ -510,12 +510,12 @@
             ></a>
           </h3>
           <p>
-            The next step is to import Shoelace’s default theme (stylesheet) in
+            The next step is to import Nebula’s default theme (stylesheet) in
             <code>app/javascript/stylesheets/application.scss</code>.
           </p>
-          <pre><code class="language-css" id="code-block-141"><span class="token atrule"><span class="token rule">@import</span> <span class="token string">'@shoelace-style/shoelace/dist/themes/light'</span><span class="token punctuation">;</span></span>
-<span class="token atrule"><span class="token rule">@import</span> <span class="token string">'@shoelace-style/shoelace/dist/themes/dark'</span><span class="token punctuation">;</span></span> // Optional dark theme
-</code><sl-copy-button class="copy-code-button" from="code-block-141"></sl-copy-button></pre>
+          <pre><code class="language-css" id="code-block-145"><span class="token atrule"><span class="token rule">@import</span> <span class="token string">'@onsonr/nebula/dist/themes/light'</span><span class="token punctuation">;</span></span>
+<span class="token atrule"><span class="token rule">@import</span> <span class="token string">'@onsonr/nebula/dist/themes/dark'</span><span class="token punctuation">;</span></span> // Optional dark theme
+</code><sl-copy-button class="copy-code-button" from="code-block-145"></sl-copy-button></pre>
           <p>
             Fore more details about themes, please refer to
             <a href="/getting-started/themes#theme-basics">Theme Basics</a>.
@@ -527,11 +527,11 @@
             ></a>
           </h3>
           <p>
-            After importing the theme, you’ll need to import the JavaScript files for Shoelace. Add the following code
-            to <code>app/javascript/packs/application.js</code>.
+            After importing the theme, you’ll need to import the JavaScript files for Nebula. Add the following code to
+            <code>app/javascript/packs/application.js</code>.
           </p>
-          <pre><code class="language-js" id="code-block-142"><span class="token keyword">import</span> <span class="token string">'../stylesheets/application.scss'</span>
-<span class="token keyword">import</span> <span class="token punctuation">{</span> setBasePath<span class="token punctuation">,</span> SlAlert<span class="token punctuation">,</span> SlAnimation<span class="token punctuation">,</span> SlButton<span class="token punctuation">,</span> <span class="token operator">...</span> <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'@shoelace-style/shoelace'</span>
+          <pre><code class="language-js" id="code-block-146"><span class="token keyword">import</span> <span class="token string">'../stylesheets/application.scss'</span>
+<span class="token keyword">import</span> <span class="token punctuation">{</span> setBasePath<span class="token punctuation">,</span> SlAlert<span class="token punctuation">,</span> SlAnimation<span class="token punctuation">,</span> SlButton<span class="token punctuation">,</span> <span class="token operator">...</span> <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'@onsonr/nebula'</span>
 
 <span class="token comment">// ...</span>
 
@@ -540,17 +540,17 @@
 <span class="token comment">// Path to the assets folder (should be independent from the current script source path</span>
 <span class="token comment">// to work correctly in different environments)</span>
 <span class="token function">setBasePath</span><span class="token punctuation">(</span>rootUrl <span class="token operator">+</span> <span class="token string">'/packs/js/'</span><span class="token punctuation">)</span>
-</code><sl-copy-button class="copy-code-button" from="code-block-142"></sl-copy-button></pre>
+</code><sl-copy-button class="copy-code-button" from="code-block-146"></sl-copy-button></pre>
           <h3 id="webpack-config" class="anchor-heading">
             webpack Config<a href="#webpack-config" aria-label='Direct link to "webpack Config"'></a>
           </h3>
           <p>
-            Next we need to add Shoelace’s assets to the final build output. To do this, modify
+            Next we need to add Nebula’s assets to the final build output. To do this, modify
             <code>config/webpack/environment.js</code> to look like this.
           </p>
-          <pre><code class="language-js" id="code-block-143"><span class="token keyword">const</span> <span class="token punctuation">{</span> environment <span class="token punctuation">}</span> <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'@rails/webpacker'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+          <pre><code class="language-js" id="code-block-147"><span class="token keyword">const</span> <span class="token punctuation">{</span> environment <span class="token punctuation">}</span> <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'@rails/webpacker'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 
-<span class="token comment">// Shoelace config</span>
+<span class="token comment">// Nebula config</span>
 <span class="token keyword">const</span> path <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'path'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token keyword">const</span> CopyPlugin <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'copy-webpack-plugin'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 
@@ -560,7 +560,7 @@ environment<span class="token punctuation">.</span>plugins<span class="token pun
   <span class="token keyword">new</span> <span class="token class-name">CopyPlugin</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
     <span class="token literal-property property">patterns</span><span class="token operator">:</span> <span class="token punctuation">[</span>
       <span class="token punctuation">{</span>
-        <span class="token literal-property property">from</span><span class="token operator">:</span> path<span class="token punctuation">.</span><span class="token function">resolve</span><span class="token punctuation">(</span>__dirname<span class="token punctuation">,</span> <span class="token string">'../../node_modules/@shoelace-style/shoelace/dist/assets'</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+        <span class="token literal-property property">from</span><span class="token operator">:</span> path<span class="token punctuation">.</span><span class="token function">resolve</span><span class="token punctuation">(</span>__dirname<span class="token punctuation">,</span> <span class="token string">'../../node_modules/@onsonr/nebula/dist/assets'</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
         <span class="token literal-property property">to</span><span class="token operator">:</span> path<span class="token punctuation">.</span><span class="token function">resolve</span><span class="token punctuation">(</span>__dirname<span class="token punctuation">,</span> <span class="token string">'../../public/packs/js/assets'</span><span class="token punctuation">)</span>
       <span class="token punctuation">}</span>
     <span class="token punctuation">]</span>
@@ -568,7 +568,7 @@ environment<span class="token punctuation">.</span>plugins<span class="token pun
 <span class="token punctuation">)</span><span class="token punctuation">;</span>
 
 module<span class="token punctuation">.</span>exports <span class="token operator">=</span> environment<span class="token punctuation">;</span>
-</code><sl-copy-button class="copy-code-button" from="code-block-143"></sl-copy-button></pre>
+</code><sl-copy-button class="copy-code-button" from="code-block-147"></sl-copy-button></pre>
           <h3 id="adding-pack-tags" class="anchor-heading">
             Adding Pack Tags<a href="#adding-pack-tags" aria-label='Direct link to "Adding Pack Tags"'></a>
           </h3>
@@ -577,7 +577,7 @@ module<span class="token punctuation">.</span>exports <span class="token operato
             <code>tags</code> in the <code>&lt;head&gt;</code> section of
             <code>app/views/layouts/application.html.erb</code>.
           </p>
-          <pre><code class="language-html" id="code-block-144"><span class="token doctype"><span class="token punctuation">&lt;!</span><span class="token doctype-tag">doctype</span> <span class="token name">html</span><span class="token punctuation">&gt;</span></span>
+          <pre><code class="language-html" id="code-block-148"><span class="token doctype"><span class="token punctuation">&lt;!</span><span class="token doctype-tag">doctype</span> <span class="token name">html</span><span class="token punctuation">&gt;</span></span>
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>html</span><span class="token punctuation">&gt;</span></span>
   <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>head</span><span class="token punctuation">&gt;</span></span>
     <span class="token comment">&lt;!-- ... --&gt;</span>
@@ -589,8 +589,8 @@ module<span class="token punctuation">.</span>exports <span class="token operato
     &lt;%= yield %&gt;
   <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>body</span><span class="token punctuation">&gt;</span></span>
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>html</span><span class="token punctuation">&gt;</span></span>
-</code><sl-copy-button class="copy-code-button" from="code-block-144"></sl-copy-button></pre>
-          <p>Now you can start using Shoelace components with Rails!</p>
+</code><sl-copy-button class="copy-code-button" from="code-block-148"></sl-copy-button></pre>
+          <p>Now you can start using Nebula components with Rails!</p>
           <h2 id="additional-resources" class="anchor-heading">
             Additional Resources<a href="#additional-resources" aria-label='Direct link to "Additional Resources"'></a>
           </h2>
@@ -616,7 +616,7 @@ module<span class="token punctuation">.</span>exports <span class="token operato
                 class="external-link"
                 rel="noopener noreferrer"
                 target="_blank"
-                >Railsbyte for Shoelace</a
+                >Railsbyte for Nebula</a
               >.
             </li>
           </ul>

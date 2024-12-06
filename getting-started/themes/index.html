@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Everything you need to know about theming Shoelace." />
+    <meta name="description" content="Everything you need to know about theming Nebula." />
     <title>Themes</title>
 
     <meta name="turbo-cache-control" />
@@ -20,7 +20,7 @@
 
     <meta property="og:url" content="https://ui.onsonr.dev/getting-started/themes/" />
     <meta property="og:title" content="Themes" />
-    <meta property="og:description" content="Everything you need to know about theming Shoelace." />
+    <meta property="og:description" content="Everything you need to know about theming Nebula." />
     <meta property="og:image" content="https://ui.onsonr.dev/assets/images/og-image.png" />
 
     <link rel="stylesheet" href="/dist/themes/light.css" />
@@ -59,8 +59,8 @@
 
     <div id="icon-toolbar">
       <a
-        href="https://github.com/shoelace-style/shoelace"
-        title="View Shoelace on GitHub"
+        href="https://github.com/onsonr/nebula"
+        title="View Nebula on GitHub"
         class="external-link"
         rel="noopener noreferrer"
         target="_blank"
@@ -70,7 +70,7 @@
 
       <a
         href="https://twitter.com/shoelace_style"
-        title="Follow Shoelace on Twitter"
+        title="Follow Nebula on Twitter"
         class="external-link"
         rel="noopener noreferrer"
         target="_blank"
@@ -107,7 +107,7 @@
         </svg>
         <span>
           <strong style="white-space: nowrap">Get ready for more awesome!</strong>
-          Web Awesome, the next iteration of Shoelace, is on Kickstarter.
+          Web Awesome, the next iteration of Nebula, is on Kickstarter.
         </span>
       </span>
       <span class="faux-button">Read Our Story</span>
@@ -116,7 +116,7 @@
     <aside id="sidebar" data-preserve-scroll="">
       <header>
         <a href="/">
-          <img src="/assets/images/wordmark.svg" alt="Shoelace" />
+          <img src="/assets/images/wordmark.svg" alt="Nebula" />
         </a>
         <div class="sidebar-version">0.0.10</div>
       </header>
@@ -125,7 +125,7 @@
         <sl-button
           size="small"
           class="repo-button repo-button--github"
-          href="https://github.com/shoelace-style/shoelace"
+          href="https://github.com/onsonr/nebula"
           target="_blank"
         >
           <sl-icon slot="prefix" name="github"></sl-icon> Code
@@ -133,7 +133,7 @@
         <sl-button
           size="small"
           class="repo-button repo-button--star"
-          href="https://github.com/shoelace-style/shoelace/stargazers"
+          href="https://github.com/onsonr/nebula/stargazers"
           target="_blank"
         >
           <sl-icon slot="prefix" name="star-fill"></sl-icon> Star
@@ -181,7 +181,7 @@
               <li><a href="/resources/community">Community</a></li>
               <li>
                 <a
-                  href="https://github.com/shoelace-style/shoelace/discussions"
+                  href="https://github.com/onsonr/nebula/discussions"
                   class="external-link"
                   rel="noopener noreferrer"
                   target="_blank"
@@ -477,12 +477,12 @@
         <div class="content__body">
           <h1>Themes</h1>
           <p>
-            Shoelace is designed to be highly customizable through pure CSS. Out of the box, you can choose from a light
+            Nebula is designed to be highly customizable through pure CSS. Out of the box, you can choose from a light
             or dark theme. Alternatively, you can design your own theme.
           </p>
           <p>
-            A theme is nothing more than a stylesheet that uses the Shoelace API to define design tokens and apply
-            custom styles to components. To create a theme, you will need a decent understanding of CSS, including
+            A theme is nothing more than a stylesheet that uses the Nebula API to define design tokens and apply custom
+            styles to components. To create a theme, you will need a decent understanding of CSS, including
             <a
               href="https://developer.mozilla.org/en-US/docs/Web/CSS/--*"
               class="external-link"
@@ -525,11 +525,11 @@
             All selectors must be scoped to the theme’s class to ensure interoperability with other themes. You should
             also scope them to <code>:host</code> so they can be imported and applied to custom element shadow roots.
           </p>
-          <pre><code class="language-css" id="code-block-73"><span class="token selector">:host,
+          <pre><code class="language-css" id="code-block-60"><span class="token selector">:host,
 .sl-theme-purple-power</span> <span class="token punctuation">{</span>
   <span class="token comment">/* ... */</span>
 <span class="token punctuation">}</span>
-</code><sl-copy-button class="copy-code-button" from="code-block-73"></sl-copy-button></pre>
+</code><sl-copy-button class="copy-code-button" from="code-block-60"></sl-copy-button></pre>
           <h3 id="activating-themes" class="anchor-heading">
             Activating Themes<a href="#activating-themes" aria-label='Direct link to "Activating Themes"'></a>
           </h3>
@@ -537,7 +537,7 @@
             To activate a theme, import it and apply the theme’s class to the <code>&lt;html&gt;</code> element. This
             example imports and activates the built-in dark theme.
           </p>
-          <pre><code class="language-html" id="code-block-74"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>html</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>sl-theme-dark<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+          <pre><code class="language-html" id="code-block-61"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>html</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>sl-theme-dark<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
   <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>head</span><span class="token punctuation">&gt;</span></span>
     <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>link</span> <span class="token attr-name">rel</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>stylesheet<span class="token punctuation">"</span></span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>path/to/shoelace/dist/themes/dark.css<span class="token punctuation">"</span></span> <span class="token punctuation">/&gt;</span></span>
   <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>head</span><span class="token punctuation">&gt;</span></span>
@@ -546,7 +546,7 @@
     ...
   <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>body</span><span class="token punctuation">&gt;</span></span>
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>html</span><span class="token punctuation">&gt;</span></span>
-</code><sl-copy-button class="copy-code-button" from="code-block-74"></sl-copy-button></pre>
+</code><sl-copy-button class="copy-code-button" from="code-block-61"></sl-copy-button></pre>
           <div role="alert" class="callout callout--tip">
             <p>
               There is one exception to this rule — the light theme <em>does not</em> need to be activated. For
@@ -564,7 +564,7 @@
             You can activate themes on various containers throughout the page. This example uses the light theme with a
             dark-themed sidebar.
           </p>
-          <pre><code class="language-html" id="code-block-75"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>html</span><span class="token punctuation">&gt;</span></span>
+          <pre><code class="language-html" id="code-block-62"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>html</span><span class="token punctuation">&gt;</span></span>
   <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>head</span><span class="token punctuation">&gt;</span></span>
     <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>link</span> <span class="token attr-name">rel</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>stylesheet<span class="token punctuation">"</span></span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>path/to/shoelace/dist/themes/light.css<span class="token punctuation">"</span></span> <span class="token punctuation">/&gt;</span></span>
     <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>link</span> <span class="token attr-name">rel</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>stylesheet<span class="token punctuation">"</span></span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>path/to/shoelace/dist/themes/dark.css<span class="token punctuation">"</span></span> <span class="token punctuation">/&gt;</span></span>
@@ -578,7 +578,7 @@
     <span class="token comment">&lt;!-- light-themed content --&gt;</span>
   <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>body</span><span class="token punctuation">&gt;</span></span>
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>html</span><span class="token punctuation">&gt;</span></span>
-</code><sl-copy-button class="copy-code-button" from="code-block-75"></sl-copy-button></pre>
+</code><sl-copy-button class="copy-code-button" from="code-block-62"></sl-copy-button></pre>
           <p>It’s for this reason that themes must be scoped to specific classes.</p>
           <h2 id="creating-themes" class="anchor-heading">
             Creating Themes<a href="#creating-themes" aria-label='Direct link to "Creating Themes"'></a>
@@ -595,30 +595,30 @@
             ></a>
           </h3>
           <p>
-            The easiest way to customize Shoelace is to override one of the built-in themes. You can do this by
-            importing the light or dark theme as-is, then creating a separate stylesheet that overrides
+            The easiest way to customize Nebula is to override one of the built-in themes. You can do this by importing
+            the light or dark theme as-is, then creating a separate stylesheet that overrides
             <a href="/getting-started/customizing#design-tokens">design tokens</a> and adds
             <a href="/getting-started/customizing#component-parts">component styles</a> to your liking. You must import
             your theme <em>after</em> the built-in theme.
           </p>
           <p>If you’re customizing the light theme, you should scope your styles to the following selectors.</p>
-          <pre><code class="language-css" id="code-block-76"><span class="token selector">:root,
+          <pre><code class="language-css" id="code-block-63"><span class="token selector">:root,
 :host,
 .sl-theme-light</span> <span class="token punctuation">{</span>
   <span class="token comment">/* your custom styles here */</span>
 <span class="token punctuation">}</span>
-</code><sl-copy-button class="copy-code-button" from="code-block-76"></sl-copy-button></pre>
+</code><sl-copy-button class="copy-code-button" from="code-block-63"></sl-copy-button></pre>
           <p>If you’re customizing the dark theme, you should scope your styles to the following selectors.</p>
-          <pre><code class="language-css" id="code-block-77"><span class="token selector">:host,
+          <pre><code class="language-css" id="code-block-64"><span class="token selector">:host,
 .sl-theme-dark</span> <span class="token punctuation">{</span>
   <span class="token comment">/* your custom styles here */</span>
 <span class="token punctuation">}</span>
-</code><sl-copy-button class="copy-code-button" from="code-block-77"></sl-copy-button></pre>
+</code><sl-copy-button class="copy-code-button" from="code-block-64"></sl-copy-button></pre>
           <p>
             By customizing a built-in theme, you’ll maintain a smaller stylesheet containing only the changes you’ve
             made. Contrast this to <a href="#creating-a-new-theme">creating a new theme</a>, where you need to
             explicitly define every design token required by the library. This approach is more “future-proof,” as new
-            design tokens that emerge in subsequent versions of Shoelace will be accounted for by the built-in theme.
+            design tokens that emerge in subsequent versions of Nebula will be accounted for by the built-in theme.
           </p>
           <p>
             While this approach is easier to maintain, the drawback is that your theme can’t be activated independently
@@ -637,21 +637,21 @@
             Start by changing the selector to match your theme’s name. Assuming your new theme is called “Purple Power”,
             your theme should be scoped like this.
           </p>
-          <pre><code class="language-css" id="code-block-78"><span class="token selector">:host,
+          <pre><code class="language-css" id="code-block-65"><span class="token selector">:host,
 .sl-theme-purple-power</span> <span class="token punctuation">{</span>
   <span class="token comment">/* your custom styles here */</span>
 <span class="token punctuation">}</span>
-</code><sl-copy-button class="copy-code-button" from="code-block-78"></sl-copy-button></pre>
+</code><sl-copy-button class="copy-code-button" from="code-block-65"></sl-copy-button></pre>
           <p>
             By creating a new theme, you won’t be relying on a built-in theme as a foundation. Because the theme is
             decoupled from the built-ins, you can activate it independently as an alternative to the built-ins. This is
             the recommended approach if you’re looking to open source your theme for others to use.
           </p>
           <p>
-            You will, however, need to maintain your theme more carefully, as new versions of Shoelace may introduce new
+            You will, however, need to maintain your theme more carefully, as new versions of Nebula may introduce new
             design tokens that your theme won’t have accounted for. Because of this, it’s recommended that you clearly
-            specify which version(s) of Shoelace your theme is designed to work with and keep it up to date as new
-            versions of Shoelace are released.
+            specify which version(s) of Nebula your theme is designed to work with and keep it up to date as new
+            versions of Nebula are released.
           </p>
           <h2 id="dark-theme" class="anchor-heading">
             Dark Theme<a href="#dark-theme" aria-label='Direct link to "Dark Theme"'></a>
@@ -669,18 +669,18 @@
             dark modes with minimal effort.
           </p>
           <p>To install the dark theme, add the following to the <code>&lt;head&gt;</code> section of your page.</p>
-          <pre><code class="language-html" id="code-block-79"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>link</span>
+          <pre><code class="language-html" id="code-block-66"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>link</span>
   <span class="token attr-name">rel</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>stylesheet<span class="token punctuation">"</span></span>
-  <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@0.0.10/cdn/themes/dark.css<span class="token punctuation">"</span></span>
+  <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>https://cdn.jsdelivr.net/npm/@onsonr/nebula@0.0.10/cdn/themes/dark.css<span class="token punctuation">"</span></span>
 <span class="token punctuation">/&gt;</span></span>
-</code><sl-copy-button class="copy-code-button" from="code-block-79"></sl-copy-button></pre>
+</code><sl-copy-button class="copy-code-button" from="code-block-66"></sl-copy-button></pre>
           <p>
             To activate the theme, apply the <code>sl-theme-dark</code> class to the <code>&lt;html&gt;</code> element.
           </p>
-          <pre><code class="language-html" id="code-block-80"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>html</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>sl-theme-dark<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+          <pre><code class="language-html" id="code-block-67"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>html</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>sl-theme-dark<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
   ...
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>html</span><span class="token punctuation">&gt;</span></span>
-</code><sl-copy-button class="copy-code-button" from="code-block-80"></sl-copy-button></pre>
+</code><sl-copy-button class="copy-code-button" from="code-block-67"></sl-copy-button></pre>
           <h3 id="detecting-the-users-color-scheme-preference" class="anchor-heading">
             Detecting the User’s Color Scheme Preference<a
               href="#detecting-the-users-color-scheme-preference"
@@ -688,7 +688,7 @@
             ></a>
           </h3>
           <p>
-            Shoelace doesn’t try to auto-detect the user’s light/dark mode preference. This should be done at the
+            Nebula doesn’t try to auto-detect the user’s light/dark mode preference. This should be done at the
             application level. As a best practice, to provide a dark theme in your app, you should:
           </p>
           <ul>
@@ -707,7 +707,7 @@
             <li>Remember the user’s preference and restore it on subsequent logins</li>
           </ul>
           <p>
-            Shoelace avoids using the <code>prefers-color-scheme</code> media query because not all apps support dark
+            Nebula avoids using the <code>prefers-color-scheme</code> media query because not all apps support dark
             mode, and it would break things for the ones that don’t.
           </p>
         </div>

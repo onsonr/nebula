@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Some things to note about Shoelace and forms." />
+    <meta name="description" content="Some things to note about Nebula and forms." />
     <title>Form Controls</title>
 
     <meta name="turbo-cache-control" />
@@ -20,7 +20,7 @@
 
     <meta property="og:url" content="https://ui.onsonr.dev/getting-started/form-controls/" />
     <meta property="og:title" content="Form Controls" />
-    <meta property="og:description" content="Some things to note about Shoelace and forms." />
+    <meta property="og:description" content="Some things to note about Nebula and forms." />
     <meta property="og:image" content="https://ui.onsonr.dev/assets/images/og-image.png" />
 
     <link rel="stylesheet" href="/dist/themes/light.css" />
@@ -59,8 +59,8 @@
 
     <div id="icon-toolbar">
       <a
-        href="https://github.com/shoelace-style/shoelace"
-        title="View Shoelace on GitHub"
+        href="https://github.com/onsonr/nebula"
+        title="View Nebula on GitHub"
         class="external-link"
         rel="noopener noreferrer"
         target="_blank"
@@ -70,7 +70,7 @@
 
       <a
         href="https://twitter.com/shoelace_style"
-        title="Follow Shoelace on Twitter"
+        title="Follow Nebula on Twitter"
         class="external-link"
         rel="noopener noreferrer"
         target="_blank"
@@ -107,7 +107,7 @@
         </svg>
         <span>
           <strong style="white-space: nowrap">Get ready for more awesome!</strong>
-          Web Awesome, the next iteration of Shoelace, is on Kickstarter.
+          Web Awesome, the next iteration of Nebula, is on Kickstarter.
         </span>
       </span>
       <span class="faux-button">Read Our Story</span>
@@ -116,7 +116,7 @@
     <aside id="sidebar" data-preserve-scroll="">
       <header>
         <a href="/">
-          <img src="/assets/images/wordmark.svg" alt="Shoelace" />
+          <img src="/assets/images/wordmark.svg" alt="Nebula" />
         </a>
         <div class="sidebar-version">0.0.10</div>
       </header>
@@ -125,7 +125,7 @@
         <sl-button
           size="small"
           class="repo-button repo-button--github"
-          href="https://github.com/shoelace-style/shoelace"
+          href="https://github.com/onsonr/nebula"
           target="_blank"
         >
           <sl-icon slot="prefix" name="github"></sl-icon> Code
@@ -133,7 +133,7 @@
         <sl-button
           size="small"
           class="repo-button repo-button--star"
-          href="https://github.com/shoelace-style/shoelace/stargazers"
+          href="https://github.com/onsonr/nebula/stargazers"
           target="_blank"
         >
           <sl-icon slot="prefix" name="star-fill"></sl-icon> Star
@@ -181,7 +181,7 @@
               <li><a href="/resources/community">Community</a></li>
               <li>
                 <a
-                  href="https://github.com/shoelace-style/shoelace/discussions"
+                  href="https://github.com/onsonr/nebula/discussions"
                   class="external-link"
                   rel="noopener noreferrer"
                   target="_blank"
@@ -477,7 +477,7 @@
         <div class="content__body">
           <h1>Form Controls</h1>
           <p>
-            Every Shoelace component makes use of a
+            Every Nebula component makes use of a
             <a
               href="https://developer.mozilla.org/en-US/docs/Web/Web_Components/Using_shadow_DOM"
               class="external-link"
@@ -489,7 +489,7 @@
             <code>&lt;form&gt;</code> elements do not recognize form controls located inside a shadow root.
           </p>
           <p>
-            Shoelace solves this problem by using the
+            Nebula solves this problem by using the
             <a
               href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLFormElement/formdata_event"
               class="external-link"
@@ -504,18 +504,17 @@
               rel="noopener noreferrer"
               target="_blank"
               >available in all modern browsers</a
-            >. This means, when a form is submitted, Shoelace form controls will automatically append their values to
-            the <code>FormData</code> object that’s used to submit the form. In most cases, things will “just work.”
-            However, if you’re using a form serialization library, it might need to be adapted to recognize Shoelace
-            form controls.
+            >. This means, when a form is submitted, Nebula form controls will automatically append their values to the
+            <code>FormData</code> object that’s used to submit the form. In most cases, things will “just work.”
+            However, if you’re using a form serialization library, it might need to be adapted to recognize Nebula form
+            controls.
           </p>
           <div role="alert" class="callout callout--tip">
             <p>
-              Shoelace uses event listeners to intercept the form’s <code>formdata</code> and
-              <code>submit</code> events. This allows it to inject data and trigger validation as necessary. If you’re
-              also attaching an event listener to the form,
-              <em>you must attach it after Shoelace form controls are connected to the DOM</em>, otherwise your logic
-              will run before Shoelace has a chance to inject form data and validate form controls.
+              Nebula uses event listeners to intercept the form’s <code>formdata</code> and <code>submit</code> events.
+              This allows it to inject data and trigger validation as necessary. If you’re also attaching an event
+              listener to the form, <em>you must attach it after Nebula form controls are connected to the DOM</em>,
+              otherwise your logic will run before Nebula has a chance to inject form data and validate form controls.
             </p>
           </div>
           <h2 id="data-serialization" class="anchor-heading">
@@ -550,23 +549,23 @@
             interface offers a standard way to serialize forms in the browser. You can create a
             <code>FormData</code> object from any <code>&lt;form&gt;</code> element like this.
           </p>
-          <pre><code class="language-js" id="code-block-35"><span class="token keyword">const</span> form <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">querySelector</span><span class="token punctuation">(</span><span class="token string">'form'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+          <pre><code class="language-js" id="code-block-68"><span class="token keyword">const</span> form <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">querySelector</span><span class="token punctuation">(</span><span class="token string">'form'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token keyword">const</span> data <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">FormData</span><span class="token punctuation">(</span>form<span class="token punctuation">)</span><span class="token punctuation">;</span>
 
 <span class="token comment">// All form control data is available in a FormData object</span>
-</code><sl-copy-button class="copy-code-button" from="code-block-35"></sl-copy-button></pre>
+</code><sl-copy-button class="copy-code-button" from="code-block-68"></sl-copy-button></pre>
           <p>
             However, some folks find <code>FormData</code> tricky to work with or they need to pass a JSON payload to
-            their server. To accommodate this, Shoelace offers a serialization utility that gathers form data and
-            returns a simple JavaScript object instead.
+            their server. To accommodate this, Nebula offers a serialization utility that gathers form data and returns
+            a simple JavaScript object instead.
           </p>
-          <pre><code class="language-js" id="code-block-36"><span class="token keyword">import</span> <span class="token punctuation">{</span> serialize <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'@shoelace-style/shoelace/dist/utilities/form.js'</span><span class="token punctuation">;</span>
+          <pre><code class="language-js" id="code-block-69"><span class="token keyword">import</span> <span class="token punctuation">{</span> serialize <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'@onsonr/nebula/dist/utilities/form.js'</span><span class="token punctuation">;</span>
 
 <span class="token keyword">const</span> form <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">querySelector</span><span class="token punctuation">(</span><span class="token string">'form'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token keyword">const</span> data <span class="token operator">=</span> <span class="token function">serialize</span><span class="token punctuation">(</span>form<span class="token punctuation">)</span><span class="token punctuation">;</span>
 
 <span class="token comment">// All form control data is available in a plain object</span>
-</code><sl-copy-button class="copy-code-button" from="code-block-36"></sl-copy-button></pre>
+</code><sl-copy-button class="copy-code-button" from="code-block-69"></sl-copy-button></pre>
           <p>
             This results in an object with name/value pairs that map to each form control. If more than one form control
             shares the same name, the values will be passed as an array, e.g.
@@ -587,8 +586,8 @@
               target="_blank"
               >Constraint Validation API</a
             >
-            for Shoelace form controls. You can activate it using attributes such as <code>required</code>,
-            <code>pattern</code>, <code>minlength</code>, <code>maxlength</code>, etc. Shoelace implements many of the
+            for Nebula form controls. You can activate it using attributes such as <code>required</code>,
+            <code>pattern</code>, <code>minlength</code>, <code>maxlength</code>, etc. Nebula implements many of the
             same attributes as native form controls, but check the documentation for a list of supported properties for
             each component.
           </p>
@@ -661,9 +660,9 @@
               </div>
             </div>
 
-            <div class="code-preview__source-group" id="code-preview-source-group-2">
+            <div class="code-preview__source-group" id="code-preview-source-group-3">
               <div class="code-preview__source code-preview__source--html" data-flavor="html">
-                <pre><code class="language-html" id="code-block-37"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>form</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>input-validation-required<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+                <pre><code class="language-html" id="code-block-70"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>form</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>input-validation-required<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
   <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>sl-input</span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>name<span class="token punctuation">"</span></span> <span class="token attr-name">label</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>Name<span class="token punctuation">"</span></span> <span class="token attr-name">required</span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>sl-input</span><span class="token punctuation">&gt;</span></span>
   <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>br</span> <span class="token punctuation">/&gt;</span></span>
   <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>sl-select</span> <span class="token attr-name">label</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>Favorite Animal<span class="token punctuation">"</span></span> <span class="token attr-name">clearable</span> <span class="token attr-name">required</span><span class="token punctuation">&gt;</span></span>
@@ -698,16 +697,16 @@
     <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
   <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 </span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">&gt;</span></span>
-</code><sl-copy-button class="copy-code-button" from="code-block-37"></sl-copy-button></pre>
+</code><sl-copy-button class="copy-code-button" from="code-block-70"></sl-copy-button></pre>
               </div>
 
               <div class="code-preview__source code-preview__source--react" data-flavor="react">
-                <pre><code class="language-jsx" id="code-block-38"><span class="token keyword">import</span> SlButton <span class="token keyword">from</span> <span class="token string">'@shoelace-style/shoelace/dist/react/button'</span><span class="token punctuation">;</span>
-<span class="token keyword">import</span> SlCheckbox <span class="token keyword">from</span> <span class="token string">'@shoelace-style/shoelace/dist/react/checkbox'</span><span class="token punctuation">;</span>
-<span class="token keyword">import</span> SlInput <span class="token keyword">from</span> <span class="token string">'@shoelace-style/shoelace/dist/react/input'</span><span class="token punctuation">;</span>
-<span class="token keyword">import</span> SlMenuItem <span class="token keyword">from</span> <span class="token string">'@shoelace-style/shoelace/dist/react/menu-item'</span><span class="token punctuation">;</span>
-<span class="token keyword">import</span> SlSelect <span class="token keyword">from</span> <span class="token string">'@shoelace-style/shoelace/dist/react/select'</span><span class="token punctuation">;</span>
-<span class="token keyword">import</span> SlTextarea <span class="token keyword">from</span> <span class="token string">'@shoelace-style/shoelace/dist/react/textarea'</span><span class="token punctuation">;</span>
+                <pre><code class="language-jsx" id="code-block-71"><span class="token keyword">import</span> SlButton <span class="token keyword">from</span> <span class="token string">'@onsonr/nebula/dist/react/button'</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> SlCheckbox <span class="token keyword">from</span> <span class="token string">'@onsonr/nebula/dist/react/checkbox'</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> SlInput <span class="token keyword">from</span> <span class="token string">'@onsonr/nebula/dist/react/input'</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> SlMenuItem <span class="token keyword">from</span> <span class="token string">'@onsonr/nebula/dist/react/menu-item'</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> SlSelect <span class="token keyword">from</span> <span class="token string">'@onsonr/nebula/dist/react/select'</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> SlTextarea <span class="token keyword">from</span> <span class="token string">'@onsonr/nebula/dist/react/textarea'</span><span class="token punctuation">;</span>
 
 <span class="token keyword">const</span> <span class="token function-variable function">App</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
   <span class="token keyword">function</span> <span class="token function">handleSubmit</span><span class="token punctuation">(</span><span class="token parameter">event</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
@@ -737,7 +736,7 @@
     </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>form</span><span class="token punctuation">&gt;</span></span>
   <span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token punctuation">}</span><span class="token punctuation">;</span>
-</code><sl-copy-button class="copy-code-button" from="code-block-38"></sl-copy-button></pre>
+</code><sl-copy-button class="copy-code-button" from="code-block-71"></sl-copy-button></pre>
               </div>
             </div>
 
@@ -746,7 +745,7 @@
                 type="button"
                 class="code-preview__button code-preview__toggle"
                 aria-expanded="false"
-                aria-controls="code-preview-source-group-2"
+                aria-controls="code-preview-source-group-3"
               >
                 Source
                 <svg
@@ -832,9 +831,9 @@
               </div>
             </div>
 
-            <div class="code-preview__source-group" id="code-preview-source-group-3">
+            <div class="code-preview__source-group" id="code-preview-source-group-4">
               <div class="code-preview__source code-preview__source--html" data-flavor="html">
-                <pre><code class="language-html" id="code-block-39"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>form</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>input-validation-pattern<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+                <pre><code class="language-html" id="code-block-72"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>form</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>input-validation-pattern<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
   <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>sl-input</span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>letters<span class="token punctuation">"</span></span> <span class="token attr-name">required</span> <span class="token attr-name">label</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>Letters<span class="token punctuation">"</span></span> <span class="token attr-name">pattern</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>[A-Za-z]+<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>sl-input</span><span class="token punctuation">&gt;</span></span>
   <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>br</span> <span class="token punctuation">/&gt;</span></span>
   <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>sl-button</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>submit<span class="token punctuation">"</span></span> <span class="token attr-name">variant</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>primary<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>Submit<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>sl-button</span><span class="token punctuation">&gt;</span></span>
@@ -855,12 +854,12 @@
     <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
   <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 </span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">&gt;</span></span>
-</code><sl-copy-button class="copy-code-button" from="code-block-39"></sl-copy-button></pre>
+</code><sl-copy-button class="copy-code-button" from="code-block-72"></sl-copy-button></pre>
               </div>
 
               <div class="code-preview__source code-preview__source--react" data-flavor="react">
-                <pre><code class="language-jsx" id="code-block-40"><span class="token keyword">import</span> SlButton <span class="token keyword">from</span> <span class="token string">'@shoelace-style/shoelace/dist/react/button'</span><span class="token punctuation">;</span>
-<span class="token keyword">import</span> SlInput <span class="token keyword">from</span> <span class="token string">'@shoelace-style/shoelace/dist/react/input'</span><span class="token punctuation">;</span>
+                <pre><code class="language-jsx" id="code-block-73"><span class="token keyword">import</span> SlButton <span class="token keyword">from</span> <span class="token string">'@onsonr/nebula/dist/react/button'</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> SlInput <span class="token keyword">from</span> <span class="token string">'@onsonr/nebula/dist/react/input'</span><span class="token punctuation">;</span>
 
 <span class="token keyword">const</span> <span class="token function-variable function">App</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
   <span class="token keyword">function</span> <span class="token function">handleSubmit</span><span class="token punctuation">(</span><span class="token parameter">event</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
@@ -878,7 +877,7 @@
     </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>form</span><span class="token punctuation">&gt;</span></span>
   <span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token punctuation">}</span><span class="token punctuation">;</span>
-</code><sl-copy-button class="copy-code-button" from="code-block-40"></sl-copy-button></pre>
+</code><sl-copy-button class="copy-code-button" from="code-block-73"></sl-copy-button></pre>
               </div>
             </div>
 
@@ -887,7 +886,7 @@
                 type="button"
                 class="code-preview__button code-preview__toggle"
                 aria-expanded="false"
-                aria-controls="code-preview-source-group-3"
+                aria-controls="code-preview-source-group-4"
               >
                 Source
                 <svg
@@ -967,9 +966,9 @@
               </div>
             </div>
 
-            <div class="code-preview__source-group" id="code-preview-source-group-4">
+            <div class="code-preview__source-group" id="code-preview-source-group-5">
               <div class="code-preview__source code-preview__source--html" data-flavor="html">
-                <pre><code class="language-html" id="code-block-41"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>form</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>input-validation-type<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+                <pre><code class="language-html" id="code-block-74"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>form</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>input-validation-type<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
   <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>sl-input</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>email<span class="token punctuation">"</span></span> <span class="token attr-name">label</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>Email<span class="token punctuation">"</span></span> <span class="token attr-name">placeholder</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>you@example.com<span class="token punctuation">"</span></span> <span class="token attr-name">required</span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>sl-input</span><span class="token punctuation">&gt;</span></span>
   <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>br</span> <span class="token punctuation">/&gt;</span></span>
   <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>sl-input</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>url<span class="token punctuation">"</span></span> <span class="token attr-name">label</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>URL<span class="token punctuation">"</span></span> <span class="token attr-name">placeholder</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>https://example.com/<span class="token punctuation">"</span></span> <span class="token attr-name">required</span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>sl-input</span><span class="token punctuation">&gt;</span></span>
@@ -992,12 +991,12 @@
     <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
   <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 </span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">&gt;</span></span>
-</code><sl-copy-button class="copy-code-button" from="code-block-41"></sl-copy-button></pre>
+</code><sl-copy-button class="copy-code-button" from="code-block-74"></sl-copy-button></pre>
               </div>
 
               <div class="code-preview__source code-preview__source--react" data-flavor="react">
-                <pre><code class="language-jsx" id="code-block-42"><span class="token keyword">import</span> SlButton <span class="token keyword">from</span> <span class="token string">'@shoelace-style/shoelace/dist/react/button'</span><span class="token punctuation">;</span>
-<span class="token keyword">import</span> SlInput <span class="token keyword">from</span> <span class="token string">'@shoelace-style/shoelace/dist/react/input'</span><span class="token punctuation">;</span>
+                <pre><code class="language-jsx" id="code-block-75"><span class="token keyword">import</span> SlButton <span class="token keyword">from</span> <span class="token string">'@onsonr/nebula/dist/react/button'</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> SlInput <span class="token keyword">from</span> <span class="token string">'@onsonr/nebula/dist/react/input'</span><span class="token punctuation">;</span>
 
 <span class="token keyword">const</span> <span class="token function-variable function">App</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
   <span class="token keyword">function</span> <span class="token function">handleSubmit</span><span class="token punctuation">(</span><span class="token parameter">event</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
@@ -1017,7 +1016,7 @@
     </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>form</span><span class="token punctuation">&gt;</span></span>
   <span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token punctuation">}</span><span class="token punctuation">;</span>
-</code><sl-copy-button class="copy-code-button" from="code-block-42"></sl-copy-button></pre>
+</code><sl-copy-button class="copy-code-button" from="code-block-75"></sl-copy-button></pre>
               </div>
             </div>
 
@@ -1026,7 +1025,7 @@
                 type="button"
                 class="code-preview__button code-preview__toggle"
                 aria-expanded="false"
-                aria-controls="code-preview-source-group-4"
+                aria-controls="code-preview-source-group-5"
               >
                 Source
                 <svg
@@ -1119,9 +1118,9 @@
               </div>
             </div>
 
-            <div class="code-preview__source-group" id="code-preview-source-group-5">
+            <div class="code-preview__source-group" id="code-preview-source-group-6">
               <div class="code-preview__source code-preview__source--html" data-flavor="html">
-                <pre><code class="language-html" id="code-block-43"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>form</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>input-validation-custom<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+                <pre><code class="language-html" id="code-block-76"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>form</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>input-validation-custom<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
   <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>sl-input</span> <span class="token attr-name">label</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>Type “shoelace”<span class="token punctuation">"</span></span> <span class="token attr-name">required</span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>sl-input</span><span class="token punctuation">&gt;</span></span>
   <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>br</span> <span class="token punctuation">/&gt;</span></span>
   <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>sl-button</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>submit<span class="token punctuation">"</span></span> <span class="token attr-name">variant</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>primary<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>Submit<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>sl-button</span><span class="token punctuation">&gt;</span></span>
@@ -1151,13 +1150,13 @@
     <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
   <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 </span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">&gt;</span></span>
-</code><sl-copy-button class="copy-code-button" from="code-block-43"></sl-copy-button></pre>
+</code><sl-copy-button class="copy-code-button" from="code-block-76"></sl-copy-button></pre>
               </div>
 
               <div class="code-preview__source code-preview__source--react" data-flavor="react">
-                <pre><code class="language-jsx" id="code-block-44"><span class="token keyword">import</span> <span class="token punctuation">{</span> useRef<span class="token punctuation">,</span> useState <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'react'</span><span class="token punctuation">;</span>
-<span class="token keyword">import</span> SlButton <span class="token keyword">from</span> <span class="token string">'@shoelace-style/shoelace/dist/react/button'</span><span class="token punctuation">;</span>
-<span class="token keyword">import</span> SlInput <span class="token keyword">from</span> <span class="token string">'@shoelace-style/shoelace/dist/react/input'</span><span class="token punctuation">;</span>
+                <pre><code class="language-jsx" id="code-block-77"><span class="token keyword">import</span> <span class="token punctuation">{</span> useRef<span class="token punctuation">,</span> useState <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'react'</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> SlButton <span class="token keyword">from</span> <span class="token string">'@onsonr/nebula/dist/react/button'</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> SlInput <span class="token keyword">from</span> <span class="token string">'@onsonr/nebula/dist/react/input'</span><span class="token punctuation">;</span>
 
 <span class="token keyword">const</span> <span class="token function-variable function">App</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
   <span class="token keyword">const</span> input <span class="token operator">=</span> <span class="token function">useRef</span><span class="token punctuation">(</span><span class="token keyword">null</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
@@ -1188,7 +1187,7 @@
     </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>form</span><span class="token punctuation">&gt;</span></span>
   <span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token punctuation">}</span><span class="token punctuation">;</span>
-</code><sl-copy-button class="copy-code-button" from="code-block-44"></sl-copy-button></pre>
+</code><sl-copy-button class="copy-code-button" from="code-block-77"></sl-copy-button></pre>
               </div>
             </div>
 
@@ -1197,7 +1196,7 @@
                 type="button"
                 class="code-preview__button code-preview__toggle"
                 aria-expanded="false"
-                aria-controls="code-preview-source-group-5"
+                aria-controls="code-preview-source-group-6"
               >
                 Source
                 <svg
@@ -1252,7 +1251,7 @@
             ></a>
           </h2>
           <p>
-            Due to the many ways form controls are used, Shoelace doesn’t provide out of the box validation styles for
+            Due to the many ways form controls are used, Nebula doesn’t provide out of the box validation styles for
             form controls as part of its default theme. Instead, the following attributes will be applied to reflect a
             control’s validity as users interact with it. You can use them to create custom styles for any of the
             validation states you’re interested in.
@@ -1318,7 +1317,7 @@
           <div role="alert" class="callout callout--tip">
             <p>
               In the future, data attributes will be replaced with custom pseudo classes such as
-              <code>:--valid</code> and <code>:--invalid</code>. Shoelace is using data attributes as a workaround until
+              <code>:--valid</code> and <code>:--invalid</code>. Nebula is using data attributes as a workaround until
               browsers support custom states through
               <a
                 href="https://developer.mozilla.org/en-US/docs/Web/API/ElementInternals/states"
@@ -1457,9 +1456,9 @@
               </div>
             </div>
 
-            <div class="code-preview__source-group" id="code-preview-source-group-6">
+            <div class="code-preview__source-group" id="code-preview-source-group-7">
               <div class="code-preview__source code-preview__source--html">
-                <pre><code class="language-html" id="code-block-45"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>form</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>validity-styles<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+                <pre><code class="language-html" id="code-block-78"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>form</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>validity-styles<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
   <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>sl-input</span>
     <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>name<span class="token punctuation">"</span></span>
     <span class="token attr-name">label</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>Name<span class="token punctuation">"</span></span>
@@ -1556,7 +1555,7 @@
     <span class="token property">box-shadow</span><span class="token punctuation">:</span> 0 0 0 <span class="token function">var</span><span class="token punctuation">(</span>--sl-focus-ring-width<span class="token punctuation">)</span> <span class="token function">var</span><span class="token punctuation">(</span>--sl-color-success-300<span class="token punctuation">)</span><span class="token punctuation">;</span>
   <span class="token punctuation">}</span>
 </span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>style</span><span class="token punctuation">&gt;</span></span>
-</code><sl-copy-button class="copy-code-button" from="code-block-45"></sl-copy-button></pre>
+</code><sl-copy-button class="copy-code-button" from="code-block-78"></sl-copy-button></pre>
               </div>
             </div>
 
@@ -1565,7 +1564,7 @@
                 type="button"
                 class="code-preview__button code-preview__toggle"
                 aria-expanded="false"
-                aria-controls="code-preview-source-group-6"
+                aria-controls="code-preview-source-group-7"
               >
                 Source
                 <svg
@@ -1606,8 +1605,8 @@
             ></a>
           </h2>
           <p>
-            By default, Shoelace form controls use the browser’s tooltip-style error messages. No mechanism is provided
-            to show errors inline, as there are too many opinions on how that would work when combined with native form
+            By default, Nebula form controls use the browser’s tooltip-style error messages. No mechanism is provided to
+            show errors inline, as there are too many opinions on how that would work when combined with native form
             controls and other custom elements. You can, however, implement your own solution using the following
             technique.
           </p>
@@ -1723,9 +1722,9 @@
               </div>
             </div>
 
-            <div class="code-preview__source-group" id="code-preview-source-group-7">
+            <div class="code-preview__source-group" id="code-preview-source-group-8">
               <div class="code-preview__source code-preview__source--html">
-                <pre><code class="language-html" id="code-block-46"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>form</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>inline-validation<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+                <pre><code class="language-html" id="code-block-79"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>form</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>inline-validation<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
   <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>sl-input</span>
     <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>name<span class="token punctuation">"</span></span>
     <span class="token attr-name">label</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>Name<span class="token punctuation">"</span></span>
@@ -1824,7 +1823,7 @@
     <span class="token property">box-shadow</span><span class="token punctuation">:</span> 0 0 0 <span class="token function">var</span><span class="token punctuation">(</span>--sl-focus-ring-width<span class="token punctuation">)</span> <span class="token function">var</span><span class="token punctuation">(</span>--sl-color-success-300<span class="token punctuation">)</span><span class="token punctuation">;</span>
   <span class="token punctuation">}</span>
 </span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>style</span><span class="token punctuation">&gt;</span></span>
-</code><sl-copy-button class="copy-code-button" from="code-block-46"></sl-copy-button></pre>
+</code><sl-copy-button class="copy-code-button" from="code-block-79"></sl-copy-button></pre>
               </div>
             </div>
 
@@ -1833,7 +1832,7 @@
                 type="button"
                 class="code-preview__button code-preview__toggle"
                 aria-expanded="false"
-                aria-controls="code-preview-source-group-7"
+                aria-controls="code-preview-source-group-8"
               >
                 Source
                 <svg
@@ -1890,24 +1889,24 @@
               target="_blank"
               ><code>HTMLFormElement.elements</code></a
             >
-            will not return Shoelace form controls because the browser is unaware of their status as custom element form
-            controls. Fortunately, Shoelace provides an <code>elements()</code> function that does something very
-            similar. However, instead of returning an
+            will not return Nebula form controls because the browser is unaware of their status as custom element form
+            controls. Fortunately, Nebula provides an <code>elements()</code> function that does something very similar.
+            However, instead of returning an
             <a
               href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLFormControlsCollection"
               class="external-link"
               rel="noopener noreferrer"
               target="_blank"
               ><code>HTMLFormControlsCollection</code></a
-            >, it returns an array of HTML and Shoelace form controls in the order they appear in the DOM.
+            >, it returns an array of HTML and Nebula form controls in the order they appear in the DOM.
           </p>
-          <pre><code class="language-js" id="code-block-47"><span class="token keyword">import</span> <span class="token punctuation">{</span> getFormControls <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'@shoelace-style/shoelace/dist/utilities/form.js'</span><span class="token punctuation">;</span>
+          <pre><code class="language-js" id="code-block-80"><span class="token keyword">import</span> <span class="token punctuation">{</span> getFormControls <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'@onsonr/nebula/dist/utilities/form.js'</span><span class="token punctuation">;</span>
 
 <span class="token keyword">const</span> form <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">querySelector</span><span class="token punctuation">(</span><span class="token string">'#my-form'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token keyword">const</span> formControls <span class="token operator">=</span> <span class="token function">getFormControls</span><span class="token punctuation">(</span>form<span class="token punctuation">)</span><span class="token punctuation">;</span>
 
 console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>formControls<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// e.g. [input, sl-input, ...]</span>
-</code><sl-copy-button class="copy-code-button" from="code-block-47"></sl-copy-button></pre>
+</code><sl-copy-button class="copy-code-button" from="code-block-80"></sl-copy-button></pre>
           <div role="alert" class="callout callout--tip">
             <p>
               You probably don’t need this function! If you’re gathering form data for submission, you probably want to
