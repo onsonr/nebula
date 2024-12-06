@@ -167,11 +167,11 @@ import {
   alert_default
 } from "../chunks/chunk.LNUB62XV.js";
 import {
-  animated_image_default
-} from "../chunks/chunk.JFXHKZRL.js";
-import {
   animation_default
 } from "../chunks/chunk.P63VQA7M.js";
+import {
+  animated_image_default
+} from "../chunks/chunk.JFXHKZRL.js";
 import "../chunks/chunk.UVHVFXKX.js";
 import "../chunks/chunk.CJB5WKGN.js";
 import "../chunks/chunk.XDXFLZH2.js";
