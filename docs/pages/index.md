@@ -21,7 +21,7 @@ toc: false
 
 </div>
 <div class="splash-end">
-<img class="splash-image" src="/assets/images/undraw-content-team.svg" alt="Cartoon of people assembling components while standing on a giant laptop.">
+<img class="splash-image" src="/assets/images/loginbox.png" alt="Illustration of a sonr login box.">
 </div>
 </div>
 
