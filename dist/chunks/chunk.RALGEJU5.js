@@ -1,6 +1,6 @@
 import {
   SlAnimatedImage
-} from "./chunk.THDZPG3S.js";
+} from "./chunk.FKYLS2FH.js";
 
 // src/components/animated-image/animated-image.ts
 var animated_image_default = SlAnimatedImage;
