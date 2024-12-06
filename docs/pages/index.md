@@ -1,6 +1,6 @@
 ---
 meta:
-  title: 'Shoelace: A forward-thinking library of web components.'
+  title: 'Nebula: A specialized fork of Shoelace for Crypto and Blockchain interfaces.'
   description: Hand-crafted custom elements for any occasion.
 toc: false
 ---
@@ -29,12 +29,10 @@ toc: false
 
 <div class="badges">
 
-[![jsDelivr](https://data.jsdelivr.com/v1/package/npm/@shoelace-style/shoelace/badge)](https://www.jsdelivr.com/package/npm/@shoelace-style/shoelace)
-[![npm](https://img.shields.io/npm/dw/@shoelace-style/shoelace?label=npm&style=flat-square)](https://www.npmjs.com/package/@shoelace-style/shoelace)
+[![jsDelivr](https://data.jsdelivr.com/v1/package/npm/@onsonr/nebula/badge)](https://www.jsdelivr.com/package/npm/@onsonr/nebula)
+[![npm](https://img.shields.io/npm/dw/@onsonr/nebula?label=npm&style=flat-square)](https://www.npmjs.com/package/@onsonr/nebula)
 [![License](https://img.shields.io/badge/license-MIT-232323.svg?style=flat-square)](https://github.com/shoelace-style/shoelace/blob/next/LICENSE.md)<br>
-[![Discord](https://img.shields.io/badge/Discord-Join%20the%20chat-5965f2.svg?style=flat-square&logo=discord&logoColor=white)](https://discord.gg/mg8f26C)
-[![Twitter](https://img.shields.io/badge/Twitter-Follow-00acee.svg?style=flat-square&logo=twitter&logoColor=white)](https://twitter.com/shoelace_style)
-[![Sponsor](https://img.shields.io/badge/GitHub-Code-232323.svg?style=flat-square&logo=github&logoColor=white)](https://github.com/shoelace-style/shoelace)
+[![Twitter](https://img.shields.io/badge/Twitter-Follow-00acee.svg?style=flat-square&logo=twitter&logoColor=white)](https://twitter.com/sonr_io)
 
 </div>
 
@@ -44,8 +42,8 @@ Add the following code to your page.
 
 <!-- prettier-ignore -->
 ```html
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@%VERSION%/%CDNDIR%/themes/light.css" />
-<script type="module" src="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@%VERSION%/%CDNDIR%/shoelace-autoloader.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@onsonr/nebula@%VERSION%/%CDNDIR%/themes/light.css" />
+<script type="module" src="https://cdn.jsdelivr.net/npm/@onsonr/nebula@%VERSION%/%CDNDIR%/shoelace-autoloader.js"></script>
 ```
 
 Now you have access to all of Shoelace's components! Try adding a button:
