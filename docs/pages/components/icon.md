@@ -129,35 +129,6 @@ Icons are sized relative to the current font size. To change their size, set the
 </div>
 ```
 
-{% raw %}
-
-```jsx:react
-import SlIcon from '@onsonr/nebula/dist/react/icon';
-
-const App = () => (
-  <div style={{ fontSize: '32px' }}>
-    <SlIcon name="exclamation-triangle" />
-    <SlIcon name="archive" />
-    <SlIcon name="battery-charging" />
-    <SlIcon name="bell" />
-    <SlIcon name="clock" />
-    <SlIcon name="cloud" />
-    <SlIcon name="download" />
-    <SlIcon name="file-earmark" />
-    <SlIcon name="flag" />
-    <SlIcon name="heart" />
-    <SlIcon name="image" />
-    <SlIcon name="lightning" />
-    <SlIcon name="mic" />
-    <SlIcon name="search" />
-    <SlIcon name="star" />
-    <SlIcon name="trash" />
-  </div>
-);
-```
-
-{% endraw %}
-
 ### Labels
 
 For non-decorative icons, use the `label` attribute to announce it to assistive devices.
@@ -165,6 +136,8 @@ For non-decorative icons, use the `label` attribute to announce it to assistive 
 ```html:preview
 <sl-icon name="star-fill" label="Add to favorites"></sl-icon>
 ```
+
+{% raw %}
 
 ```jsx:react
 import SlIcon from '@onsonr/nebula/dist/react/icon';
