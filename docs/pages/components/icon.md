@@ -172,22 +172,6 @@ import SlIcon from '@onsonr/nebula/dist/react/icon';
 const App = () => <SlIcon name="star-fill" label="Add to favorites" />;
 ```
 
-### Custom Icons
-
-Custom icons can be loaded individually with the `src` attribute. Only SVGs on a local or CORS-enabled endpoint are supported. If you're using more than one custom icon, it might make sense to register a [custom icon library](#icon-libraries).
-
-```html:preview
-<sl-icon src="https://shoelace.style/assets/images/shoe.svg" style="font-size: 8rem;"></sl-icon>
-```
-
-{% raw %}
-
-```jsx:react
-import SlIcon from '@onsonr/nebula/dist/react/icon';
-
-const App = () => <SlIcon src="https://shoelace.style/assets/images/shoe.svg" style={{ fontSize: '8rem' }}></SlIcon>;
-```
-
 {% endraw %}
 
 ## Icon Libraries
@@ -211,11 +195,33 @@ Icons sourced from our internal style guide.
 ```html:preview
 <div style="font-size: 24px;">
   <sl-icon library="sonr" name="passkey"></sl-icon>
-  <sl-icon library="sonr" name="snr"></sl-icon>
+  <sl-icon library="sonr" name="docs"></sl-icon>
+  <sl-icon library="sonr" name="social-github"></sl-icon>
+  <sl-icon library="sonr" name="social-twitter"></sl-icon>
+  <sl-icon library="sonr" name="social-youtube"></sl-icon>
+  <sl-icon library="sonr" name="error-blockchain"></sl-icon>
+  <sl-icon library="sonr" name="error-network"></sl-icon>
+  <sl-icon library="sonr" name="swap-coins"></sl-icon>
+  <sl-icon library="sonr" name="scanner-qr"></sl-icon>
+  <sl-icon library="sonr" name="external-link"></sl-icon>
+  <sl-icon library="sonr" name="face-id"></sl-icon>
+  <sl-icon library="sonr" name="lock-access"></sl-icon>
+  <sl-icon library="sonr" name="check-shield"></sl-icon>
+  <sl-icon library="sonr" name="vault"></sl-icon>
+  <sl-icon library="sonr" name="coin-assets"></sl-icon>
+  <sl-icon library="sonr" name="coins-hand"></sl-icon>
+  <sl-icon library="sonr" name="coins-stack"></sl-icon>
+  <sl-icon library="sonr" name="currency-dollar"></sl-icon>
+  <sl-icon library="sonr" name="currency-euro"></sl-icon>
+  <sl-icon library="sonr" name="currency-pound"></sl-icon>
+  <sl-icon library="sonr" name="currency-rupee"></sl-icon>
+  <sl-icon library="sonr" name="currency-yen"></sl-icon>
+  <sl-icon library="sonr" name="sonr"></sl-icon>
+  <sl-icon library="sonr" name="sonr-fill"></sl-icon>
+  <sl-icon library="sonr" name="osmo"></sl-icon>
   <sl-icon library="sonr" name="btc"></sl-icon>
   <sl-icon library="sonr" name="sol"></sl-icon>
   <sl-icon library="sonr" name="usdc"></sl-icon>
-  <sl-icon library="sonr" name="osmo"></sl-icon>
  </div>
 ```
 
@@ -228,6 +234,7 @@ All Caps ticker symbol for the icon.
 
 ```html:preview
 <div style="font-size: 24px;">
+  <sl-icon library="crypto" name="SNR"></sl-icon>
   <sl-icon library="crypto" name="BTC"></sl-icon>
   <sl-icon library="crypto" name="ETH"></sl-icon>
   <sl-icon library="crypto" name="LTC"></sl-icon>
@@ -239,6 +246,15 @@ All Caps ticker symbol for the icon.
   <sl-icon library="crypto" name="SOL"></sl-icon>
   <sl-icon library="crypto" name="USDT"></sl-icon>
   <sl-icon library="crypto" name="USDC"></sl-icon>
+  <sl-icon library="crypto" name="EVMOS"></sl-icon>
+  <sl-icon library="crypto" name="FIL"></sl-icon>
+  <sl-icon library="crypto" name="ATOM"></sl-icon>
+  <sl-icon library="crypto" name="AXL"></sl-icon>
+  <sl-icon library="crypto" name="HNS"></sl-icon>
+  <sl-icon library="crypto" name="AKT"></sl-icon>
+  <sl-icon library="crypto" name="DOGE"></sl-icon>
+  <sl-icon library="crypto" name="SOL"></sl-icon>
+  <sl-icon library="crypto" name="STARZ"></sl-icon>
 </div>
 ```
 
