@@ -1,6 +1,6 @@
 import {
   SlAnimation
-} from "./chunk.ZPH3EXSL.js";
+} from "./chunk.UYEAPXNR.js";
 
 // src/components/animation/animation.ts
 var animation_default = SlAnimation;
