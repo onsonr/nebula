@@ -1,8 +1,8 @@
 import type { DefineComponent } from "vue";
 
 import type { SlAlert } from "../../components/alert/alert.component.js";
-import type { SlAnimatedImage } from "../../components/animated-image/animated-image.component.js";
 import type { SlAnimation } from "../../components/animation/animation.component.js";
+import type { SlAnimatedImage } from "../../components/animated-image/animated-image.component.js";
 import type { SlAvatar } from "../../components/avatar/avatar.component.js";
 import type { SlBadge } from "../../components/badge/badge.component.js";
 import type { SlBreadcrumb } from "../../components/breadcrumb/breadcrumb.component.js";
@@ -52,9 +52,9 @@ import type { SlSwitch } from "../../components/switch/switch.component.js";
 import type { SlTab } from "../../components/tab/tab.component.js";
 import type { SlTabGroup } from "../../components/tab-group/tab-group.component.js";
 import type { SlTabPanel } from "../../components/tab-panel/tab-panel.component.js";
-import type { SlTag } from "../../components/tag/tag.component.js";
 import type { SlTextarea } from "../../components/textarea/textarea.component.js";
 import type { SlTooltip } from "../../components/tooltip/tooltip.component.js";
+import type { SlTag } from "../../components/tag/tag.component.js";
 import type { SlTree } from "../../components/tree/tree.component.js";
 import type { SlTreeItem } from "../../components/tree-item/tree-item.component.js";
 import type { SlVisuallyHidden } from "../../components/visually-hidden/visually-hidden.component.js";
@@ -81,25 +81,6 @@ the alert will not close on its own. */
   onSlHide?: (e: CustomEvent<never>) => void;
   /** Emitted after the alert closes and all animations are complete. */
   onSlAfterHide?: (e: CustomEvent<never>) => void;
-};
-
-type SlAnimatedImageProps = {
-  /** The path to the image to load. */
-  src?: SlAnimatedImage["src"];
-  /** A description of the image used by assistive devices. */
-  alt?: SlAnimatedImage["alt"];
-  /** Plays the animation. When this attribute is remove, the animation will pause. */
-  play?: SlAnimatedImage["play"];
-  /**  */
-  animatedImage?: SlAnimatedImage["animatedImage"];
-  /**  */
-  frozenFrame?: SlAnimatedImage["frozenFrame"];
-  /**  */
-  isLoaded?: SlAnimatedImage["isLoaded"];
-  /** Emitted when the image loads successfully. */
-  onSlLoad?: (e: CustomEvent<never>) => void;
-  /** Emitted when the image fails to load. */
-  onSlError?: (e: CustomEvent<never>) => void;
 };
 
 type SlAnimationProps = {
@@ -142,6 +123,25 @@ value can be changed without causing the animation to restart. */
   onSlFinish?: (e: CustomEvent<never>) => void;
   /** Emitted when the animation starts or restarts. */
   onSlStart?: (e: CustomEvent<never>) => void;
+};
+
+type SlAnimatedImageProps = {
+  /** The path to the image to load. */
+  src?: SlAnimatedImage["src"];
+  /** A description of the image used by assistive devices. */
+  alt?: SlAnimatedImage["alt"];
+  /** Plays the animation. When this attribute is remove, the animation will pause. */
+  play?: SlAnimatedImage["play"];
+  /**  */
+  animatedImage?: SlAnimatedImage["animatedImage"];
+  /**  */
+  frozenFrame?: SlAnimatedImage["frozenFrame"];
+  /**  */
+  isLoaded?: SlAnimatedImage["isLoaded"];
+  /** Emitted when the image loads successfully. */
+  onSlLoad?: (e: CustomEvent<never>) => void;
+  /** Emitted when the image fails to load. */
+  onSlError?: (e: CustomEvent<never>) => void;
 };
 
 type SlAvatarProps = {
@@ -1379,20 +1379,6 @@ type SlTabPanelProps = {
   active?: SlTabPanel["active"];
 };
 
-type SlTagProps = {
-  /** The tag's theme variant. */
-  variant?: SlTag["variant"];
-  /** The tag's size. */
-  size?: SlTag["size"];
-  /** Draws a pill-style tag with rounded edges. */
-  pill?: SlTag["pill"];
-  /** Makes the tag removable and shows a remove button. */
-  removable?: SlTag["removable"];
-
-  /** Emitted when the remove button is activated. */
-  onSlRemove?: (e: CustomEvent<never>) => void;
-};
-
 type SlTextareaProps = {
   /**  */
   title?: SlTextarea["title"];
@@ -1502,6 +1488,20 @@ scenarios. */
   onSlAfterHide?: (e: CustomEvent<never>) => void;
 };
 
+type SlTagProps = {
+  /** The tag's theme variant. */
+  variant?: SlTag["variant"];
+  /** The tag's size. */
+  size?: SlTag["size"];
+  /** Draws a pill-style tag with rounded edges. */
+  pill?: SlTag["pill"];
+  /** Makes the tag removable and shows a remove button. */
+  removable?: SlTag["removable"];
+
+  /** Emitted when the remove button is activated. */
+  onSlRemove?: (e: CustomEvent<never>) => void;
+};
+
 type SlTreeProps = {
   /** The selection behavior of the tree. Single selection allows only one node to be selected at a time. Multiple
 displays checkboxes and allows more than one node to be selected. Leaf allows only leaf nodes to be selected. */
@@ -1592,6 +1592,25 @@ export type CustomElements = {
   "sl-alert": DefineComponent<SlAlertProps>;
 
   /**
+   * Animate elements declaratively with nearly 100 baked-in presets, or roll your own with custom keyframes. Powered by the [Web Animations API](https://developer.mozilla.org/en-US/docs/Web/API/Web_Animations_API).
+   * ---
+   *
+   *
+   * ### **Events:**
+   *  - **sl-cancel** - Emitted when the animation is canceled.
+   * - **sl-finish** - Emitted when the animation finishes.
+   * - **sl-start** - Emitted when the animation starts or restarts.
+   *
+   * ### **Methods:**
+   *  - **cancel()** - Clears all keyframe effects caused by this animation and aborts its playback.
+   * - **finish()** - Sets the playback time to the end of the animation corresponding to the current playback direction.
+   *
+   * ### **Slots:**
+   *  - _default_ - The element to animate. Avoid slotting in more than one element, as subsequent ones will be ignored. To animate multiple elements, either wrap them in a single container or use multiple `<sl-animation>` elements.
+   */
+  "sl-animation": DefineComponent<SlAnimationProps>;
+
+  /**
    * A component for displaying animated GIFs and WEBPs that play and pause on interaction.
    * ---
    *
@@ -1612,25 +1631,6 @@ export type CustomElements = {
    *  - **control-box** - The container that surrounds the pause/play icons and provides their background.
    */
   "sl-animated-image": DefineComponent<SlAnimatedImageProps>;
-
-  /**
-   * Animate elements declaratively with nearly 100 baked-in presets, or roll your own with custom keyframes. Powered by the [Web Animations API](https://developer.mozilla.org/en-US/docs/Web/API/Web_Animations_API).
-   * ---
-   *
-   *
-   * ### **Events:**
-   *  - **sl-cancel** - Emitted when the animation is canceled.
-   * - **sl-finish** - Emitted when the animation finishes.
-   * - **sl-start** - Emitted when the animation starts or restarts.
-   *
-   * ### **Methods:**
-   *  - **cancel()** - Clears all keyframe effects caused by this animation and aborts its playback.
-   * - **finish()** - Sets the playback time to the end of the animation corresponding to the current playback direction.
-   *
-   * ### **Slots:**
-   *  - _default_ - The element to animate. Avoid slotting in more than one element, as subsequent ones will be ignored. To animate multiple elements, either wrap them in a single container or use multiple `<sl-animation>` elements.
-   */
-  "sl-animation": DefineComponent<SlAnimationProps>;
 
   /**
    * Avatars are used to represent a person or object.
@@ -2811,25 +2811,6 @@ export type CustomElements = {
   "sl-tab-panel": DefineComponent<SlTabPanelProps>;
 
   /**
-   * Tags are used as labels to organize things or to indicate a selection.
-   * ---
-   *
-   *
-   * ### **Events:**
-   *  - **sl-remove** - Emitted when the remove button is activated.
-   *
-   * ### **Slots:**
-   *  - _default_ - The tag's content.
-   *
-   * ### **CSS Parts:**
-   *  - **base** - The component's base wrapper.
-   * - **content** - The tag's content.
-   * - **remove-button** - The tag's remove button, an `<sl-icon-button>`.
-   * - **remove-button__base** - The remove button's exported `base` part.
-   */
-  "sl-tag": DefineComponent<SlTagProps>;
-
-  /**
    * Textareas collect data from the user and allow multiple lines of text.
    * ---
    *
@@ -2898,6 +2879,25 @@ export type CustomElements = {
    * - **body** - The tooltip's body where its content is rendered.
    */
   "sl-tooltip": DefineComponent<SlTooltipProps>;
+
+  /**
+   * Tags are used as labels to organize things or to indicate a selection.
+   * ---
+   *
+   *
+   * ### **Events:**
+   *  - **sl-remove** - Emitted when the remove button is activated.
+   *
+   * ### **Slots:**
+   *  - _default_ - The tag's content.
+   *
+   * ### **CSS Parts:**
+   *  - **base** - The component's base wrapper.
+   * - **content** - The tag's content.
+   * - **remove-button** - The tag's remove button, an `<sl-icon-button>`.
+   * - **remove-button__base** - The remove button's exported `base` part.
+   */
+  "sl-tag": DefineComponent<SlTagProps>;
 
   /**
    * Trees allow you to display a hierarchical list of selectable [tree items](/components/tree-item). Items with children can be expanded and collapsed as desired by the user.
