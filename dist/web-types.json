@@ -453,101 +453,6 @@
           }
         },
         {
-          "name": "sl-breadcrumb",
-          "description": "Breadcrumbs provide a group of links so users can easily navigate a website's hierarchy.\n---\n\n\n### **Slots:**\n - _default_ - One or more breadcrumb items to display.\n- **separator** - The separator to use between breadcrumb items. Works best with `<sl-icon>`.\n\n### **CSS Parts:**\n - **base** - The component's base wrapper.",
-          "doc-url": "",
-          "attributes": [
-            {
-              "name": "label",
-              "description": "The label to use for the breadcrumb control. This will not be shown on the screen, but it will be announced by\nscreen readers and other assistive devices to provide more context for users.",
-              "value": { "type": "string", "default": "''" }
-            }
-          ],
-          "slots": [
-            {
-              "name": "",
-              "description": "One or more breadcrumb items to display."
-            },
-            {
-              "name": "separator",
-              "description": "The separator to use between breadcrumb items. Works best with `<sl-icon>`."
-            }
-          ],
-          "events": [],
-          "js": {
-            "properties": [
-              {
-                "name": "label",
-                "description": "The label to use for the breadcrumb control. This will not be shown on the screen, but it will be announced by\nscreen readers and other assistive devices to provide more context for users.",
-                "value": { "type": "string" }
-              }
-            ],
-            "events": []
-          }
-        },
-        {
-          "name": "sl-breadcrumb-item",
-          "description": "Breadcrumb Items are used inside [breadcrumbs](/components/breadcrumb) to represent different links.\n---\n\n\n### **Slots:**\n - _default_ - The breadcrumb item's label.\n- **prefix** - An optional prefix, usually an icon or icon button.\n- **suffix** - An optional suffix, usually an icon or icon button.\n- **separator** - The separator to use for the breadcrumb item. This will only change the separator for this item. If you want to change it for all items in the group, set the separator on `<sl-breadcrumb>` instead.\n\n### **CSS Parts:**\n - **base** - The component's base wrapper.\n- **label** - The breadcrumb item's label.\n- **prefix** - The container that wraps the prefix.\n- **suffix** - The container that wraps the suffix.\n- **separator** - The container that wraps the separator.",
-          "doc-url": "",
-          "attributes": [
-            {
-              "name": "href",
-              "description": "Optional URL to direct the user to when the breadcrumb item is activated. When set, a link will be rendered\ninternally. When unset, a button will be rendered instead.",
-              "value": { "type": "string | undefined" }
-            },
-            {
-              "name": "target",
-              "description": "Tells the browser where to open the link. Only used when `href` is set.",
-              "value": {
-                "type": "'_blank' | '_parent' | '_self' | '_top' | undefined"
-              }
-            },
-            {
-              "name": "rel",
-              "description": "The `rel` attribute to use on the link. Only used when `href` is set.",
-              "value": { "type": "string", "default": "'noreferrer noopener'" }
-            }
-          ],
-          "slots": [
-            { "name": "", "description": "The breadcrumb item's label." },
-            {
-              "name": "prefix",
-              "description": "An optional prefix, usually an icon or icon button."
-            },
-            {
-              "name": "suffix",
-              "description": "An optional suffix, usually an icon or icon button."
-            },
-            {
-              "name": "separator",
-              "description": "The separator to use for the breadcrumb item. This will only change the separator for this item. If you want to change it for all items in the group, set the separator on `<sl-breadcrumb>` instead."
-            }
-          ],
-          "events": [],
-          "js": {
-            "properties": [
-              {
-                "name": "href",
-                "description": "Optional URL to direct the user to when the breadcrumb item is activated. When set, a link will be rendered\ninternally. When unset, a button will be rendered instead.",
-                "value": { "type": "string | undefined" }
-              },
-              {
-                "name": "target",
-                "description": "Tells the browser where to open the link. Only used when `href` is set.",
-                "value": {
-                  "type": "'_blank' | '_parent' | '_self' | '_top' | undefined"
-                }
-              },
-              {
-                "name": "rel",
-                "description": "The `rel` attribute to use on the link. Only used when `href` is set.",
-                "value": { "type": "string" }
-              }
-            ],
-            "events": []
-          }
-        },
-        {
           "name": "sl-button",
           "description": "Buttons represent actions that are available to the user.\n---\n\n\n### **Events:**\n - **sl-blur** - Emitted when the button loses focus.\n- **sl-focus** - Emitted when the button gains focus.\n- **sl-invalid** - Emitted when the form control has been checked for validity and its constraints aren't satisfied.\n\n### **Methods:**\n - **click()** - Simulates a click on the button.\n- **focus(options: _FocusOptions_)** - Sets focus on the button.\n- **blur()** - Removes focus from the button.\n- **checkValidity()** - Checks for validity but does not show a validation message. Returns `true` when valid and `false` when invalid.\n- **getForm(): _HTMLFormElement | null_** - Gets the associated form, if one exists.\n- **reportValidity()** - Checks for validity and shows the browser's validation message if the control is invalid.\n- **setCustomValidity(message: _string_)** - Sets a custom validation message. Pass an empty string to restore validity.\n\n### **Slots:**\n - _default_ - The button's label.\n- **prefix** - A presentational prefix icon or similar element.\n- **suffix** - A presentational suffix icon or similar element.\n\n### **CSS Parts:**\n - **base** - The component's base wrapper.\n- **prefix** - The container that wraps the prefix.\n- **label** - The button's label.\n- **suffix** - The container that wraps the suffix.\n- **caret** - The button's caret icon, an `<sl-icon>` element.\n- **spinner** - The spinner that shows when the button is in the loading state.",
           "doc-url": "",
@@ -858,6 +763,68 @@
           }
         },
         {
+          "name": "sl-breadcrumb-item",
+          "description": "Breadcrumb Items are used inside [breadcrumbs](/components/breadcrumb) to represent different links.\n---\n\n\n### **Slots:**\n - _default_ - The breadcrumb item's label.\n- **prefix** - An optional prefix, usually an icon or icon button.\n- **suffix** - An optional suffix, usually an icon or icon button.\n- **separator** - The separator to use for the breadcrumb item. This will only change the separator for this item. If you want to change it for all items in the group, set the separator on `<sl-breadcrumb>` instead.\n\n### **CSS Parts:**\n - **base** - The component's base wrapper.\n- **label** - The breadcrumb item's label.\n- **prefix** - The container that wraps the prefix.\n- **suffix** - The container that wraps the suffix.\n- **separator** - The container that wraps the separator.",
+          "doc-url": "",
+          "attributes": [
+            {
+              "name": "href",
+              "description": "Optional URL to direct the user to when the breadcrumb item is activated. When set, a link will be rendered\ninternally. When unset, a button will be rendered instead.",
+              "value": { "type": "string | undefined" }
+            },
+            {
+              "name": "target",
+              "description": "Tells the browser where to open the link. Only used when `href` is set.",
+              "value": {
+                "type": "'_blank' | '_parent' | '_self' | '_top' | undefined"
+              }
+            },
+            {
+              "name": "rel",
+              "description": "The `rel` attribute to use on the link. Only used when `href` is set.",
+              "value": { "type": "string", "default": "'noreferrer noopener'" }
+            }
+          ],
+          "slots": [
+            { "name": "", "description": "The breadcrumb item's label." },
+            {
+              "name": "prefix",
+              "description": "An optional prefix, usually an icon or icon button."
+            },
+            {
+              "name": "suffix",
+              "description": "An optional suffix, usually an icon or icon button."
+            },
+            {
+              "name": "separator",
+              "description": "The separator to use for the breadcrumb item. This will only change the separator for this item. If you want to change it for all items in the group, set the separator on `<sl-breadcrumb>` instead."
+            }
+          ],
+          "events": [],
+          "js": {
+            "properties": [
+              {
+                "name": "href",
+                "description": "Optional URL to direct the user to when the breadcrumb item is activated. When set, a link will be rendered\ninternally. When unset, a button will be rendered instead.",
+                "value": { "type": "string | undefined" }
+              },
+              {
+                "name": "target",
+                "description": "Tells the browser where to open the link. Only used when `href` is set.",
+                "value": {
+                  "type": "'_blank' | '_parent' | '_self' | '_top' | undefined"
+                }
+              },
+              {
+                "name": "rel",
+                "description": "The `rel` attribute to use on the link. Only used when `href` is set.",
+                "value": { "type": "string" }
+              }
+            ],
+            "events": []
+          }
+        },
+        {
           "name": "sl-card",
           "description": "Cards can be used to group related subjects in a container.\n---\n\n\n### **Slots:**\n - _default_ - The card's main content.\n- **header** - An optional header for the card.\n- **footer** - An optional footer for the card.\n- **image** - An optional image to render at the start of the card.\n\n### **CSS Properties:**\n - **--border-color** - The card's border color, including borders that occur inside the card. _(default: undefined)_\n- **--border-radius** - The border radius for the card's edges. _(default: undefined)_\n- **--border-width** - The width of the card's borders. _(default: undefined)_\n- **--padding** - The padding to use for the card's sections. _(default: undefined)_\n\n### **CSS Parts:**\n - **base** - The component's base wrapper.\n- **image** - The container that wraps the card's image.\n- **header** - The container that wraps the card's header.\n- **body** - The container that wraps the card's main content.\n- **footer** - The container that wraps the card's footer.",
           "doc-url": "",
@@ -880,6 +847,39 @@
           "events": [],
           "js": {
             "properties": [{ "name": "hasSlotController", "value": {} }],
+            "events": []
+          }
+        },
+        {
+          "name": "sl-breadcrumb",
+          "description": "Breadcrumbs provide a group of links so users can easily navigate a website's hierarchy.\n---\n\n\n### **Slots:**\n - _default_ - One or more breadcrumb items to display.\n- **separator** - The separator to use between breadcrumb items. Works best with `<sl-icon>`.\n\n### **CSS Parts:**\n - **base** - The component's base wrapper.",
+          "doc-url": "",
+          "attributes": [
+            {
+              "name": "label",
+              "description": "The label to use for the breadcrumb control. This will not be shown on the screen, but it will be announced by\nscreen readers and other assistive devices to provide more context for users.",
+              "value": { "type": "string", "default": "''" }
+            }
+          ],
+          "slots": [
+            {
+              "name": "",
+              "description": "One or more breadcrumb items to display."
+            },
+            {
+              "name": "separator",
+              "description": "The separator to use between breadcrumb items. Works best with `<sl-icon>`."
+            }
+          ],
+          "events": [],
+          "js": {
+            "properties": [
+              {
+                "name": "label",
+                "description": "The label to use for the breadcrumb control. This will not be shown on the screen, but it will be announced by\nscreen readers and other assistive devices to provide more context for users.",
+                "value": { "type": "string" }
+              }
+            ],
             "events": []
           }
         },
