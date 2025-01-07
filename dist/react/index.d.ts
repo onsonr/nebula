@@ -1,5 +1,5 @@
-export { default as SlAlert } from './alert/index.js';
 export { default as SlAnimatedImage } from './animated-image/index.js';
+export { default as SlAlert } from './alert/index.js';
 export { default as SlAnimation } from './animation/index.js';
 export { default as SlAvatar } from './avatar/index.js';
 export { default as SlBadge } from './badge/index.js';

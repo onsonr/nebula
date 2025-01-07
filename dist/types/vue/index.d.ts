@@ -1,15 +1,15 @@
 import type { DefineComponent } from "vue";
 
-import type { SlAlert } from "../../components/alert/alert.component.js";
 import type { SlAnimatedImage } from "../../components/animated-image/animated-image.component.js";
+import type { SlAlert } from "../../components/alert/alert.component.js";
 import type { SlAnimation } from "../../components/animation/animation.component.js";
 import type { SlAvatar } from "../../components/avatar/avatar.component.js";
 import type { SlBadge } from "../../components/badge/badge.component.js";
+import type { SlBreadcrumb } from "../../components/breadcrumb/breadcrumb.component.js";
+import type { SlBreadcrumbItem } from "../../components/breadcrumb-item/breadcrumb-item.component.js";
 import type { SlButton } from "../../components/button/button.component.js";
 import type { SlButtonGroup } from "../../components/button-group/button-group.component.js";
-import type { SlBreadcrumbItem } from "../../components/breadcrumb-item/breadcrumb-item.component.js";
 import type { SlCard } from "../../components/card/card.component.js";
-import type { SlBreadcrumb } from "../../components/breadcrumb/breadcrumb.component.js";
 import type { SlCarousel } from "../../components/carousel/carousel.component.js";
 import type { SlCarouselItem } from "../../components/carousel-item/carousel-item.component.js";
 import type { SlCheckbox } from "../../components/checkbox/checkbox.component.js";
@@ -59,6 +59,25 @@ import type { SlTree } from "../../components/tree/tree.component.js";
 import type { SlTreeItem } from "../../components/tree-item/tree-item.component.js";
 import type { SlVisuallyHidden } from "../../components/visually-hidden/visually-hidden.component.js";
 
+type SlAnimatedImageProps = {
+  /** The path to the image to load. */
+  src?: SlAnimatedImage["src"];
+  /** A description of the image used by assistive devices. */
+  alt?: SlAnimatedImage["alt"];
+  /** Plays the animation. When this attribute is remove, the animation will pause. */
+  play?: SlAnimatedImage["play"];
+  /**  */
+  animatedImage?: SlAnimatedImage["animatedImage"];
+  /**  */
+  frozenFrame?: SlAnimatedImage["frozenFrame"];
+  /**  */
+  isLoaded?: SlAnimatedImage["isLoaded"];
+  /** Emitted when the image loads successfully. */
+  onSlLoad?: (e: CustomEvent<never>) => void;
+  /** Emitted when the image fails to load. */
+  onSlError?: (e: CustomEvent<never>) => void;
+};
+
 type SlAlertProps = {
   /** Indicates whether or not the alert is open. You can toggle this attribute to show and hide the alert, or you can
 use the `show()` and `hide()` methods and this attribute will reflect the alert's open state. */
@@ -81,25 +100,6 @@ the alert will not close on its own. */
   onSlHide?: (e: CustomEvent<never>) => void;
   /** Emitted after the alert closes and all animations are complete. */
   onSlAfterHide?: (e: CustomEvent<never>) => void;
-};
-
-type SlAnimatedImageProps = {
-  /** The path to the image to load. */
-  src?: SlAnimatedImage["src"];
-  /** A description of the image used by assistive devices. */
-  alt?: SlAnimatedImage["alt"];
-  /** Plays the animation. When this attribute is remove, the animation will pause. */
-  play?: SlAnimatedImage["play"];
-  /**  */
-  animatedImage?: SlAnimatedImage["animatedImage"];
-  /**  */
-  frozenFrame?: SlAnimatedImage["frozenFrame"];
-  /**  */
-  isLoaded?: SlAnimatedImage["isLoaded"];
-  /** Emitted when the image loads successfully. */
-  onSlLoad?: (e: CustomEvent<never>) => void;
-  /** Emitted when the image fails to load. */
-  onSlError?: (e: CustomEvent<never>) => void;
 };
 
 type SlAnimationProps = {
@@ -164,6 +164,26 @@ type SlBadgeProps = {
   pill?: SlBadge["pill"];
   /** Makes the badge pulsate to draw attention. */
   pulse?: SlBadge["pulse"];
+};
+
+type SlBreadcrumbProps = {
+  /** The label to use for the breadcrumb control. This will not be shown on the screen, but it will be announced by
+screen readers and other assistive devices to provide more context for users. */
+  label?: SlBreadcrumb["label"];
+  /**  */
+  defaultSlot?: SlBreadcrumb["defaultSlot"];
+  /**  */
+  separatorSlot?: SlBreadcrumb["separatorSlot"];
+};
+
+type SlBreadcrumbItemProps = {
+  /** Optional URL to direct the user to when the breadcrumb item is activated. When set, a link will be rendered
+internally. When unset, a button will be rendered instead. */
+  href?: SlBreadcrumbItem["href"];
+  /** Tells the browser where to open the link. Only used when `href` is set. */
+  target?: SlBreadcrumbItem["target"];
+  /** The `rel` attribute to use on the link. Only used when `href` is set. */
+  rel?: SlBreadcrumbItem["rel"];
 };
 
 type SlButtonProps = {
@@ -245,27 +265,7 @@ devices when interacting with the control and is strongly recommended. */
   disableRole?: SlButtonGroup["disableRole"];
 };
 
-type SlBreadcrumbItemProps = {
-  /** Optional URL to direct the user to when the breadcrumb item is activated. When set, a link will be rendered
-internally. When unset, a button will be rendered instead. */
-  href?: SlBreadcrumbItem["href"];
-  /** Tells the browser where to open the link. Only used when `href` is set. */
-  target?: SlBreadcrumbItem["target"];
-  /** The `rel` attribute to use on the link. Only used when `href` is set. */
-  rel?: SlBreadcrumbItem["rel"];
-};
-
 type SlCardProps = {};
-
-type SlBreadcrumbProps = {
-  /** The label to use for the breadcrumb control. This will not be shown on the screen, but it will be announced by
-screen readers and other assistive devices to provide more context for users. */
-  label?: SlBreadcrumb["label"];
-  /**  */
-  defaultSlot?: SlBreadcrumb["defaultSlot"];
-  /**  */
-  separatorSlot?: SlBreadcrumb["separatorSlot"];
-};
 
 type SlCarouselProps = {
   /** When set, allows the user to navigate the carousel in the same direction indefinitely. */
@@ -1561,6 +1561,28 @@ type SlVisuallyHiddenProps = {};
 
 export type CustomElements = {
   /**
+   * A component for displaying animated GIFs and WEBPs that play and pause on interaction.
+   * ---
+   *
+   *
+   * ### **Events:**
+   *  - **sl-load** - Emitted when the image loads successfully.
+   * - **sl-error** - Emitted when the image fails to load.
+   *
+   * ### **Slots:**
+   *  - **play-icon** - Optional play icon to use instead of the default. Works best with `<sl-icon>`.
+   * - **pause-icon** - Optional pause icon to use instead of the default. Works best with `<sl-icon>`.
+   *
+   * ### **CSS Properties:**
+   *  - **--control-box-size** - The size of the icon box. _(default: undefined)_
+   * - **--icon-size** - The size of the play/pause icons. _(default: undefined)_
+   *
+   * ### **CSS Parts:**
+   *  - **control-box** - The container that surrounds the pause/play icons and provides their background.
+   */
+  "sl-animated-image": DefineComponent<SlAnimatedImageProps>;
+
+  /**
    * Alerts are used to display important messages inline or as toast notifications.
    * ---
    *
@@ -1590,28 +1612,6 @@ export type CustomElements = {
    * - **close-button__base** - The close button's exported `base` part.
    */
   "sl-alert": DefineComponent<SlAlertProps>;
-
-  /**
-   * A component for displaying animated GIFs and WEBPs that play and pause on interaction.
-   * ---
-   *
-   *
-   * ### **Events:**
-   *  - **sl-load** - Emitted when the image loads successfully.
-   * - **sl-error** - Emitted when the image fails to load.
-   *
-   * ### **Slots:**
-   *  - **play-icon** - Optional play icon to use instead of the default. Works best with `<sl-icon>`.
-   * - **pause-icon** - Optional pause icon to use instead of the default. Works best with `<sl-icon>`.
-   *
-   * ### **CSS Properties:**
-   *  - **--control-box-size** - The size of the icon box. _(default: undefined)_
-   * - **--icon-size** - The size of the play/pause icons. _(default: undefined)_
-   *
-   * ### **CSS Parts:**
-   *  - **control-box** - The container that surrounds the pause/play icons and provides their background.
-   */
-  "sl-animated-image": DefineComponent<SlAnimatedImageProps>;
 
   /**
    * Animate elements declaratively with nearly 100 baked-in presets, or roll your own with custom keyframes. Powered by the [Web Animations API](https://developer.mozilla.org/en-US/docs/Web/API/Web_Animations_API).
@@ -1665,6 +1665,40 @@ export type CustomElements = {
   "sl-badge": DefineComponent<SlBadgeProps>;
 
   /**
+   * Breadcrumbs provide a group of links so users can easily navigate a website's hierarchy.
+   * ---
+   *
+   *
+   * ### **Slots:**
+   *  - _default_ - One or more breadcrumb items to display.
+   * - **separator** - The separator to use between breadcrumb items. Works best with `<sl-icon>`.
+   *
+   * ### **CSS Parts:**
+   *  - **base** - The component's base wrapper.
+   */
+  "sl-breadcrumb": DefineComponent<SlBreadcrumbProps>;
+
+  /**
+   * Breadcrumb Items are used inside [breadcrumbs](/components/breadcrumb) to represent different links.
+   * ---
+   *
+   *
+   * ### **Slots:**
+   *  - _default_ - The breadcrumb item's label.
+   * - **prefix** - An optional prefix, usually an icon or icon button.
+   * - **suffix** - An optional suffix, usually an icon or icon button.
+   * - **separator** - The separator to use for the breadcrumb item. This will only change the separator for this item. If you want to change it for all items in the group, set the separator on `<sl-breadcrumb>` instead.
+   *
+   * ### **CSS Parts:**
+   *  - **base** - The component's base wrapper.
+   * - **label** - The breadcrumb item's label.
+   * - **prefix** - The container that wraps the prefix.
+   * - **suffix** - The container that wraps the suffix.
+   * - **separator** - The container that wraps the separator.
+   */
+  "sl-breadcrumb-item": DefineComponent<SlBreadcrumbItemProps>;
+
+  /**
    * Buttons represent actions that are available to the user.
    * ---
    *
@@ -1712,26 +1746,6 @@ export type CustomElements = {
   "sl-button-group": DefineComponent<SlButtonGroupProps>;
 
   /**
-   * Breadcrumb Items are used inside [breadcrumbs](/components/breadcrumb) to represent different links.
-   * ---
-   *
-   *
-   * ### **Slots:**
-   *  - _default_ - The breadcrumb item's label.
-   * - **prefix** - An optional prefix, usually an icon or icon button.
-   * - **suffix** - An optional suffix, usually an icon or icon button.
-   * - **separator** - The separator to use for the breadcrumb item. This will only change the separator for this item. If you want to change it for all items in the group, set the separator on `<sl-breadcrumb>` instead.
-   *
-   * ### **CSS Parts:**
-   *  - **base** - The component's base wrapper.
-   * - **label** - The breadcrumb item's label.
-   * - **prefix** - The container that wraps the prefix.
-   * - **suffix** - The container that wraps the suffix.
-   * - **separator** - The container that wraps the separator.
-   */
-  "sl-breadcrumb-item": DefineComponent<SlBreadcrumbItemProps>;
-
-  /**
    * Cards can be used to group related subjects in a container.
    * ---
    *
@@ -1756,20 +1770,6 @@ export type CustomElements = {
    * - **footer** - The container that wraps the card's footer.
    */
   "sl-card": DefineComponent<SlCardProps>;
-
-  /**
-   * Breadcrumbs provide a group of links so users can easily navigate a website's hierarchy.
-   * ---
-   *
-   *
-   * ### **Slots:**
-   *  - _default_ - One or more breadcrumb items to display.
-   * - **separator** - The separator to use between breadcrumb items. Works best with `<sl-icon>`.
-   *
-   * ### **CSS Parts:**
-   *  - **base** - The component's base wrapper.
-   */
-  "sl-breadcrumb": DefineComponent<SlBreadcrumbProps>;
 
   /**
    * Carousels display an arbitrary number of content slides along a horizontal or vertical axis.
