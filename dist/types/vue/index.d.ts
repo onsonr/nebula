@@ -30,8 +30,8 @@ import type { SlInclude } from "../../components/include/include.component.js";
 import type { SlInput } from "../../components/input/input.component.js";
 import type { SlMenu } from "../../components/menu/menu.component.js";
 import type { SlMenuItem } from "../../components/menu-item/menu-item.component.js";
-import type { SlMenuLabel } from "../../components/menu-label/menu-label.component.js";
 import type { SlMutationObserver } from "../../components/mutation-observer/mutation-observer.component.js";
+import type { SlMenuLabel } from "../../components/menu-label/menu-label.component.js";
 import type { SlOption } from "../../components/option/option.component.js";
 import type { SlPopup } from "../../components/popup/popup.component.js";
 import type { SlProgressBar } from "../../components/progress-bar/progress-bar.component.js";
@@ -849,8 +849,6 @@ type SlMenuItemProps = {
   menuItem?: SlMenuItem["menuItem"];
 };
 
-type SlMenuLabelProps = {};
-
 type SlMutationObserverProps = {
   /** Watches for changes to attributes. To watch only specific attributes, separate them by a space, e.g.
 `attr="class id title"`. To watch all attributes, use `*`. */
@@ -869,6 +867,8 @@ type SlMutationObserverProps = {
   /** Emitted when a mutation occurs. */
   onSlMutation?: (e: CustomEvent<{ mutationList: MutationRecord[] }>) => void;
 };
+
+type SlMenuLabelProps = {};
 
 type SlOptionProps = {
   /** The option's value. When selected, the containing form control will receive this value. The value must be unique
@@ -2292,19 +2292,6 @@ export type CustomElements = {
   "sl-menu-item": DefineComponent<SlMenuItemProps>;
 
   /**
-   * Menu labels are used to describe a group of menu items.
-   * ---
-   *
-   *
-   * ### **Slots:**
-   *  - _default_ - The menu label's content.
-   *
-   * ### **CSS Parts:**
-   *  - **base** - The component's base wrapper.
-   */
-  "sl-menu-label": DefineComponent<SlMenuLabelProps>;
-
-  /**
    * The Mutation Observer component offers a thin, declarative interface to the [`MutationObserver API`](https://developer.mozilla.org/en-US/docs/Web/API/MutationObserver).
    * ---
    *
@@ -2316,6 +2303,19 @@ export type CustomElements = {
    *  - _default_ - The content to watch for mutations.
    */
   "sl-mutation-observer": DefineComponent<SlMutationObserverProps>;
+
+  /**
+   * Menu labels are used to describe a group of menu items.
+   * ---
+   *
+   *
+   * ### **Slots:**
+   *  - _default_ - The menu label's content.
+   *
+   * ### **CSS Parts:**
+   *  - **base** - The component's base wrapper.
+   */
+  "sl-menu-label": DefineComponent<SlMenuLabelProps>;
 
   /**
    * Options define the selectable items within various form controls such as [select](/components/select).

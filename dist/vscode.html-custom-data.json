@@ -1476,17 +1476,6 @@
       ]
     },
     {
-      "name": "sl-menu-label",
-      "description": "Menu labels are used to describe a group of menu items.\n---\n\n\n### **Slots:**\n - _default_ - The menu label's content.\n\n### **CSS Parts:**\n - **base** - The component's base wrapper.",
-      "attributes": [],
-      "references": [
-        {
-          "name": "Documentation",
-          "url": "https://shoelace.style/components/menu-label"
-        }
-      ]
-    },
-    {
       "name": "sl-mutation-observer",
       "description": "The Mutation Observer component offers a thin, declarative interface to the [`MutationObserver API`](https://developer.mozilla.org/en-US/docs/Web/API/MutationObserver).\n---\n\n\n### **Events:**\n - **sl-mutation** - Emitted when a mutation occurs.\n\n### **Slots:**\n - _default_ - The content to watch for mutations.",
       "attributes": [
@@ -1525,6 +1514,17 @@
         {
           "name": "Documentation",
           "url": "https://shoelace.style/components/mutation-observer"
+        }
+      ]
+    },
+    {
+      "name": "sl-menu-label",
+      "description": "Menu labels are used to describe a group of menu items.\n---\n\n\n### **Slots:**\n - _default_ - The menu label's content.\n\n### **CSS Parts:**\n - **base** - The component's base wrapper.",
+      "attributes": [],
+      "references": [
+        {
+          "name": "Documentation",
+          "url": "https://shoelace.style/components/menu-label"
         }
       ]
     },
