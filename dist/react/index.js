@@ -47,14 +47,14 @@ import {
   progress_ring_default
 } from "../chunks/chunk.VXSOGZDQ.js";
 import {
+  qr_code_default
+} from "../chunks/chunk.2OKI6PHM.js";
+import {
   radio_default
 } from "../chunks/chunk.TW53AQUU.js";
 import {
   radio_button_default
 } from "../chunks/chunk.GQZDKUQJ.js";
-import {
-  qr_code_default
-} from "../chunks/chunk.2OKI6PHM.js";
 import {
   radio_group_default
 } from "../chunks/chunk.P4Z2VYVQ.js";
@@ -167,11 +167,11 @@ import {
   alert_default
 } from "../chunks/chunk.FAGJVQML.js";
 import {
-  animation_default
-} from "../chunks/chunk.P63VQA7M.js";
-import {
   animated_image_default
 } from "../chunks/chunk.JFXHKZRL.js";
+import {
+  animation_default
+} from "../chunks/chunk.P63VQA7M.js";
 import "../chunks/chunk.UVHVFXKX.js";
 import "../chunks/chunk.CJB5WKGN.js";
 import "../chunks/chunk.XDXFLZH2.js";

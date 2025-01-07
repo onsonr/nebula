@@ -11344,446 +11344,6 @@
     },
     {
       "kind": "javascript-module",
-      "path": "components/rating/rating.js",
-      "declarations": [
-        {
-          "kind": "class",
-          "description": "",
-          "name": "SlRating",
-          "cssProperties": [
-            {
-              "description": "The inactive color for symbols.",
-              "name": "--symbol-color"
-            },
-            {
-              "description": "The active color for symbols.",
-              "name": "--symbol-color-active"
-            },
-            {
-              "description": "The size of symbols.",
-              "name": "--symbol-size"
-            },
-            {
-              "description": "The spacing to use around symbols.",
-              "name": "--symbol-spacing"
-            }
-          ],
-          "cssParts": [
-            {
-              "description": "The component's base wrapper.",
-              "name": "base"
-            }
-          ],
-          "members": [
-            {
-              "kind": "field",
-              "name": "dependencies",
-              "type": {
-                "text": "object"
-              },
-              "static": true,
-              "default": "{ 'sl-icon': SlIcon }"
-            },
-            {
-              "kind": "field",
-              "name": "rating",
-              "type": {
-                "text": "HTMLElement"
-              }
-            },
-            {
-              "kind": "field",
-              "name": "hoverValue",
-              "type": {
-                "text": "number"
-              },
-              "privacy": "private",
-              "default": "0"
-            },
-            {
-              "kind": "field",
-              "name": "isHovering",
-              "type": {
-                "text": "boolean"
-              },
-              "privacy": "private",
-              "default": "false"
-            },
-            {
-              "kind": "field",
-              "name": "label",
-              "type": {
-                "text": "string"
-              },
-              "default": "''",
-              "description": "A label that describes the rating to assistive devices.",
-              "attribute": "label"
-            },
-            {
-              "kind": "field",
-              "name": "value",
-              "type": {
-                "text": "number"
-              },
-              "default": "0",
-              "description": "The current rating.",
-              "attribute": "value"
-            },
-            {
-              "kind": "field",
-              "name": "max",
-              "type": {
-                "text": "number"
-              },
-              "default": "5",
-              "description": "The highest rating to show.",
-              "attribute": "max"
-            },
-            {
-              "kind": "field",
-              "name": "precision",
-              "type": {
-                "text": "number"
-              },
-              "default": "1",
-              "description": "The precision at which the rating will increase and decrease. For example, to allow half-star ratings, set this\nattribute to `0.5`.",
-              "attribute": "precision"
-            },
-            {
-              "kind": "field",
-              "name": "readonly",
-              "type": {
-                "text": "boolean"
-              },
-              "default": "false",
-              "description": "Makes the rating readonly.",
-              "attribute": "readonly",
-              "reflects": true
-            },
-            {
-              "kind": "field",
-              "name": "disabled",
-              "type": {
-                "text": "boolean"
-              },
-              "default": "false",
-              "description": "Disables the rating.",
-              "attribute": "disabled",
-              "reflects": true
-            },
-            {
-              "kind": "field",
-              "name": "getSymbol",
-              "type": {
-                "text": "(value: number) => string"
-              },
-              "description": "A function that customizes the symbol to be rendered. The first and only argument is the rating's current value.\nThe function should return a string containing trusted HTML of the symbol to render at the specified value. Works\nwell with `<sl-icon>` elements.",
-              "attribute": "getSymbol"
-            },
-            {
-              "kind": "method",
-              "name": "getValueFromMousePosition",
-              "privacy": "private",
-              "parameters": [
-                {
-                  "name": "event",
-                  "type": {
-                    "text": "MouseEvent"
-                  }
-                }
-              ]
-            },
-            {
-              "kind": "method",
-              "name": "getValueFromTouchPosition",
-              "privacy": "private",
-              "parameters": [
-                {
-                  "name": "event",
-                  "type": {
-                    "text": "TouchEvent"
-                  }
-                }
-              ]
-            },
-            {
-              "kind": "method",
-              "name": "getValueFromXCoordinate",
-              "privacy": "private",
-              "parameters": [
-                {
-                  "name": "coordinate",
-                  "type": {
-                    "text": "number"
-                  }
-                }
-              ]
-            },
-            {
-              "kind": "method",
-              "name": "handleClick",
-              "privacy": "private",
-              "parameters": [
-                {
-                  "name": "event",
-                  "type": {
-                    "text": "MouseEvent"
-                  }
-                }
-              ]
-            },
-            {
-              "kind": "method",
-              "name": "setValue",
-              "privacy": "private",
-              "parameters": [
-                {
-                  "name": "newValue",
-                  "type": {
-                    "text": "number"
-                  }
-                }
-              ]
-            },
-            {
-              "kind": "method",
-              "name": "handleKeyDown",
-              "privacy": "private",
-              "parameters": [
-                {
-                  "name": "event",
-                  "type": {
-                    "text": "KeyboardEvent"
-                  }
-                }
-              ]
-            },
-            {
-              "kind": "method",
-              "name": "handleMouseEnter",
-              "privacy": "private",
-              "parameters": [
-                {
-                  "name": "event",
-                  "type": {
-                    "text": "MouseEvent"
-                  }
-                }
-              ]
-            },
-            {
-              "kind": "method",
-              "name": "handleMouseMove",
-              "privacy": "private",
-              "parameters": [
-                {
-                  "name": "event",
-                  "type": {
-                    "text": "MouseEvent"
-                  }
-                }
-              ]
-            },
-            {
-              "kind": "method",
-              "name": "handleMouseLeave",
-              "privacy": "private"
-            },
-            {
-              "kind": "method",
-              "name": "handleTouchStart",
-              "privacy": "private",
-              "parameters": [
-                {
-                  "name": "event",
-                  "type": {
-                    "text": "TouchEvent"
-                  }
-                }
-              ]
-            },
-            {
-              "kind": "method",
-              "name": "handleTouchMove",
-              "privacy": "private",
-              "parameters": [
-                {
-                  "name": "event",
-                  "type": {
-                    "text": "TouchEvent"
-                  }
-                }
-              ]
-            },
-            {
-              "kind": "method",
-              "name": "handleTouchEnd",
-              "privacy": "private",
-              "parameters": [
-                {
-                  "name": "event",
-                  "type": {
-                    "text": "TouchEvent"
-                  }
-                }
-              ]
-            },
-            {
-              "kind": "method",
-              "name": "roundToPrecision",
-              "privacy": "private",
-              "parameters": [
-                {
-                  "name": "numberToRound",
-                  "type": {
-                    "text": "number"
-                  }
-                },
-                {
-                  "name": "precision",
-                  "default": "0.5"
-                }
-              ]
-            },
-            {
-              "kind": "method",
-              "name": "handleHoverValueChange"
-            },
-            {
-              "kind": "method",
-              "name": "handleIsHoveringChange"
-            },
-            {
-              "kind": "method",
-              "name": "focus",
-              "parameters": [
-                {
-                  "name": "options",
-                  "optional": true,
-                  "type": {
-                    "text": "FocusOptions"
-                  }
-                }
-              ],
-              "description": "Sets focus on the rating."
-            },
-            {
-              "kind": "method",
-              "name": "blur",
-              "description": "Removes focus from the rating."
-            }
-          ],
-          "events": [
-            {
-              "description": "Emitted when the rating's value changes.",
-              "name": "sl-change",
-              "reactName": "onSlChange",
-              "eventName": "SlChangeEvent"
-            },
-            {
-              "type": {
-                "text": "{ phase: 'start' | 'move' | 'end', value: number }"
-              },
-              "description": "Emitted when the user hovers over a value. The `phase` property indicates when hovering starts, moves to a new value, or ends. The `value` property tells what the rating's value would be if the user were to commit to the hovered value.",
-              "name": "sl-hover",
-              "reactName": "onSlHover",
-              "eventName": "SlHoverEvent"
-            }
-          ],
-          "attributes": [
-            {
-              "name": "label",
-              "type": {
-                "text": "string"
-              },
-              "default": "''",
-              "description": "A label that describes the rating to assistive devices.",
-              "fieldName": "label"
-            },
-            {
-              "name": "value",
-              "type": {
-                "text": "number"
-              },
-              "default": "0",
-              "description": "The current rating.",
-              "fieldName": "value"
-            },
-            {
-              "name": "max",
-              "type": {
-                "text": "number"
-              },
-              "default": "5",
-              "description": "The highest rating to show.",
-              "fieldName": "max"
-            },
-            {
-              "name": "precision",
-              "type": {
-                "text": "number"
-              },
-              "default": "1",
-              "description": "The precision at which the rating will increase and decrease. For example, to allow half-star ratings, set this\nattribute to `0.5`.",
-              "fieldName": "precision"
-            },
-            {
-              "name": "readonly",
-              "type": {
-                "text": "boolean"
-              },
-              "default": "false",
-              "description": "Makes the rating readonly.",
-              "fieldName": "readonly"
-            },
-            {
-              "name": "disabled",
-              "type": {
-                "text": "boolean"
-              },
-              "default": "false",
-              "description": "Disables the rating.",
-              "fieldName": "disabled"
-            },
-            {
-              "name": "getSymbol",
-              "type": {
-                "text": "(value: number) => string"
-              },
-              "description": "A function that customizes the symbol to be rendered. The first and only argument is the rating's current value.\nThe function should return a string containing trusted HTML of the symbol to render at the specified value. Works\nwell with `<sl-icon>` elements.",
-              "fieldName": "getSymbol"
-            }
-          ],
-          "superclass": {
-            "name": "ShoelaceElement",
-            "module": "/src/internal/shoelace-element.js"
-          },
-          "summary": "Ratings give users a way to quickly view and provide feedback.",
-          "tagNameWithoutPrefix": "rating",
-          "tagName": "sl-rating",
-          "customElement": true,
-          "jsDoc": "/**\n * @summary Ratings give users a way to quickly view and provide feedback.\n * @documentation https://shoelace.style/components/rating\n * @status stable\n * @since 2.0\n *\n * @dependency sl-icon\n *\n * @event sl-change - Emitted when the rating's value changes.\n * @event {{ phase: 'start' | 'move' | 'end', value: number }} sl-hover - Emitted when the user hovers over a value. The\n *  `phase` property indicates when hovering starts, moves to a new value, or ends. The `value` property tells what the\n *  rating's value would be if the user were to commit to the hovered value.\n *\n * @csspart base - The component's base wrapper.\n *\n * @cssproperty --symbol-color - The inactive color for symbols.\n * @cssproperty --symbol-color-active - The active color for symbols.\n * @cssproperty --symbol-size - The size of symbols.\n * @cssproperty --symbol-spacing - The spacing to use around symbols.\n */",
-          "documentation": "https://shoelace.style/components/rating",
-          "status": "stable",
-          "since": "2.0",
-          "dependencies": [
-            "sl-icon"
-          ]
-        }
-      ],
-      "exports": [
-        {
-          "kind": "js",
-          "name": "default",
-          "declaration": {
-            "name": "SlRating",
-            "module": "components/rating/rating.js"
-          }
-        }
-      ]
-    },
-    {
-      "kind": "javascript-module",
       "path": "components/range/range.js",
       "declarations": [
         {
@@ -12355,6 +11915,446 @@
           "declaration": {
             "name": "SlRange",
             "module": "components/range/range.js"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "components/rating/rating.js",
+      "declarations": [
+        {
+          "kind": "class",
+          "description": "",
+          "name": "SlRating",
+          "cssProperties": [
+            {
+              "description": "The inactive color for symbols.",
+              "name": "--symbol-color"
+            },
+            {
+              "description": "The active color for symbols.",
+              "name": "--symbol-color-active"
+            },
+            {
+              "description": "The size of symbols.",
+              "name": "--symbol-size"
+            },
+            {
+              "description": "The spacing to use around symbols.",
+              "name": "--symbol-spacing"
+            }
+          ],
+          "cssParts": [
+            {
+              "description": "The component's base wrapper.",
+              "name": "base"
+            }
+          ],
+          "members": [
+            {
+              "kind": "field",
+              "name": "dependencies",
+              "type": {
+                "text": "object"
+              },
+              "static": true,
+              "default": "{ 'sl-icon': SlIcon }"
+            },
+            {
+              "kind": "field",
+              "name": "rating",
+              "type": {
+                "text": "HTMLElement"
+              }
+            },
+            {
+              "kind": "field",
+              "name": "hoverValue",
+              "type": {
+                "text": "number"
+              },
+              "privacy": "private",
+              "default": "0"
+            },
+            {
+              "kind": "field",
+              "name": "isHovering",
+              "type": {
+                "text": "boolean"
+              },
+              "privacy": "private",
+              "default": "false"
+            },
+            {
+              "kind": "field",
+              "name": "label",
+              "type": {
+                "text": "string"
+              },
+              "default": "''",
+              "description": "A label that describes the rating to assistive devices.",
+              "attribute": "label"
+            },
+            {
+              "kind": "field",
+              "name": "value",
+              "type": {
+                "text": "number"
+              },
+              "default": "0",
+              "description": "The current rating.",
+              "attribute": "value"
+            },
+            {
+              "kind": "field",
+              "name": "max",
+              "type": {
+                "text": "number"
+              },
+              "default": "5",
+              "description": "The highest rating to show.",
+              "attribute": "max"
+            },
+            {
+              "kind": "field",
+              "name": "precision",
+              "type": {
+                "text": "number"
+              },
+              "default": "1",
+              "description": "The precision at which the rating will increase and decrease. For example, to allow half-star ratings, set this\nattribute to `0.5`.",
+              "attribute": "precision"
+            },
+            {
+              "kind": "field",
+              "name": "readonly",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "description": "Makes the rating readonly.",
+              "attribute": "readonly",
+              "reflects": true
+            },
+            {
+              "kind": "field",
+              "name": "disabled",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "description": "Disables the rating.",
+              "attribute": "disabled",
+              "reflects": true
+            },
+            {
+              "kind": "field",
+              "name": "getSymbol",
+              "type": {
+                "text": "(value: number) => string"
+              },
+              "description": "A function that customizes the symbol to be rendered. The first and only argument is the rating's current value.\nThe function should return a string containing trusted HTML of the symbol to render at the specified value. Works\nwell with `<sl-icon>` elements.",
+              "attribute": "getSymbol"
+            },
+            {
+              "kind": "method",
+              "name": "getValueFromMousePosition",
+              "privacy": "private",
+              "parameters": [
+                {
+                  "name": "event",
+                  "type": {
+                    "text": "MouseEvent"
+                  }
+                }
+              ]
+            },
+            {
+              "kind": "method",
+              "name": "getValueFromTouchPosition",
+              "privacy": "private",
+              "parameters": [
+                {
+                  "name": "event",
+                  "type": {
+                    "text": "TouchEvent"
+                  }
+                }
+              ]
+            },
+            {
+              "kind": "method",
+              "name": "getValueFromXCoordinate",
+              "privacy": "private",
+              "parameters": [
+                {
+                  "name": "coordinate",
+                  "type": {
+                    "text": "number"
+                  }
+                }
+              ]
+            },
+            {
+              "kind": "method",
+              "name": "handleClick",
+              "privacy": "private",
+              "parameters": [
+                {
+                  "name": "event",
+                  "type": {
+                    "text": "MouseEvent"
+                  }
+                }
+              ]
+            },
+            {
+              "kind": "method",
+              "name": "setValue",
+              "privacy": "private",
+              "parameters": [
+                {
+                  "name": "newValue",
+                  "type": {
+                    "text": "number"
+                  }
+                }
+              ]
+            },
+            {
+              "kind": "method",
+              "name": "handleKeyDown",
+              "privacy": "private",
+              "parameters": [
+                {
+                  "name": "event",
+                  "type": {
+                    "text": "KeyboardEvent"
+                  }
+                }
+              ]
+            },
+            {
+              "kind": "method",
+              "name": "handleMouseEnter",
+              "privacy": "private",
+              "parameters": [
+                {
+                  "name": "event",
+                  "type": {
+                    "text": "MouseEvent"
+                  }
+                }
+              ]
+            },
+            {
+              "kind": "method",
+              "name": "handleMouseMove",
+              "privacy": "private",
+              "parameters": [
+                {
+                  "name": "event",
+                  "type": {
+                    "text": "MouseEvent"
+                  }
+                }
+              ]
+            },
+            {
+              "kind": "method",
+              "name": "handleMouseLeave",
+              "privacy": "private"
+            },
+            {
+              "kind": "method",
+              "name": "handleTouchStart",
+              "privacy": "private",
+              "parameters": [
+                {
+                  "name": "event",
+                  "type": {
+                    "text": "TouchEvent"
+                  }
+                }
+              ]
+            },
+            {
+              "kind": "method",
+              "name": "handleTouchMove",
+              "privacy": "private",
+              "parameters": [
+                {
+                  "name": "event",
+                  "type": {
+                    "text": "TouchEvent"
+                  }
+                }
+              ]
+            },
+            {
+              "kind": "method",
+              "name": "handleTouchEnd",
+              "privacy": "private",
+              "parameters": [
+                {
+                  "name": "event",
+                  "type": {
+                    "text": "TouchEvent"
+                  }
+                }
+              ]
+            },
+            {
+              "kind": "method",
+              "name": "roundToPrecision",
+              "privacy": "private",
+              "parameters": [
+                {
+                  "name": "numberToRound",
+                  "type": {
+                    "text": "number"
+                  }
+                },
+                {
+                  "name": "precision",
+                  "default": "0.5"
+                }
+              ]
+            },
+            {
+              "kind": "method",
+              "name": "handleHoverValueChange"
+            },
+            {
+              "kind": "method",
+              "name": "handleIsHoveringChange"
+            },
+            {
+              "kind": "method",
+              "name": "focus",
+              "parameters": [
+                {
+                  "name": "options",
+                  "optional": true,
+                  "type": {
+                    "text": "FocusOptions"
+                  }
+                }
+              ],
+              "description": "Sets focus on the rating."
+            },
+            {
+              "kind": "method",
+              "name": "blur",
+              "description": "Removes focus from the rating."
+            }
+          ],
+          "events": [
+            {
+              "description": "Emitted when the rating's value changes.",
+              "name": "sl-change",
+              "reactName": "onSlChange",
+              "eventName": "SlChangeEvent"
+            },
+            {
+              "type": {
+                "text": "{ phase: 'start' | 'move' | 'end', value: number }"
+              },
+              "description": "Emitted when the user hovers over a value. The `phase` property indicates when hovering starts, moves to a new value, or ends. The `value` property tells what the rating's value would be if the user were to commit to the hovered value.",
+              "name": "sl-hover",
+              "reactName": "onSlHover",
+              "eventName": "SlHoverEvent"
+            }
+          ],
+          "attributes": [
+            {
+              "name": "label",
+              "type": {
+                "text": "string"
+              },
+              "default": "''",
+              "description": "A label that describes the rating to assistive devices.",
+              "fieldName": "label"
+            },
+            {
+              "name": "value",
+              "type": {
+                "text": "number"
+              },
+              "default": "0",
+              "description": "The current rating.",
+              "fieldName": "value"
+            },
+            {
+              "name": "max",
+              "type": {
+                "text": "number"
+              },
+              "default": "5",
+              "description": "The highest rating to show.",
+              "fieldName": "max"
+            },
+            {
+              "name": "precision",
+              "type": {
+                "text": "number"
+              },
+              "default": "1",
+              "description": "The precision at which the rating will increase and decrease. For example, to allow half-star ratings, set this\nattribute to `0.5`.",
+              "fieldName": "precision"
+            },
+            {
+              "name": "readonly",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "description": "Makes the rating readonly.",
+              "fieldName": "readonly"
+            },
+            {
+              "name": "disabled",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "description": "Disables the rating.",
+              "fieldName": "disabled"
+            },
+            {
+              "name": "getSymbol",
+              "type": {
+                "text": "(value: number) => string"
+              },
+              "description": "A function that customizes the symbol to be rendered. The first and only argument is the rating's current value.\nThe function should return a string containing trusted HTML of the symbol to render at the specified value. Works\nwell with `<sl-icon>` elements.",
+              "fieldName": "getSymbol"
+            }
+          ],
+          "superclass": {
+            "name": "ShoelaceElement",
+            "module": "/src/internal/shoelace-element.js"
+          },
+          "summary": "Ratings give users a way to quickly view and provide feedback.",
+          "tagNameWithoutPrefix": "rating",
+          "tagName": "sl-rating",
+          "customElement": true,
+          "jsDoc": "/**\n * @summary Ratings give users a way to quickly view and provide feedback.\n * @documentation https://shoelace.style/components/rating\n * @status stable\n * @since 2.0\n *\n * @dependency sl-icon\n *\n * @event sl-change - Emitted when the rating's value changes.\n * @event {{ phase: 'start' | 'move' | 'end', value: number }} sl-hover - Emitted when the user hovers over a value. The\n *  `phase` property indicates when hovering starts, moves to a new value, or ends. The `value` property tells what the\n *  rating's value would be if the user were to commit to the hovered value.\n *\n * @csspart base - The component's base wrapper.\n *\n * @cssproperty --symbol-color - The inactive color for symbols.\n * @cssproperty --symbol-color-active - The active color for symbols.\n * @cssproperty --symbol-size - The size of symbols.\n * @cssproperty --symbol-spacing - The spacing to use around symbols.\n */",
+          "documentation": "https://shoelace.style/components/rating",
+          "status": "stable",
+          "since": "2.0",
+          "dependencies": [
+            "sl-icon"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "default",
+          "declaration": {
+            "name": "SlRating",
+            "module": "components/rating/rating.js"
           }
         }
       ]

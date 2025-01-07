@@ -40,8 +40,8 @@ import type { SlQrCode } from "../../components/qr-code/qr-code.component.js";
 import type { SlRadio } from "../../components/radio/radio.component.js";
 import type { SlRadioButton } from "../../components/radio-button/radio-button.component.js";
 import type { SlRadioGroup } from "../../components/radio-group/radio-group.component.js";
-import type { SlRating } from "../../components/rating/rating.component.js";
 import type { SlRange } from "../../components/range/range.component.js";
+import type { SlRating } from "../../components/rating/rating.component.js";
 import type { SlRelativeTime } from "../../components/relative-time/relative-time.component.js";
 import type { SlResizeObserver } from "../../components/resize-observer/resize-observer.component.js";
 import type { SlSelect } from "../../components/select/select.component.js";
@@ -1073,32 +1073,6 @@ the same document or shadow root for this to work. */
   onSlInvalid?: (e: CustomEvent<never>) => void;
 };
 
-type SlRatingProps = {
-  /** A label that describes the rating to assistive devices. */
-  label?: SlRating["label"];
-  /** The current rating. */
-  value?: SlRating["value"];
-  /** The highest rating to show. */
-  max?: SlRating["max"];
-  /** The precision at which the rating will increase and decrease. For example, to allow half-star ratings, set this
-attribute to `0.5`. */
-  precision?: SlRating["precision"];
-  /** Makes the rating readonly. */
-  readonly?: SlRating["readonly"];
-  /** Disables the rating. */
-  disabled?: SlRating["disabled"];
-  /** A function that customizes the symbol to be rendered. The first and only argument is the rating's current value.
-The function should return a string containing trusted HTML of the symbol to render at the specified value. Works
-well with `<sl-icon>` elements. */
-  getSymbol?: SlRating["getSymbol"];
-  /**  */
-  rating?: SlRating["rating"];
-  /** Emitted when the rating's value changes. */
-  onSlChange?: (e: CustomEvent<never>) => void;
-  /** Emitted when the user hovers over a value. The `phase` property indicates when hovering starts, moves to a new value, or ends. The `value` property tells what the rating's value would be if the user were to commit to the hovered value. */
-  onSlHover?: (e: CustomEvent<{ phase: "start" | "move" | "end"; value: number }>) => void;
-};
-
 type SlRangeProps = {
   /**  */
   title?: SlRange["title"];
@@ -1147,6 +1121,32 @@ function should return a string to display in the tooltip. */
   onSlInput?: (e: CustomEvent<never>) => void;
   /** Emitted when the form control has been checked for validity and its constraints aren't satisfied. */
   onSlInvalid?: (e: CustomEvent<never>) => void;
+};
+
+type SlRatingProps = {
+  /** A label that describes the rating to assistive devices. */
+  label?: SlRating["label"];
+  /** The current rating. */
+  value?: SlRating["value"];
+  /** The highest rating to show. */
+  max?: SlRating["max"];
+  /** The precision at which the rating will increase and decrease. For example, to allow half-star ratings, set this
+attribute to `0.5`. */
+  precision?: SlRating["precision"];
+  /** Makes the rating readonly. */
+  readonly?: SlRating["readonly"];
+  /** Disables the rating. */
+  disabled?: SlRating["disabled"];
+  /** A function that customizes the symbol to be rendered. The first and only argument is the rating's current value.
+The function should return a string containing trusted HTML of the symbol to render at the specified value. Works
+well with `<sl-icon>` elements. */
+  getSymbol?: SlRating["getSymbol"];
+  /**  */
+  rating?: SlRating["rating"];
+  /** Emitted when the rating's value changes. */
+  onSlChange?: (e: CustomEvent<never>) => void;
+  /** Emitted when the user hovers over a value. The `phase` property indicates when hovering starts, moves to a new value, or ends. The `value` property tells what the rating's value would be if the user were to commit to the hovered value. */
+  onSlHover?: (e: CustomEvent<{ phase: "start" | "move" | "end"; value: number }>) => void;
 };
 
 type SlRelativeTimeProps = {
@@ -2501,30 +2501,6 @@ export type CustomElements = {
   "sl-radio-group": DefineComponent<SlRadioGroupProps>;
 
   /**
-   * Ratings give users a way to quickly view and provide feedback.
-   * ---
-   *
-   *
-   * ### **Events:**
-   *  - **sl-change** - Emitted when the rating's value changes.
-   * - **sl-hover** - Emitted when the user hovers over a value. The `phase` property indicates when hovering starts, moves to a new value, or ends. The `value` property tells what the rating's value would be if the user were to commit to the hovered value.
-   *
-   * ### **Methods:**
-   *  - **focus(options: _FocusOptions_)** - Sets focus on the rating.
-   * - **blur()** - Removes focus from the rating.
-   *
-   * ### **CSS Properties:**
-   *  - **--symbol-color** - The inactive color for symbols. _(default: undefined)_
-   * - **--symbol-color-active** - The active color for symbols. _(default: undefined)_
-   * - **--symbol-size** - The size of symbols. _(default: undefined)_
-   * - **--symbol-spacing** - The spacing to use around symbols. _(default: undefined)_
-   *
-   * ### **CSS Parts:**
-   *  - **base** - The component's base wrapper.
-   */
-  "sl-rating": DefineComponent<SlRatingProps>;
-
-  /**
    * Ranges allow the user to select a single value within a given range using a slider.
    * ---
    *
@@ -2568,6 +2544,30 @@ export type CustomElements = {
    * - **tooltip** - The range's tooltip.
    */
   "sl-range": DefineComponent<SlRangeProps>;
+
+  /**
+   * Ratings give users a way to quickly view and provide feedback.
+   * ---
+   *
+   *
+   * ### **Events:**
+   *  - **sl-change** - Emitted when the rating's value changes.
+   * - **sl-hover** - Emitted when the user hovers over a value. The `phase` property indicates when hovering starts, moves to a new value, or ends. The `value` property tells what the rating's value would be if the user were to commit to the hovered value.
+   *
+   * ### **Methods:**
+   *  - **focus(options: _FocusOptions_)** - Sets focus on the rating.
+   * - **blur()** - Removes focus from the rating.
+   *
+   * ### **CSS Properties:**
+   *  - **--symbol-color** - The inactive color for symbols. _(default: undefined)_
+   * - **--symbol-color-active** - The active color for symbols. _(default: undefined)_
+   * - **--symbol-size** - The size of symbols. _(default: undefined)_
+   * - **--symbol-spacing** - The spacing to use around symbols. _(default: undefined)_
+   *
+   * ### **CSS Parts:**
+   *  - **base** - The component's base wrapper.
+   */
+  "sl-rating": DefineComponent<SlRatingProps>;
 
   /**
    * Outputs a localized time phrase relative to the current date and time.
