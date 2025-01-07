@@ -34,9 +34,10 @@ tasks:
 
   esclient:bump:
     dir: ./libs/es-client
+    internal: true
     cmds:
-      - pnpm version patch
-      - git add package.json
-      - git commit -m "chore: bump version to {{.VERSION}} [skip ci]"
+      - devbox run bump
+      - git add .
+      - git commit -m "(chore) bump version"
       - git push
     silent: true
