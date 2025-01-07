@@ -1,5 +1,5 @@
-export { default as SlAnimatedImage } from './animated-image/index.js';
 export { default as SlAlert } from './alert/index.js';
+export { default as SlAnimatedImage } from './animated-image/index.js';
 export { default as SlAnimation } from './animation/index.js';
 export { default as SlAvatar } from './avatar/index.js';
 export { default as SlBadge } from './badge/index.js';
@@ -38,8 +38,8 @@ export { default as SlQrCode } from './qr-code/index.js';
 export { default as SlRadio } from './radio/index.js';
 export { default as SlRadioButton } from './radio-button/index.js';
 export { default as SlRadioGroup } from './radio-group/index.js';
-export { default as SlRange } from './range/index.js';
 export { default as SlRating } from './rating/index.js';
+export { default as SlRange } from './range/index.js';
 export { default as SlRelativeTime } from './relative-time/index.js';
 export { default as SlResizeObserver } from './resize-observer/index.js';
 export { default as SlSelect } from './select/index.js';

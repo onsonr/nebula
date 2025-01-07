@@ -3,33 +3,6 @@
   "version": 1.1,
   "tags": [
     {
-      "name": "sl-animated-image",
-      "description": "A component for displaying animated GIFs and WEBPs that play and pause on interaction.\n---\n\n\n### **Events:**\n - **sl-load** - Emitted when the image loads successfully.\n- **sl-error** - Emitted when the image fails to load.\n\n### **Slots:**\n - **play-icon** - Optional play icon to use instead of the default. Works best with `<sl-icon>`.\n- **pause-icon** - Optional pause icon to use instead of the default. Works best with `<sl-icon>`.\n\n### **CSS Properties:**\n - **--control-box-size** - The size of the icon box. _(default: undefined)_\n- **--icon-size** - The size of the play/pause icons. _(default: undefined)_\n\n### **CSS Parts:**\n - **control-box** - The container that surrounds the pause/play icons and provides their background.",
-      "attributes": [
-        {
-          "name": "src",
-          "description": "The path to the image to load.",
-          "values": []
-        },
-        {
-          "name": "alt",
-          "description": "A description of the image used by assistive devices.",
-          "values": []
-        },
-        {
-          "name": "play",
-          "description": "Plays the animation. When this attribute is remove, the animation will pause.",
-          "values": []
-        }
-      ],
-      "references": [
-        {
-          "name": "Documentation",
-          "url": "https://shoelace.style/components/animated-image"
-        }
-      ]
-    },
-    {
       "name": "sl-alert",
       "description": "Alerts are used to display important messages inline or as toast notifications.\n---\n\n\n### **Events:**\n - **sl-show** - Emitted when the alert opens.\n- **sl-after-show** - Emitted after the alert opens and all animations are complete.\n- **sl-hide** - Emitted when the alert closes.\n- **sl-after-hide** - Emitted after the alert closes and all animations are complete.\n\n### **Methods:**\n - **show()** - Shows the alert.\n- **hide()** - Hides the alert\n- **toast()** - Displays the alert as a toast notification. This will move the alert out of its position in the DOM and, when\ndismissed, it will be removed from the DOM completely. By storing a reference to the alert, you can reuse it by\ncalling this method again. The returned promise will resolve after the alert is hidden.\n\n### **Slots:**\n - _default_ - The alert's main content.\n- **icon** - An icon to show in the alert. Works best with `<sl-icon>`.\n\n### **CSS Parts:**\n - **base** - The component's base wrapper.\n- **icon** - The container that wraps the optional icon.\n- **message** - The container that wraps the alert's main content.\n- **close-button** - The close button, an `<sl-icon-button>`.\n- **close-button__base** - The close button's exported `base` part.",
       "attributes": [
@@ -64,6 +37,33 @@
         {
           "name": "Documentation",
           "url": "https://shoelace.style/components/alert"
+        }
+      ]
+    },
+    {
+      "name": "sl-animated-image",
+      "description": "A component for displaying animated GIFs and WEBPs that play and pause on interaction.\n---\n\n\n### **Events:**\n - **sl-load** - Emitted when the image loads successfully.\n- **sl-error** - Emitted when the image fails to load.\n\n### **Slots:**\n - **play-icon** - Optional play icon to use instead of the default. Works best with `<sl-icon>`.\n- **pause-icon** - Optional pause icon to use instead of the default. Works best with `<sl-icon>`.\n\n### **CSS Properties:**\n - **--control-box-size** - The size of the icon box. _(default: undefined)_\n- **--icon-size** - The size of the play/pause icons. _(default: undefined)_\n\n### **CSS Parts:**\n - **control-box** - The container that surrounds the pause/play icons and provides their background.",
+      "attributes": [
+        {
+          "name": "src",
+          "description": "The path to the image to load.",
+          "values": []
+        },
+        {
+          "name": "alt",
+          "description": "A description of the image used by assistive devices.",
+          "values": []
+        },
+        {
+          "name": "play",
+          "description": "Plays the animation. When this attribute is remove, the animation will pause.",
+          "values": []
+        }
+      ],
+      "references": [
+        {
+          "name": "Documentation",
+          "url": "https://shoelace.style/components/animated-image"
         }
       ]
     },
@@ -1919,6 +1919,49 @@
       ]
     },
     {
+      "name": "sl-rating",
+      "description": "Ratings give users a way to quickly view and provide feedback.\n---\n\n\n### **Events:**\n - **sl-change** - Emitted when the rating's value changes.\n- **sl-hover** - Emitted when the user hovers over a value. The `phase` property indicates when hovering starts, moves to a new value, or ends. The `value` property tells what the rating's value would be if the user were to commit to the hovered value.\n\n### **Methods:**\n - **focus(options: _FocusOptions_)** - Sets focus on the rating.\n- **blur()** - Removes focus from the rating.\n\n### **CSS Properties:**\n - **--symbol-color** - The inactive color for symbols. _(default: undefined)_\n- **--symbol-color-active** - The active color for symbols. _(default: undefined)_\n- **--symbol-size** - The size of symbols. _(default: undefined)_\n- **--symbol-spacing** - The spacing to use around symbols. _(default: undefined)_\n\n### **CSS Parts:**\n - **base** - The component's base wrapper.",
+      "attributes": [
+        {
+          "name": "label",
+          "description": "A label that describes the rating to assistive devices.",
+          "values": []
+        },
+        { "name": "value", "description": "The current rating.", "values": [] },
+        {
+          "name": "max",
+          "description": "The highest rating to show.",
+          "values": []
+        },
+        {
+          "name": "precision",
+          "description": "The precision at which the rating will increase and decrease. For example, to allow half-star ratings, set this\nattribute to `0.5`.",
+          "values": []
+        },
+        {
+          "name": "readonly",
+          "description": "Makes the rating readonly.",
+          "values": []
+        },
+        {
+          "name": "disabled",
+          "description": "Disables the rating.",
+          "values": []
+        },
+        {
+          "name": "getSymbol",
+          "description": "A function that customizes the symbol to be rendered. The first and only argument is the rating's current value.\nThe function should return a string containing trusted HTML of the symbol to render at the specified value. Works\nwell with `<sl-icon>` elements.",
+          "values": [{ "name": "(value: number) => string" }]
+        }
+      ],
+      "references": [
+        {
+          "name": "Documentation",
+          "url": "https://shoelace.style/components/rating"
+        }
+      ]
+    },
+    {
       "name": "sl-range",
       "description": "Ranges allow the user to select a single value within a given range using a slider.\n---\n\n\n### **Events:**\n - **sl-blur** - Emitted when the control loses focus.\n- **sl-change** - Emitted when an alteration to the control's value is committed by the user.\n- **sl-focus** - Emitted when the control gains focus.\n- **sl-input** - Emitted when the control receives input.\n- **sl-invalid** - Emitted when the form control has been checked for validity and its constraints aren't satisfied.\n\n### **Methods:**\n - **focus(options: _FocusOptions_)** - Sets focus on the range.\n- **blur()** - Removes focus from the range.\n- **stepUp()** - Increments the value of the range by the value of the step attribute.\n- **stepDown()** - Decrements the value of the range by the value of the step attribute.\n- **checkValidity()** - Checks for validity but does not show a validation message. Returns `true` when valid and `false` when invalid.\n- **getForm(): _HTMLFormElement | null_** - Gets the associated form, if one exists.\n- **reportValidity()** - Checks for validity and shows the browser's validation message if the control is invalid.\n- **setCustomValidity(message: _string_)** - Sets a custom validation message. Pass an empty string to restore validity.\n\n### **Slots:**\n - **label** - The range's label. Alternatively, you can use the `label` attribute.\n- **help-text** - Text that describes how to use the input. Alternatively, you can use the `help-text` attribute.\n\n### **CSS Properties:**\n - **--thumb-size** - The size of the thumb. _(default: undefined)_\n- **--tooltip-offset** - The vertical distance the tooltip is offset from the track. _(default: undefined)_\n- **--track-color-active** - The color of the portion of the track that represents the current value. _(default: undefined)_\n- **--track-color-inactive** - The of the portion of the track that represents the remaining value. _(default: undefined)_\n- **--track-height** - The height of the track. _(default: undefined)_\n- **--track-active-offset** - The point of origin of the active track. _(default: undefined)_\n\n### **CSS Parts:**\n - **form-control** - The form control that wraps the label, input, and help text.\n- **form-control-label** - The label's wrapper.\n- **form-control-input** - The range's wrapper.\n- **form-control-help-text** - The help text's wrapper.\n- **base** - The component's base wrapper.\n- **input** - The internal `<input>` element.\n- **tooltip** - The range's tooltip.",
       "attributes": [
@@ -1982,49 +2025,6 @@
         {
           "name": "Documentation",
           "url": "https://shoelace.style/components/range"
-        }
-      ]
-    },
-    {
-      "name": "sl-rating",
-      "description": "Ratings give users a way to quickly view and provide feedback.\n---\n\n\n### **Events:**\n - **sl-change** - Emitted when the rating's value changes.\n- **sl-hover** - Emitted when the user hovers over a value. The `phase` property indicates when hovering starts, moves to a new value, or ends. The `value` property tells what the rating's value would be if the user were to commit to the hovered value.\n\n### **Methods:**\n - **focus(options: _FocusOptions_)** - Sets focus on the rating.\n- **blur()** - Removes focus from the rating.\n\n### **CSS Properties:**\n - **--symbol-color** - The inactive color for symbols. _(default: undefined)_\n- **--symbol-color-active** - The active color for symbols. _(default: undefined)_\n- **--symbol-size** - The size of symbols. _(default: undefined)_\n- **--symbol-spacing** - The spacing to use around symbols. _(default: undefined)_\n\n### **CSS Parts:**\n - **base** - The component's base wrapper.",
-      "attributes": [
-        {
-          "name": "label",
-          "description": "A label that describes the rating to assistive devices.",
-          "values": []
-        },
-        { "name": "value", "description": "The current rating.", "values": [] },
-        {
-          "name": "max",
-          "description": "The highest rating to show.",
-          "values": []
-        },
-        {
-          "name": "precision",
-          "description": "The precision at which the rating will increase and decrease. For example, to allow half-star ratings, set this\nattribute to `0.5`.",
-          "values": []
-        },
-        {
-          "name": "readonly",
-          "description": "Makes the rating readonly.",
-          "values": []
-        },
-        {
-          "name": "disabled",
-          "description": "Disables the rating.",
-          "values": []
-        },
-        {
-          "name": "getSymbol",
-          "description": "A function that customizes the symbol to be rendered. The first and only argument is the rating's current value.\nThe function should return a string containing trusted HTML of the symbol to render at the specified value. Works\nwell with `<sl-icon>` elements.",
-          "values": [{ "name": "(value: number) => string" }]
-        }
-      ],
-      "references": [
-        {
-          "name": "Documentation",
-          "url": "https://shoelace.style/components/rating"
         }
       ]
     },
