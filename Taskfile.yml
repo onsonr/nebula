@@ -16,6 +16,7 @@ tasks:
   nebula:publish:
     dir: .
     cmds:
+      - task: nebula:bump
       - devbox run publish
     silent: true
 
