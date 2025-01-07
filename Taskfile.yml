@@ -28,5 +28,15 @@ tasks:
   esclient:publish:
     dir: ./libs/es-client
     cmds:
+      - task: esclient:bump
       - devbox run publish
+    silent: true
+
+  esclient:bump:
+    dir: ./libs/es-client
+    cmds:
+      - pnpm version patch
+      - git add package.json
+      - git commit -m "chore: bump version to {{.VERSION}} [skip ci]"
+      - git push
     silent: true
