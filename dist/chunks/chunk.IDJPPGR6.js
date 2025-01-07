@@ -1,9 +1,9 @@
 import {
-  SlIcon
-} from "./chunk.QQHXFE7X.js";
-import {
   animated_image_styles_default
 } from "./chunk.WIDVIH73.js";
+import {
+  SlIcon
+} from "./chunk.QQHXFE7X.js";
 import {
   watch
 } from "./chunk.FA5RT4K4.js";
