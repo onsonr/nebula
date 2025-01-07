@@ -1,5 +1,5 @@
 import { PlainMessage } from "@bufbuild/protobuf";
-import { IbcApplicationsTransferV1MsgTransfer as ProtoMsgIbcTransfer } from "@onsonr/es/protobufs";
+import { IbcApplicationsTransferV1MsgTransfer as ProtoMsgIbcTransfer } from "../../protobufs";
 
 import { DeepPrettify } from "../../typeutils/prettify";
 import { Adapter } from "./Adapter";

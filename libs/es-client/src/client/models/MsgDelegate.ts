@@ -1,5 +1,5 @@
 import { PlainMessage } from "@bufbuild/protobuf";
-import { CosmosStakingV1beta1MsgDelegate as ProtoMsgDelegate } from "@onsonr/es/protobufs";
+import { CosmosStakingV1beta1MsgDelegate as ProtoMsgDelegate } from "../..//protobufs";
 
 import { DeepPrettify } from "../../typeutils/prettify";
 import { Adapter } from "./Adapter";
@@ -24,7 +24,8 @@ export class MsgDelegate implements Adapter {
         delegator_address: this.data.delegatorAddress,
         validator_address: this.data.validatorAddress,
         amount: this.data.amount,
-        },
+      },
     };
   }
 }
+

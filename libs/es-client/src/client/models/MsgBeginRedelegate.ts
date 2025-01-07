@@ -1,5 +1,5 @@
 import { PlainMessage } from "@bufbuild/protobuf";
-import { CosmosStakingV1beta1MsgBeginRedelegate as ProtoMsgBeginRedelegate } from "@onsonr/es/protobufs";
+import { CosmosStakingV1beta1MsgBeginRedelegate as ProtoMsgBeginRedelegate } from "../../protobufs";
 
 import { DeepPrettify } from "../../typeutils/prettify";
 import { Adapter } from "./Adapter";
@@ -25,7 +25,8 @@ export class MsgBeginRedelegate implements Adapter {
         validator_src_address: this.data.validatorSrcAddress,
         validator_dst_address: this.data.validatorDstAddress,
         amount: this.data.amount,
-        },
+      },
     };
   }
 }
+
