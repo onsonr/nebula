@@ -16,7 +16,7 @@
         "bun run publish"
       ],
       "bump": [
-        "bun version patch"
+        "npm version patch"
       ]
     }
   }
