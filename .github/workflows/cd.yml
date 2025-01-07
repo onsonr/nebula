@@ -4,8 +4,7 @@ name: Deploy @onsonr/es to npm
 on:
   push:
     branches:
-      - "master"
-      - "main"
+      - "other"
 
 jobs:
   release:

@@ -19,6 +19,17 @@ tasks:
       - devbox run publish
     silent: true
 
+  nebula:bump:
+    dir: .
+    internal: true
+    cmds:
+      - devbox run bump
+      - git add .
+      - git commit -m "(chore) bump version"
+      - git tag $(cat package.json | jq -r .version)
+      - git push --follow-tags
+    silent: true
+
   esclient:build:
     dir: ./libs/es-client
     cmds:
@@ -39,5 +50,6 @@ tasks:
       - devbox run bump
       - git add .
       - git commit -m "(chore) bump version"
-      - git push
+      - git tag $(cat package.json | jq -r .version)
+      - git push --follow-tags
     silent: true
