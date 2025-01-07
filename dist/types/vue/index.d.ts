@@ -1,8 +1,8 @@
 import type { DefineComponent } from "vue";
 
 import type { SlAlert } from "../../components/alert/alert.component.js";
-import type { SlAnimation } from "../../components/animation/animation.component.js";
 import type { SlAnimatedImage } from "../../components/animated-image/animated-image.component.js";
+import type { SlAnimation } from "../../components/animation/animation.component.js";
 import type { SlAvatar } from "../../components/avatar/avatar.component.js";
 import type { SlBadge } from "../../components/badge/badge.component.js";
 import type { SlBreadcrumb } from "../../components/breadcrumb/breadcrumb.component.js";
@@ -83,6 +83,25 @@ the alert will not close on its own. */
   onSlAfterHide?: (e: CustomEvent<never>) => void;
 };
 
+type SlAnimatedImageProps = {
+  /** The path to the image to load. */
+  src?: SlAnimatedImage["src"];
+  /** A description of the image used by assistive devices. */
+  alt?: SlAnimatedImage["alt"];
+  /** Plays the animation. When this attribute is remove, the animation will pause. */
+  play?: SlAnimatedImage["play"];
+  /**  */
+  animatedImage?: SlAnimatedImage["animatedImage"];
+  /**  */
+  frozenFrame?: SlAnimatedImage["frozenFrame"];
+  /**  */
+  isLoaded?: SlAnimatedImage["isLoaded"];
+  /** Emitted when the image loads successfully. */
+  onSlLoad?: (e: CustomEvent<never>) => void;
+  /** Emitted when the image fails to load. */
+  onSlError?: (e: CustomEvent<never>) => void;
+};
+
 type SlAnimationProps = {
   /** The name of the built-in animation to use. For custom animations, use the `keyframes` prop. */
   name?: SlAnimation["name"];
@@ -123,25 +142,6 @@ value can be changed without causing the animation to restart. */
   onSlFinish?: (e: CustomEvent<never>) => void;
   /** Emitted when the animation starts or restarts. */
   onSlStart?: (e: CustomEvent<never>) => void;
-};
-
-type SlAnimatedImageProps = {
-  /** The path to the image to load. */
-  src?: SlAnimatedImage["src"];
-  /** A description of the image used by assistive devices. */
-  alt?: SlAnimatedImage["alt"];
-  /** Plays the animation. When this attribute is remove, the animation will pause. */
-  play?: SlAnimatedImage["play"];
-  /**  */
-  animatedImage?: SlAnimatedImage["animatedImage"];
-  /**  */
-  frozenFrame?: SlAnimatedImage["frozenFrame"];
-  /**  */
-  isLoaded?: SlAnimatedImage["isLoaded"];
-  /** Emitted when the image loads successfully. */
-  onSlLoad?: (e: CustomEvent<never>) => void;
-  /** Emitted when the image fails to load. */
-  onSlError?: (e: CustomEvent<never>) => void;
 };
 
 type SlAvatarProps = {
@@ -1592,25 +1592,6 @@ export type CustomElements = {
   "sl-alert": DefineComponent<SlAlertProps>;
 
   /**
-   * Animate elements declaratively with nearly 100 baked-in presets, or roll your own with custom keyframes. Powered by the [Web Animations API](https://developer.mozilla.org/en-US/docs/Web/API/Web_Animations_API).
-   * ---
-   *
-   *
-   * ### **Events:**
-   *  - **sl-cancel** - Emitted when the animation is canceled.
-   * - **sl-finish** - Emitted when the animation finishes.
-   * - **sl-start** - Emitted when the animation starts or restarts.
-   *
-   * ### **Methods:**
-   *  - **cancel()** - Clears all keyframe effects caused by this animation and aborts its playback.
-   * - **finish()** - Sets the playback time to the end of the animation corresponding to the current playback direction.
-   *
-   * ### **Slots:**
-   *  - _default_ - The element to animate. Avoid slotting in more than one element, as subsequent ones will be ignored. To animate multiple elements, either wrap them in a single container or use multiple `<sl-animation>` elements.
-   */
-  "sl-animation": DefineComponent<SlAnimationProps>;
-
-  /**
    * A component for displaying animated GIFs and WEBPs that play and pause on interaction.
    * ---
    *
@@ -1631,6 +1612,25 @@ export type CustomElements = {
    *  - **control-box** - The container that surrounds the pause/play icons and provides their background.
    */
   "sl-animated-image": DefineComponent<SlAnimatedImageProps>;
+
+  /**
+   * Animate elements declaratively with nearly 100 baked-in presets, or roll your own with custom keyframes. Powered by the [Web Animations API](https://developer.mozilla.org/en-US/docs/Web/API/Web_Animations_API).
+   * ---
+   *
+   *
+   * ### **Events:**
+   *  - **sl-cancel** - Emitted when the animation is canceled.
+   * - **sl-finish** - Emitted when the animation finishes.
+   * - **sl-start** - Emitted when the animation starts or restarts.
+   *
+   * ### **Methods:**
+   *  - **cancel()** - Clears all keyframe effects caused by this animation and aborts its playback.
+   * - **finish()** - Sets the playback time to the end of the animation corresponding to the current playback direction.
+   *
+   * ### **Slots:**
+   *  - _default_ - The element to animate. Avoid slotting in more than one element, as subsequent ones will be ignored. To animate multiple elements, either wrap them in a single container or use multiple `<sl-animation>` elements.
+   */
+  "sl-animation": DefineComponent<SlAnimationProps>;
 
   /**
    * Avatars are used to represent a person or object.

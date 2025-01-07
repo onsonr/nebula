@@ -1,7 +1,4 @@
 import {
-  animation_styles_default
-} from "./chunk.UG4GPH4N.js";
-import {
   dist_exports
 } from "./chunk.RAB4VAMR.js";
 import {
@@ -15,6 +12,9 @@ import {
   n,
   r2 as r
 } from "./chunk.URGPTPT3.js";
+import {
+  animation_styles_default
+} from "./chunk.UG4GPH4N.js";
 import {
   x
 } from "./chunk.CXZZ2LVK.js";

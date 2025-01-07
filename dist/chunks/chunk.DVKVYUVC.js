@@ -1,6 +1,6 @@
 import {
   SlAnimatedImage
-} from "./chunk.THDZPG3S.js";
+} from "./chunk.FKYLS2FH.js";
 
 // src/react/animated-image/index.ts
 import * as React from "react";
