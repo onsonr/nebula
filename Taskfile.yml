@@ -7,14 +7,26 @@ tasks:
       - templ generate
     silent: true
 
-  nebula-build:
+  nebula:build:
     dir: .
     cmds:
-      - bun run build
+      - devbox run build
     silent: true
 
-  esclient-build:
+  nebula:publish:
+    dir: .
+    cmds:
+      - devbox run publish
+    silent: true
+
+  esclient:build:
     dir: ./libs/es-client
     cmds:
       - devbox run build
+    silent: true
+
+  esclient:publish:
+    dir: ./libs/es-client
+    cmds:
+      - devbox run publish
     silent: true
