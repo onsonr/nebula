@@ -6,14 +6,14 @@
   ],
   "shell": {
     "init_hook": [
-      "bun install"
+      "pnpm install"
     ],
     "scripts": {
       "build": [
-        "bun run build"
+        "pnpm run build"
       ],
       "publish": [
-        "npm publish"
+        "pnpm publish"
       ],
       "bump": [
         "npm version patch"
