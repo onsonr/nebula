@@ -13,6 +13,7 @@
         "pnpm run build"
       ],
       "publish": [
+        "pnpm version patch",
         "pnpm publish"
       ]
     }
