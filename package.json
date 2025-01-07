@@ -50,7 +50,6 @@
     "build": "node scripts/build.js",
     "verify": "npm run prettier:check && npm run lint && npm run build && npm run test",
     "prepare": "npx playwright install",
-    "publish": "npm publish --access public",
     "prettier": "prettier --write --log-level=warn .",
     "prettier:check": "prettier --check --log-level=warn .",
     "lint": "eslint src --max-warnings 0",
