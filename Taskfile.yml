@@ -1,12 +1,20 @@
 # https://taskfile.dev
 
 version: '3'
-
-vars:
-  GREETING: Hello, World!
-
 tasks:
   templ-gen:
     cmds:
       - templ generate
+    silent: true
+
+  nebula-build:
+    dir: .
+    cmds:
+      - bun run build
+    silent: true
+
+  esclient-build:
+    dir: ./libs/es-client
+    cmds:
+      - devbox run build
     silent: true
