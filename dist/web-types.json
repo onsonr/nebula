@@ -106,77 +106,6 @@
           }
         },
         {
-          "name": "sl-animated-image",
-          "description": "A component for displaying animated GIFs and WEBPs that play and pause on interaction.\n---\n\n\n### **Events:**\n - **sl-load** - Emitted when the image loads successfully.\n- **sl-error** - Emitted when the image fails to load.\n\n### **Slots:**\n - **play-icon** - Optional play icon to use instead of the default. Works best with `<sl-icon>`.\n- **pause-icon** - Optional pause icon to use instead of the default. Works best with `<sl-icon>`.\n\n### **CSS Properties:**\n - **--control-box-size** - The size of the icon box. _(default: undefined)_\n- **--icon-size** - The size of the play/pause icons. _(default: undefined)_\n\n### **CSS Parts:**\n - **control-box** - The container that surrounds the pause/play icons and provides their background.",
-          "doc-url": "",
-          "attributes": [
-            {
-              "name": "src",
-              "description": "The path to the image to load.",
-              "value": { "type": "string" }
-            },
-            {
-              "name": "alt",
-              "description": "A description of the image used by assistive devices.",
-              "value": { "type": "string" }
-            },
-            {
-              "name": "play",
-              "description": "Plays the animation. When this attribute is remove, the animation will pause.",
-              "value": { "type": "boolean" }
-            }
-          ],
-          "slots": [
-            {
-              "name": "play-icon",
-              "description": "Optional play icon to use instead of the default. Works best with `<sl-icon>`."
-            },
-            {
-              "name": "pause-icon",
-              "description": "Optional pause icon to use instead of the default. Works best with `<sl-icon>`."
-            }
-          ],
-          "events": [
-            {
-              "name": "sl-load",
-              "description": "Emitted when the image loads successfully."
-            },
-            {
-              "name": "sl-error",
-              "description": "Emitted when the image fails to load."
-            }
-          ],
-          "js": {
-            "properties": [
-              {
-                "name": "src",
-                "description": "The path to the image to load.",
-                "value": { "type": "string" }
-              },
-              {
-                "name": "alt",
-                "description": "A description of the image used by assistive devices.",
-                "value": { "type": "string" }
-              },
-              {
-                "name": "play",
-                "description": "Plays the animation. When this attribute is remove, the animation will pause.",
-                "value": { "type": "boolean" }
-              }
-            ],
-            "events": [
-              {
-                "name": "sl-load",
-                "description": "Emitted when the image loads successfully."
-              },
-              {
-                "name": "sl-error",
-                "description": "Emitted when the image fails to load."
-              }
-            ]
-          }
-        },
-        {
           "name": "sl-animation",
           "description": "Animate elements declaratively with nearly 100 baked-in presets, or roll your own with custom keyframes. Powered by the [Web Animations API](https://developer.mozilla.org/en-US/docs/Web/API/Web_Animations_API).\n---\n\n\n### **Events:**\n - **sl-cancel** - Emitted when the animation is canceled.\n- **sl-finish** - Emitted when the animation finishes.\n- **sl-start** - Emitted when the animation starts or restarts.\n\n### **Methods:**\n - **cancel()** - Clears all keyframe effects caused by this animation and aborts its playback.\n- **finish()** - Sets the playback time to the end of the animation corresponding to the current playback direction.\n\n### **Slots:**\n - _default_ - The element to animate. Avoid slotting in more than one element, as subsequent ones will be ignored. To animate multiple elements, either wrap them in a single container or use multiple `<sl-animation>` elements.",
           "doc-url": "",
@@ -327,6 +256,77 @@
               {
                 "name": "sl-start",
                 "description": "Emitted when the animation starts or restarts."
+              }
+            ]
+          }
+        },
+        {
+          "name": "sl-animated-image",
+          "description": "A component for displaying animated GIFs and WEBPs that play and pause on interaction.\n---\n\n\n### **Events:**\n - **sl-load** - Emitted when the image loads successfully.\n- **sl-error** - Emitted when the image fails to load.\n\n### **Slots:**\n - **play-icon** - Optional play icon to use instead of the default. Works best with `<sl-icon>`.\n- **pause-icon** - Optional pause icon to use instead of the default. Works best with `<sl-icon>`.\n\n### **CSS Properties:**\n - **--control-box-size** - The size of the icon box. _(default: undefined)_\n- **--icon-size** - The size of the play/pause icons. _(default: undefined)_\n\n### **CSS Parts:**\n - **control-box** - The container that surrounds the pause/play icons and provides their background.",
+          "doc-url": "",
+          "attributes": [
+            {
+              "name": "src",
+              "description": "The path to the image to load.",
+              "value": { "type": "string" }
+            },
+            {
+              "name": "alt",
+              "description": "A description of the image used by assistive devices.",
+              "value": { "type": "string" }
+            },
+            {
+              "name": "play",
+              "description": "Plays the animation. When this attribute is remove, the animation will pause.",
+              "value": { "type": "boolean" }
+            }
+          ],
+          "slots": [
+            {
+              "name": "play-icon",
+              "description": "Optional play icon to use instead of the default. Works best with `<sl-icon>`."
+            },
+            {
+              "name": "pause-icon",
+              "description": "Optional pause icon to use instead of the default. Works best with `<sl-icon>`."
+            }
+          ],
+          "events": [
+            {
+              "name": "sl-load",
+              "description": "Emitted when the image loads successfully."
+            },
+            {
+              "name": "sl-error",
+              "description": "Emitted when the image fails to load."
+            }
+          ],
+          "js": {
+            "properties": [
+              {
+                "name": "src",
+                "description": "The path to the image to load.",
+                "value": { "type": "string" }
+              },
+              {
+                "name": "alt",
+                "description": "A description of the image used by assistive devices.",
+                "value": { "type": "string" }
+              },
+              {
+                "name": "play",
+                "description": "Plays the animation. When this attribute is remove, the animation will pause.",
+                "value": { "type": "boolean" }
+              }
+            ],
+            "events": [
+              {
+                "name": "sl-load",
+                "description": "Emitted when the image loads successfully."
+              },
+              {
+                "name": "sl-error",
+                "description": "Emitted when the image fails to load."
               }
             ]
           }
@@ -4171,107 +4171,6 @@
           }
         },
         {
-          "name": "sl-rating",
-          "description": "Ratings give users a way to quickly view and provide feedback.\n---\n\n\n### **Events:**\n - **sl-change** - Emitted when the rating's value changes.\n- **sl-hover** - Emitted when the user hovers over a value. The `phase` property indicates when hovering starts, moves to a new value, or ends. The `value` property tells what the rating's value would be if the user were to commit to the hovered value.\n\n### **Methods:**\n - **focus(options: _FocusOptions_)** - Sets focus on the rating.\n- **blur()** - Removes focus from the rating.\n\n### **CSS Properties:**\n - **--symbol-color** - The inactive color for symbols. _(default: undefined)_\n- **--symbol-color-active** - The active color for symbols. _(default: undefined)_\n- **--symbol-size** - The size of symbols. _(default: undefined)_\n- **--symbol-spacing** - The spacing to use around symbols. _(default: undefined)_\n\n### **CSS Parts:**\n - **base** - The component's base wrapper.",
-          "doc-url": "",
-          "attributes": [
-            {
-              "name": "label",
-              "description": "A label that describes the rating to assistive devices.",
-              "value": { "type": "string", "default": "''" }
-            },
-            {
-              "name": "value",
-              "description": "The current rating.",
-              "value": { "type": "number", "default": "0" }
-            },
-            {
-              "name": "max",
-              "description": "The highest rating to show.",
-              "value": { "type": "number", "default": "5" }
-            },
-            {
-              "name": "precision",
-              "description": "The precision at which the rating will increase and decrease. For example, to allow half-star ratings, set this\nattribute to `0.5`.",
-              "value": { "type": "number", "default": "1" }
-            },
-            {
-              "name": "readonly",
-              "description": "Makes the rating readonly.",
-              "value": { "type": "boolean", "default": "false" }
-            },
-            {
-              "name": "disabled",
-              "description": "Disables the rating.",
-              "value": { "type": "boolean", "default": "false" }
-            },
-            {
-              "name": "getSymbol",
-              "description": "A function that customizes the symbol to be rendered. The first and only argument is the rating's current value.\nThe function should return a string containing trusted HTML of the symbol to render at the specified value. Works\nwell with `<sl-icon>` elements.",
-              "value": { "type": "(value: number) => string" }
-            }
-          ],
-          "events": [
-            {
-              "name": "sl-change",
-              "description": "Emitted when the rating's value changes."
-            },
-            {
-              "name": "sl-hover",
-              "description": "Emitted when the user hovers over a value. The `phase` property indicates when hovering starts, moves to a new value, or ends. The `value` property tells what the rating's value would be if the user were to commit to the hovered value."
-            }
-          ],
-          "js": {
-            "properties": [
-              {
-                "name": "label",
-                "description": "A label that describes the rating to assistive devices.",
-                "value": { "type": "string" }
-              },
-              {
-                "name": "value",
-                "description": "The current rating.",
-                "value": { "type": "number" }
-              },
-              {
-                "name": "max",
-                "description": "The highest rating to show.",
-                "value": { "type": "number" }
-              },
-              {
-                "name": "precision",
-                "description": "The precision at which the rating will increase and decrease. For example, to allow half-star ratings, set this\nattribute to `0.5`.",
-                "value": { "type": "number" }
-              },
-              {
-                "name": "readonly",
-                "description": "Makes the rating readonly.",
-                "value": { "type": "boolean" }
-              },
-              {
-                "name": "disabled",
-                "description": "Disables the rating.",
-                "value": { "type": "boolean" }
-              },
-              {
-                "name": "getSymbol",
-                "description": "A function that customizes the symbol to be rendered. The first and only argument is the rating's current value.\nThe function should return a string containing trusted HTML of the symbol to render at the specified value. Works\nwell with `<sl-icon>` elements.",
-                "value": { "type": "(value: number) => string" }
-              }
-            ],
-            "events": [
-              {
-                "name": "sl-change",
-                "description": "Emitted when the rating's value changes."
-              },
-              {
-                "name": "sl-hover",
-                "description": "Emitted when the user hovers over a value. The `phase` property indicates when hovering starts, moves to a new value, or ends. The `value` property tells what the rating's value would be if the user were to commit to the hovered value."
-              }
-            ]
-          }
-        },
-        {
           "name": "sl-relative-time",
           "description": "Outputs a localized time phrase relative to the current date and time.\n---\n",
           "doc-url": "",
@@ -4670,6 +4569,107 @@
               {
                 "name": "sl-invalid",
                 "description": "Emitted when the form control has been checked for validity and its constraints aren't satisfied."
+              }
+            ]
+          }
+        },
+        {
+          "name": "sl-rating",
+          "description": "Ratings give users a way to quickly view and provide feedback.\n---\n\n\n### **Events:**\n - **sl-change** - Emitted when the rating's value changes.\n- **sl-hover** - Emitted when the user hovers over a value. The `phase` property indicates when hovering starts, moves to a new value, or ends. The `value` property tells what the rating's value would be if the user were to commit to the hovered value.\n\n### **Methods:**\n - **focus(options: _FocusOptions_)** - Sets focus on the rating.\n- **blur()** - Removes focus from the rating.\n\n### **CSS Properties:**\n - **--symbol-color** - The inactive color for symbols. _(default: undefined)_\n- **--symbol-color-active** - The active color for symbols. _(default: undefined)_\n- **--symbol-size** - The size of symbols. _(default: undefined)_\n- **--symbol-spacing** - The spacing to use around symbols. _(default: undefined)_\n\n### **CSS Parts:**\n - **base** - The component's base wrapper.",
+          "doc-url": "",
+          "attributes": [
+            {
+              "name": "label",
+              "description": "A label that describes the rating to assistive devices.",
+              "value": { "type": "string", "default": "''" }
+            },
+            {
+              "name": "value",
+              "description": "The current rating.",
+              "value": { "type": "number", "default": "0" }
+            },
+            {
+              "name": "max",
+              "description": "The highest rating to show.",
+              "value": { "type": "number", "default": "5" }
+            },
+            {
+              "name": "precision",
+              "description": "The precision at which the rating will increase and decrease. For example, to allow half-star ratings, set this\nattribute to `0.5`.",
+              "value": { "type": "number", "default": "1" }
+            },
+            {
+              "name": "readonly",
+              "description": "Makes the rating readonly.",
+              "value": { "type": "boolean", "default": "false" }
+            },
+            {
+              "name": "disabled",
+              "description": "Disables the rating.",
+              "value": { "type": "boolean", "default": "false" }
+            },
+            {
+              "name": "getSymbol",
+              "description": "A function that customizes the symbol to be rendered. The first and only argument is the rating's current value.\nThe function should return a string containing trusted HTML of the symbol to render at the specified value. Works\nwell with `<sl-icon>` elements.",
+              "value": { "type": "(value: number) => string" }
+            }
+          ],
+          "events": [
+            {
+              "name": "sl-change",
+              "description": "Emitted when the rating's value changes."
+            },
+            {
+              "name": "sl-hover",
+              "description": "Emitted when the user hovers over a value. The `phase` property indicates when hovering starts, moves to a new value, or ends. The `value` property tells what the rating's value would be if the user were to commit to the hovered value."
+            }
+          ],
+          "js": {
+            "properties": [
+              {
+                "name": "label",
+                "description": "A label that describes the rating to assistive devices.",
+                "value": { "type": "string" }
+              },
+              {
+                "name": "value",
+                "description": "The current rating.",
+                "value": { "type": "number" }
+              },
+              {
+                "name": "max",
+                "description": "The highest rating to show.",
+                "value": { "type": "number" }
+              },
+              {
+                "name": "precision",
+                "description": "The precision at which the rating will increase and decrease. For example, to allow half-star ratings, set this\nattribute to `0.5`.",
+                "value": { "type": "number" }
+              },
+              {
+                "name": "readonly",
+                "description": "Makes the rating readonly.",
+                "value": { "type": "boolean" }
+              },
+              {
+                "name": "disabled",
+                "description": "Disables the rating.",
+                "value": { "type": "boolean" }
+              },
+              {
+                "name": "getSymbol",
+                "description": "A function that customizes the symbol to be rendered. The first and only argument is the rating's current value.\nThe function should return a string containing trusted HTML of the symbol to render at the specified value. Works\nwell with `<sl-icon>` elements.",
+                "value": { "type": "(value: number) => string" }
+              }
+            ],
+            "events": [
+              {
+                "name": "sl-change",
+                "description": "Emitted when the rating's value changes."
+              },
+              {
+                "name": "sl-hover",
+                "description": "Emitted when the user hovers over a value. The `phase` property indicates when hovering starts, moves to a new value, or ends. The `value` property tells what the rating's value would be if the user were to commit to the hovered value."
               }
             ]
           }

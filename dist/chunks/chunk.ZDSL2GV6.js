@@ -1,6 +1,6 @@
 import {
   SlAlert
-} from "./chunk.6NSZTU7H.js";
+} from "./chunk.EA27M3TE.js";
 
 // src/components/alert/alert.ts
 var alert_default = SlAlert;

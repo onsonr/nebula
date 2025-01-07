@@ -1,7 +1,4 @@
 import {
-  animated_image_styles_default
-} from "./chunk.WIDVIH73.js";
-import {
   SlIcon
 } from "./chunk.QQHXFE7X.js";
 import {
@@ -16,6 +13,9 @@ import {
   n,
   r
 } from "./chunk.URGPTPT3.js";
+import {
+  animated_image_styles_default
+} from "./chunk.WIDVIH73.js";
 import {
   x
 } from "./chunk.CXZZ2LVK.js";
