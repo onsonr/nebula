@@ -1,8 +1,8 @@
 import type { DefineComponent } from "vue";
 
 import type { SlAlert } from "../../components/alert/alert.component.js";
-import type { SlAnimation } from "../../components/animation/animation.component.js";
 import type { SlAnimatedImage } from "../../components/animated-image/animated-image.component.js";
+import type { SlAnimation } from "../../components/animation/animation.component.js";
 import type { SlAvatar } from "../../components/avatar/avatar.component.js";
 import type { SlBadge } from "../../components/badge/badge.component.js";
 import type { SlBreadcrumb } from "../../components/breadcrumb/breadcrumb.component.js";
@@ -41,10 +41,10 @@ import type { SlRadio } from "../../components/radio/radio.component.js";
 import type { SlRadioButton } from "../../components/radio-button/radio-button.component.js";
 import type { SlRadioGroup } from "../../components/radio-group/radio-group.component.js";
 import type { SlRange } from "../../components/range/range.component.js";
+import type { SlRating } from "../../components/rating/rating.component.js";
 import type { SlRelativeTime } from "../../components/relative-time/relative-time.component.js";
 import type { SlResizeObserver } from "../../components/resize-observer/resize-observer.component.js";
 import type { SlSelect } from "../../components/select/select.component.js";
-import type { SlRating } from "../../components/rating/rating.component.js";
 import type { SlSkeleton } from "../../components/skeleton/skeleton.component.js";
 import type { SlSpinner } from "../../components/spinner/spinner.component.js";
 import type { SlSplitPanel } from "../../components/split-panel/split-panel.component.js";
@@ -81,6 +81,25 @@ the alert will not close on its own. */
   onSlHide?: (e: CustomEvent<never>) => void;
   /** Emitted after the alert closes and all animations are complete. */
   onSlAfterHide?: (e: CustomEvent<never>) => void;
+};
+
+type SlAnimatedImageProps = {
+  /** The path to the image to load. */
+  src?: SlAnimatedImage["src"];
+  /** A description of the image used by assistive devices. */
+  alt?: SlAnimatedImage["alt"];
+  /** Plays the animation. When this attribute is remove, the animation will pause. */
+  play?: SlAnimatedImage["play"];
+  /**  */
+  animatedImage?: SlAnimatedImage["animatedImage"];
+  /**  */
+  frozenFrame?: SlAnimatedImage["frozenFrame"];
+  /**  */
+  isLoaded?: SlAnimatedImage["isLoaded"];
+  /** Emitted when the image loads successfully. */
+  onSlLoad?: (e: CustomEvent<never>) => void;
+  /** Emitted when the image fails to load. */
+  onSlError?: (e: CustomEvent<never>) => void;
 };
 
 type SlAnimationProps = {
@@ -123,25 +142,6 @@ value can be changed without causing the animation to restart. */
   onSlFinish?: (e: CustomEvent<never>) => void;
   /** Emitted when the animation starts or restarts. */
   onSlStart?: (e: CustomEvent<never>) => void;
-};
-
-type SlAnimatedImageProps = {
-  /** The path to the image to load. */
-  src?: SlAnimatedImage["src"];
-  /** A description of the image used by assistive devices. */
-  alt?: SlAnimatedImage["alt"];
-  /** Plays the animation. When this attribute is remove, the animation will pause. */
-  play?: SlAnimatedImage["play"];
-  /**  */
-  animatedImage?: SlAnimatedImage["animatedImage"];
-  /**  */
-  frozenFrame?: SlAnimatedImage["frozenFrame"];
-  /**  */
-  isLoaded?: SlAnimatedImage["isLoaded"];
-  /** Emitted when the image loads successfully. */
-  onSlLoad?: (e: CustomEvent<never>) => void;
-  /** Emitted when the image fails to load. */
-  onSlError?: (e: CustomEvent<never>) => void;
 };
 
 type SlAvatarProps = {
@@ -1123,6 +1123,32 @@ function should return a string to display in the tooltip. */
   onSlInvalid?: (e: CustomEvent<never>) => void;
 };
 
+type SlRatingProps = {
+  /** A label that describes the rating to assistive devices. */
+  label?: SlRating["label"];
+  /** The current rating. */
+  value?: SlRating["value"];
+  /** The highest rating to show. */
+  max?: SlRating["max"];
+  /** The precision at which the rating will increase and decrease. For example, to allow half-star ratings, set this
+attribute to `0.5`. */
+  precision?: SlRating["precision"];
+  /** Makes the rating readonly. */
+  readonly?: SlRating["readonly"];
+  /** Disables the rating. */
+  disabled?: SlRating["disabled"];
+  /** A function that customizes the symbol to be rendered. The first and only argument is the rating's current value.
+The function should return a string containing trusted HTML of the symbol to render at the specified value. Works
+well with `<sl-icon>` elements. */
+  getSymbol?: SlRating["getSymbol"];
+  /**  */
+  rating?: SlRating["rating"];
+  /** Emitted when the rating's value changes. */
+  onSlChange?: (e: CustomEvent<never>) => void;
+  /** Emitted when the user hovers over a value. The `phase` property indicates when hovering starts, moves to a new value, or ends. The `value` property tells what the rating's value would be if the user were to commit to the hovered value. */
+  onSlHover?: (e: CustomEvent<{ phase: "start" | "move" | "end"; value: number }>) => void;
+};
+
 type SlRelativeTimeProps = {
   /** The date from which to calculate time from. If not set, the current date and time will be used. When passing a
 string, it's strongly recommended to use the ISO 8601 format to ensure timezones are handled correctly. To convert
@@ -1234,32 +1260,6 @@ the specified value. */
   onSlAfterHide?: (e: CustomEvent<never>) => void;
   /** Emitted when the form control has been checked for validity and its constraints aren't satisfied. */
   onSlInvalid?: (e: CustomEvent<never>) => void;
-};
-
-type SlRatingProps = {
-  /** A label that describes the rating to assistive devices. */
-  label?: SlRating["label"];
-  /** The current rating. */
-  value?: SlRating["value"];
-  /** The highest rating to show. */
-  max?: SlRating["max"];
-  /** The precision at which the rating will increase and decrease. For example, to allow half-star ratings, set this
-attribute to `0.5`. */
-  precision?: SlRating["precision"];
-  /** Makes the rating readonly. */
-  readonly?: SlRating["readonly"];
-  /** Disables the rating. */
-  disabled?: SlRating["disabled"];
-  /** A function that customizes the symbol to be rendered. The first and only argument is the rating's current value.
-The function should return a string containing trusted HTML of the symbol to render at the specified value. Works
-well with `<sl-icon>` elements. */
-  getSymbol?: SlRating["getSymbol"];
-  /**  */
-  rating?: SlRating["rating"];
-  /** Emitted when the rating's value changes. */
-  onSlChange?: (e: CustomEvent<never>) => void;
-  /** Emitted when the user hovers over a value. The `phase` property indicates when hovering starts, moves to a new value, or ends. The `value` property tells what the rating's value would be if the user were to commit to the hovered value. */
-  onSlHover?: (e: CustomEvent<{ phase: "start" | "move" | "end"; value: number }>) => void;
 };
 
 type SlSkeletonProps = {
@@ -1592,25 +1592,6 @@ export type CustomElements = {
   "sl-alert": DefineComponent<SlAlertProps>;
 
   /**
-   * Animate elements declaratively with nearly 100 baked-in presets, or roll your own with custom keyframes. Powered by the [Web Animations API](https://developer.mozilla.org/en-US/docs/Web/API/Web_Animations_API).
-   * ---
-   *
-   *
-   * ### **Events:**
-   *  - **sl-cancel** - Emitted when the animation is canceled.
-   * - **sl-finish** - Emitted when the animation finishes.
-   * - **sl-start** - Emitted when the animation starts or restarts.
-   *
-   * ### **Methods:**
-   *  - **cancel()** - Clears all keyframe effects caused by this animation and aborts its playback.
-   * - **finish()** - Sets the playback time to the end of the animation corresponding to the current playback direction.
-   *
-   * ### **Slots:**
-   *  - _default_ - The element to animate. Avoid slotting in more than one element, as subsequent ones will be ignored. To animate multiple elements, either wrap them in a single container or use multiple `<sl-animation>` elements.
-   */
-  "sl-animation": DefineComponent<SlAnimationProps>;
-
-  /**
    * A component for displaying animated GIFs and WEBPs that play and pause on interaction.
    * ---
    *
@@ -1631,6 +1612,25 @@ export type CustomElements = {
    *  - **control-box** - The container that surrounds the pause/play icons and provides their background.
    */
   "sl-animated-image": DefineComponent<SlAnimatedImageProps>;
+
+  /**
+   * Animate elements declaratively with nearly 100 baked-in presets, or roll your own with custom keyframes. Powered by the [Web Animations API](https://developer.mozilla.org/en-US/docs/Web/API/Web_Animations_API).
+   * ---
+   *
+   *
+   * ### **Events:**
+   *  - **sl-cancel** - Emitted when the animation is canceled.
+   * - **sl-finish** - Emitted when the animation finishes.
+   * - **sl-start** - Emitted when the animation starts or restarts.
+   *
+   * ### **Methods:**
+   *  - **cancel()** - Clears all keyframe effects caused by this animation and aborts its playback.
+   * - **finish()** - Sets the playback time to the end of the animation corresponding to the current playback direction.
+   *
+   * ### **Slots:**
+   *  - _default_ - The element to animate. Avoid slotting in more than one element, as subsequent ones will be ignored. To animate multiple elements, either wrap them in a single container or use multiple `<sl-animation>` elements.
+   */
+  "sl-animation": DefineComponent<SlAnimationProps>;
 
   /**
    * Avatars are used to represent a person or object.
@@ -2546,6 +2546,30 @@ export type CustomElements = {
   "sl-range": DefineComponent<SlRangeProps>;
 
   /**
+   * Ratings give users a way to quickly view and provide feedback.
+   * ---
+   *
+   *
+   * ### **Events:**
+   *  - **sl-change** - Emitted when the rating's value changes.
+   * - **sl-hover** - Emitted when the user hovers over a value. The `phase` property indicates when hovering starts, moves to a new value, or ends. The `value` property tells what the rating's value would be if the user were to commit to the hovered value.
+   *
+   * ### **Methods:**
+   *  - **focus(options: _FocusOptions_)** - Sets focus on the rating.
+   * - **blur()** - Removes focus from the rating.
+   *
+   * ### **CSS Properties:**
+   *  - **--symbol-color** - The inactive color for symbols. _(default: undefined)_
+   * - **--symbol-color-active** - The active color for symbols. _(default: undefined)_
+   * - **--symbol-size** - The size of symbols. _(default: undefined)_
+   * - **--symbol-spacing** - The spacing to use around symbols. _(default: undefined)_
+   *
+   * ### **CSS Parts:**
+   *  - **base** - The component's base wrapper.
+   */
+  "sl-rating": DefineComponent<SlRatingProps>;
+
+  /**
    * Outputs a localized time phrase relative to the current date and time.
    * ---
    *
@@ -2619,30 +2643,6 @@ export type CustomElements = {
    * - **expand-icon** - The container that wraps the expand icon.
    */
   "sl-select": DefineComponent<SlSelectProps>;
-
-  /**
-   * Ratings give users a way to quickly view and provide feedback.
-   * ---
-   *
-   *
-   * ### **Events:**
-   *  - **sl-change** - Emitted when the rating's value changes.
-   * - **sl-hover** - Emitted when the user hovers over a value. The `phase` property indicates when hovering starts, moves to a new value, or ends. The `value` property tells what the rating's value would be if the user were to commit to the hovered value.
-   *
-   * ### **Methods:**
-   *  - **focus(options: _FocusOptions_)** - Sets focus on the rating.
-   * - **blur()** - Removes focus from the rating.
-   *
-   * ### **CSS Properties:**
-   *  - **--symbol-color** - The inactive color for symbols. _(default: undefined)_
-   * - **--symbol-color-active** - The active color for symbols. _(default: undefined)_
-   * - **--symbol-size** - The size of symbols. _(default: undefined)_
-   * - **--symbol-spacing** - The spacing to use around symbols. _(default: undefined)_
-   *
-   * ### **CSS Parts:**
-   *  - **base** - The component's base wrapper.
-   */
-  "sl-rating": DefineComponent<SlRatingProps>;
 
   /**
    * Skeletons are used to provide a visual representation of where content will eventually be drawn.
