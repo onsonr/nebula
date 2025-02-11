@@ -99,7 +99,7 @@
     "custom-element-vuejs-integration": "^1.0.0",
     "del": "^7.1.0",
     "download": "^8.0.0",
-    "esbuild": "^0.19.4",
+    "esbuild": "^0.25.0",
     "esbuild-plugin-replace": "^1.4.0",
     "eslint": "^8.51.0",
     "eslint-plugin-chai-expect": "^3.0.0",
